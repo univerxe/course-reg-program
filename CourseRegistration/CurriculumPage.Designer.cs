@@ -35,7 +35,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("맑은 고딕", 36F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label1.Location = new Point(225, 261);
+            label1.Location = new Point(511, 424);
             label1.Name = "label1";
             label1.Size = new Size(389, 65);
             label1.TabIndex = 1;
@@ -43,9 +43,9 @@
             // 
             // CurriculumPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(835, 642);
+            AutoScaleMode = AutoScaleMode.None;
+            BackColor = Color.White;
+            ClientSize = new Size(1299, 951);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CurriculumPage";
