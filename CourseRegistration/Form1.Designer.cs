@@ -39,11 +39,11 @@
             numLabel = new Label();
             nameLabel = new Label();
             User = new PictureBox();
-            homeBtn = new Button();
+            HomeBtn = new Button();
             symbolPanel = new Panel();
-            registrationBtn = new Button();
-            calBtn = new Button();
-            curBtn = new Button();
+            SearchBtn = new Button();
+            CurriculumBtn = new Button();
+            MyPageBtn = new Button();
             exitBtn = new Button();
             settingBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)symbol).BeginInit();
@@ -151,22 +151,22 @@
             User.TabIndex = 0;
             User.TabStop = false;
             // 
-            // homeBtn
+            // HomeBtn
             // 
-            homeBtn.BackColor = Color.FromArgb(107, 34, 48);
-            homeBtn.FlatAppearance.BorderSize = 0;
-            homeBtn.FlatStyle = FlatStyle.Flat;
-            homeBtn.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            homeBtn.ForeColor = Color.White;
-            homeBtn.Image = (Image)resources.GetObject("homeBtn.Image");
-            homeBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            homeBtn.Location = new Point(0, 126);
-            homeBtn.Name = "homeBtn";
-            homeBtn.Size = new Size(213, 49);
-            homeBtn.TabIndex = 4;
-            homeBtn.Text = "Home";
-            homeBtn.UseVisualStyleBackColor = false;
-            homeBtn.Click += homeBtn_Click;
+            HomeBtn.BackColor = Color.FromArgb(107, 34, 48);
+            HomeBtn.FlatAppearance.BorderSize = 0;
+            HomeBtn.FlatStyle = FlatStyle.Flat;
+            HomeBtn.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            HomeBtn.ForeColor = Color.White;
+            HomeBtn.Image = (Image)resources.GetObject("HomeBtn.Image");
+            HomeBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            HomeBtn.Location = new Point(0, 126);
+            HomeBtn.Name = "HomeBtn";
+            HomeBtn.Size = new Size(213, 49);
+            HomeBtn.TabIndex = 4;
+            HomeBtn.Text = "Home";
+            HomeBtn.UseVisualStyleBackColor = false;
+            HomeBtn.Click += homeBtn_Click;
             // 
             // symbolPanel
             // 
@@ -176,56 +176,56 @@
             symbolPanel.Size = new Size(213, 90);
             symbolPanel.TabIndex = 5;
             // 
-            // registrationBtn
+            // SearchBtn
             // 
-            registrationBtn.BackColor = Color.FromArgb(107, 34, 48);
-            registrationBtn.FlatAppearance.BorderSize = 0;
-            registrationBtn.FlatStyle = FlatStyle.Flat;
-            registrationBtn.Font = new Font("맑은 고딕", 10F);
-            registrationBtn.ForeColor = Color.White;
-            registrationBtn.Image = (Image)resources.GetObject("registrationBtn.Image");
-            registrationBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            registrationBtn.Location = new Point(0, 181);
-            registrationBtn.Name = "registrationBtn";
-            registrationBtn.Size = new Size(213, 49);
-            registrationBtn.TabIndex = 6;
-            registrationBtn.Text = "수강 신청";
-            registrationBtn.UseVisualStyleBackColor = false;
-            registrationBtn.Click += registrationBtn_Click;
+            SearchBtn.BackColor = Color.FromArgb(107, 34, 48);
+            SearchBtn.FlatAppearance.BorderSize = 0;
+            SearchBtn.FlatStyle = FlatStyle.Flat;
+            SearchBtn.Font = new Font("맑은 고딕", 10F);
+            SearchBtn.ForeColor = Color.White;
+            SearchBtn.Image = (Image)resources.GetObject("SearchBtn.Image");
+            SearchBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            SearchBtn.Location = new Point(0, 181);
+            SearchBtn.Name = "SearchBtn";
+            SearchBtn.Size = new Size(213, 49);
+            SearchBtn.TabIndex = 6;
+            SearchBtn.Text = "Search";
+            SearchBtn.UseVisualStyleBackColor = false;
+            SearchBtn.Click += SearchBtn_Click;
             // 
-            // calBtn
+            // CurriculumBtn
             // 
-            calBtn.BackColor = Color.FromArgb(107, 34, 48);
-            calBtn.FlatAppearance.BorderSize = 0;
-            calBtn.FlatStyle = FlatStyle.Flat;
-            calBtn.Font = new Font("맑은 고딕", 10F);
-            calBtn.ForeColor = Color.White;
-            calBtn.Image = (Image)resources.GetObject("calBtn.Image");
-            calBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            calBtn.Location = new Point(0, 236);
-            calBtn.Name = "calBtn";
-            calBtn.Size = new Size(213, 49);
-            calBtn.TabIndex = 7;
-            calBtn.Text = "확률 계산기";
-            calBtn.UseVisualStyleBackColor = false;
-            calBtn.Click += calBtn_Click;
+            CurriculumBtn.BackColor = Color.FromArgb(107, 34, 48);
+            CurriculumBtn.FlatAppearance.BorderSize = 0;
+            CurriculumBtn.FlatStyle = FlatStyle.Flat;
+            CurriculumBtn.Font = new Font("맑은 고딕", 10F);
+            CurriculumBtn.ForeColor = Color.White;
+            CurriculumBtn.Image = (Image)resources.GetObject("CurriculumBtn.Image");
+            CurriculumBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            CurriculumBtn.Location = new Point(0, 236);
+            CurriculumBtn.Name = "CurriculumBtn";
+            CurriculumBtn.Size = new Size(213, 49);
+            CurriculumBtn.TabIndex = 7;
+            CurriculumBtn.Text = "Curriculum";
+            CurriculumBtn.UseVisualStyleBackColor = false;
+            CurriculumBtn.Click += CurriculumBtn_Click;
             // 
-            // curBtn
+            // MyPageBtn
             // 
-            curBtn.BackColor = Color.FromArgb(107, 34, 48);
-            curBtn.FlatAppearance.BorderSize = 0;
-            curBtn.FlatStyle = FlatStyle.Flat;
-            curBtn.Font = new Font("맑은 고딕", 10F);
-            curBtn.ForeColor = Color.White;
-            curBtn.Image = (Image)resources.GetObject("curBtn.Image");
-            curBtn.ImageAlign = ContentAlignment.MiddleLeft;
-            curBtn.Location = new Point(0, 291);
-            curBtn.Name = "curBtn";
-            curBtn.Size = new Size(213, 49);
-            curBtn.TabIndex = 8;
-            curBtn.Text = "커리큘럼";
-            curBtn.UseVisualStyleBackColor = false;
-            curBtn.Click += curBtn_Click;
+            MyPageBtn.BackColor = Color.FromArgb(107, 34, 48);
+            MyPageBtn.FlatAppearance.BorderSize = 0;
+            MyPageBtn.FlatStyle = FlatStyle.Flat;
+            MyPageBtn.Font = new Font("맑은 고딕", 10F);
+            MyPageBtn.ForeColor = Color.White;
+            MyPageBtn.Image = (Image)resources.GetObject("MyPageBtn.Image");
+            MyPageBtn.ImageAlign = ContentAlignment.MiddleLeft;
+            MyPageBtn.Location = new Point(0, 291);
+            MyPageBtn.Name = "MyPageBtn";
+            MyPageBtn.Size = new Size(213, 49);
+            MyPageBtn.TabIndex = 8;
+            MyPageBtn.Text = "My Page";
+            MyPageBtn.UseVisualStyleBackColor = false;
+            MyPageBtn.Click += MyPageBtn_Click;
             // 
             // exitBtn
             // 
@@ -268,11 +268,11 @@
             ClientSize = new Size(1300, 720);
             Controls.Add(settingBtn);
             Controls.Add(exitBtn);
-            Controls.Add(curBtn);
-            Controls.Add(calBtn);
-            Controls.Add(registrationBtn);
+            Controls.Add(MyPageBtn);
+            Controls.Add(CurriculumBtn);
+            Controls.Add(SearchBtn);
             Controls.Add(symbolPanel);
-            Controls.Add(homeBtn);
+            Controls.Add(HomeBtn);
             Controls.Add(userInfoPanel);
             Controls.Add(mainPanel);
             Controls.Add(topBar);
@@ -296,11 +296,11 @@
         private Panel mainPanel;
         private PictureBox symbol;
         private Panel userInfoPanel;
-        private Button homeBtn;
+        private Button HomeBtn;
         private Panel symbolPanel;
-        private Button registrationBtn;
-        private Button calBtn;
-        private Button curBtn;
+        private Button SearchBtn;
+        private Button CurriculumBtn;
+        private Button MyPageBtn;
         private Panel userPanel;
         private PictureBox User;
         private Label nameLabel;

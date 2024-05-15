@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CourseRegistration
 {
-    public partial class Registration : Form
+    public partial class SearchPage : Form
     {
-        public Registration()
+        public SearchPage()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

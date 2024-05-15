@@ -1,6 +1,6 @@
 ﻿namespace CourseRegistration
 {
-    partial class Registration
+    partial class CurriculumPage
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("맑은 고딕", 36F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label1.Location = new Point(214, 266);
+            label1.Location = new Point(225, 261);
             label1.Name = "label1";
-            label1.Size = new Size(414, 65);
+            label1.Size = new Size(389, 65);
             label1.TabIndex = 1;
-            label1.Text = "Registration Page";
+            label1.Text = "Curriculum Page";
             // 
-            // Registration
+            // CurriculumPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(835, 642);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Registration";
-            Text = "Registration";
+            Name = "CurriculumPage";
+            Text = "Calculaton";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CourseRegistration
 {
-    public partial class Calculaton : Form
+    public partial class MyPage : Form
     {
-        public Calculaton()
+        public MyPage()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace CourseRegistration
 {
-    partial class Calculaton
+    partial class MyPage
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("맑은 고딕", 36F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label1.Location = new Point(225, 261);
+            label1.Location = new Point(240, 263);
             label1.Name = "label1";
-            label1.Size = new Size(393, 65);
-            label1.TabIndex = 1;
-            label1.Text = "Calculation Page";
+            label1.Size = new Size(203, 65);
+            label1.TabIndex = 2;
+            label1.Text = "MyPage";
             // 
-            // Calculaton
+            // MyPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(835, 642);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Calculaton";
-            Text = "Calculaton";
+            Name = "MyPage";
+            Text = "Curriculum";
             ResumeLayout(false);
             PerformLayout();
         }

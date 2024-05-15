@@ -18,10 +18,10 @@ namespace CourseRegistration
         {
             Color activeColor = Color.FromArgb(97, 24, 38);
             Color btnColor = Color.FromArgb(107, 34, 48);
-            homeBtn.BackColor = btnColor;
-            registrationBtn.BackColor = btnColor;
-            calBtn.BackColor = btnColor;
-            curBtn.BackColor = btnColor;
+            HomeBtn.BackColor = btnColor;
+            SearchBtn.BackColor = btnColor;
+            CurriculumBtn.BackColor = btnColor;
+            MyPageBtn.BackColor = btnColor;
             settingBtn.BackColor = btnColor;
             button.BackColor = activeColor;
         }
@@ -55,36 +55,36 @@ namespace CourseRegistration
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            ButtonColorReset(homeBtn);
+            ButtonColorReset(HomeBtn);
             this.mainPanel.Controls.Clear();
             Home homePage = new Home() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainPanel.Controls.Add(homePage);
             homePage.Show();
         }
 
-        private void registrationBtn_Click(object sender, EventArgs e)
+        private void SearchBtn_Click(object sender, EventArgs e)
         {
-            ButtonColorReset(registrationBtn);
+            ButtonColorReset(SearchBtn);
             this.mainPanel.Controls.Clear();
-            Registration registrationPage = new Registration() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            SearchPage registrationPage = new SearchPage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainPanel.Controls.Add(registrationPage);
             registrationPage.Show();
         }
 
-        private void calBtn_Click(object sender, EventArgs e)
+        private void CurriculumBtn_Click(object sender, EventArgs e)
         {
-            ButtonColorReset(calBtn);
+            ButtonColorReset(CurriculumBtn);
             this.mainPanel.Controls.Clear();
-            Calculaton calculationPage = new Calculaton() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            CurriculumPage calculationPage = new CurriculumPage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainPanel.Controls.Add(calculationPage);
             calculationPage.Show();
         }
 
-        private void curBtn_Click(object sender, EventArgs e)
+        private void MyPageBtn_Click(object sender, EventArgs e)
         {
-            ButtonColorReset(curBtn);
+            ButtonColorReset(MyPageBtn);
             this.mainPanel.Controls.Clear();
-            Curriculum curriculumPage = new Curriculum() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            MyPage curriculumPage = new MyPage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainPanel.Controls.Add(curriculumPage);
             curriculumPage.Show();
         }
@@ -102,6 +102,5 @@ namespace CourseRegistration
         {
             this.Close();
         }
-
     }
 }
