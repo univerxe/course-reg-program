@@ -43,13 +43,16 @@
             columnHeader6 = new ColumnHeader();
             columnHeader7 = new ColumnHeader();
             groupBox2 = new GroupBox();
+            addBtn = new Button();
             splitContainer1 = new SplitContainer();
+            label10 = new Label();
             label4 = new Label();
             label9 = new Label();
             label5 = new Label();
             label6 = new Label();
             label8 = new Label();
             label7 = new Label();
+            courseNameLabel = new Label();
             GradingLabel = new Label();
             TeamProjLabel = new Label();
             ExamLabel = new Label();
@@ -62,9 +65,6 @@
             columnHeader9 = new ColumnHeader();
             columnHeader10 = new ColumnHeader();
             SearchCmb = new ComboBox();
-            label10 = new Label();
-            courseNameLabel = new Label();
-            addBtn = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -82,7 +82,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("맑은 고딕", 28F, FontStyle.Bold);
+            label1.Font = new Font("Malgun Gothic", 28F, FontStyle.Bold);
             label1.Location = new Point(55, 56);
             label1.Name = "label1";
             label1.Size = new Size(299, 51);
@@ -95,6 +95,7 @@
             SearchText.Name = "SearchText";
             SearchText.Size = new Size(422, 23);
             SearchText.TabIndex = 1;
+            SearchText.TextChanged += SearchText_TextChanged;
             SearchText.KeyUp += SearchText_KeyUp;
             // 
             // SearchBtn
@@ -110,7 +111,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("맑은 고딕", 28F, FontStyle.Bold);
+            label2.Font = new Font("Malgun Gothic", 28F, FontStyle.Bold);
             label2.Location = new Point(706, 110);
             label2.Name = "label2";
             label2.Size = new Size(283, 51);
@@ -120,7 +121,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("맑은 고딕", 28F, FontStyle.Bold);
+            label3.Font = new Font("Malgun Gothic", 28F, FontStyle.Bold);
             label3.Location = new Point(706, 463);
             label3.Name = "label3";
             label3.Size = new Size(355, 51);
@@ -188,6 +189,16 @@
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             // 
+            // addBtn
+            // 
+            addBtn.Location = new Point(6, 257);
+            addBtn.Name = "addBtn";
+            addBtn.Size = new Size(120, 33);
+            addBtn.TabIndex = 7;
+            addBtn.Text = "Add to favorites";
+            addBtn.UseVisualStyleBackColor = true;
+            addBtn.Click += addBtn_Click;
+            // 
             // splitContainer1
             // 
             splitContainer1.Dock = DockStyle.Top;
@@ -218,10 +229,20 @@
             splitContainer1.SplitterDistance = 195;
             splitContainer1.TabIndex = 6;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
+            label10.Location = new Point(12, 9);
+            label10.Name = "label10";
+            label10.Size = new Size(114, 21);
+            label10.TabIndex = 6;
+            label10.Text = "Course Name";
+            // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            label4.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             label4.Location = new Point(12, 40);
             label4.Name = "label4";
             label4.Size = new Size(66, 21);
@@ -231,7 +252,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            label9.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             label9.Location = new Point(12, 195);
             label9.Name = "label9";
             label9.Size = new Size(71, 21);
@@ -241,7 +262,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            label5.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             label5.Location = new Point(12, 71);
             label5.Name = "label5";
             label5.Size = new Size(99, 21);
@@ -251,7 +272,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            label6.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             label6.Location = new Point(12, 102);
             label6.Name = "label6";
             label6.Size = new Size(98, 21);
@@ -261,7 +282,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            label8.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             label8.Location = new Point(12, 165);
             label8.Name = "label8";
             label8.Size = new Size(111, 21);
@@ -271,12 +292,21 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            label7.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             label7.Location = new Point(12, 133);
             label7.Name = "label7";
             label7.Size = new Size(52, 21);
             label7.TabIndex = 3;
             label7.Text = "Exam";
+            // 
+            // courseNameLabel
+            // 
+            courseNameLabel.AutoSize = true;
+            courseNameLabel.Location = new Point(18, 14);
+            courseNameLabel.Name = "courseNameLabel";
+            courseNameLabel.Size = new Size(12, 15);
+            courseNameLabel.TabIndex = 6;
+            courseNameLabel.Text = "-";
             // 
             // GradingLabel
             // 
@@ -376,35 +406,6 @@
             SearchCmb.Name = "SearchCmb";
             SearchCmb.Size = new Size(121, 23);
             SearchCmb.TabIndex = 8;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            label10.Location = new Point(12, 9);
-            label10.Name = "label10";
-            label10.Size = new Size(114, 21);
-            label10.TabIndex = 6;
-            label10.Text = "Course Name";
-            // 
-            // courseNameLabel
-            // 
-            courseNameLabel.AutoSize = true;
-            courseNameLabel.Location = new Point(18, 14);
-            courseNameLabel.Name = "courseNameLabel";
-            courseNameLabel.Size = new Size(12, 15);
-            courseNameLabel.TabIndex = 6;
-            courseNameLabel.Text = "-";
-            // 
-            // addBtn
-            // 
-            addBtn.Location = new Point(6, 257);
-            addBtn.Name = "addBtn";
-            addBtn.Size = new Size(120, 33);
-            addBtn.TabIndex = 7;
-            addBtn.Text = "Add to favorites";
-            addBtn.UseVisualStyleBackColor = true;
-            addBtn.Click += addBtn_Click;
             // 
             // SearchPage
             // 

@@ -14,6 +14,11 @@ namespace CourseRegistration
     public partial class CurriculumPage : Form
     {
         private Dictionary<CheckBox, List<Button>> buttonGroups;
+        public delegate void DelegateMoveToSearchPage();
+        public DelegateMoveToSearchPage? moveToSearchPage;
+
+        public delegate void DelegateSetText(string text);
+        public DelegateSetText? delegateSetText;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -30,6 +35,7 @@ namespace CourseRegistration
             InitializeComponent();
             GroupButtons();
             InitializeDefaultStates();
+            AssignButtonClickEvents();
         }
 
         private void GroupButtons()
@@ -61,13 +67,13 @@ namespace CourseRegistration
 
         private void InitializeDefaultStates()
         {
-            checkBoxAll.Checked = true; 
-            checkBoxAll.CheckedChanged += CheckBoxAll_CheckedChanged; 
+            checkBoxAll.Checked = true;
+            checkBoxAll.CheckedChanged += CheckBoxAll_CheckedChanged;
 
             foreach (CheckBox chk in buttonGroups.Keys)
             {
                 chk.Checked = checkBoxAll.Checked;
-                CheckBox_CheckedChanged(chk, EventArgs.Empty); 
+                CheckBox_CheckedChanged(chk, EventArgs.Empty);
             }
         }
 
@@ -78,8 +84,8 @@ namespace CourseRegistration
                 bool isChecked = chkAll.Checked;
                 foreach (CheckBox chk in buttonGroups.Keys)
                 {
-                    chk.Checked = isChecked; 
-                    CheckBox_CheckedChanged(chk, EventArgs.Empty); 
+                    chk.Checked = isChecked;
+                    CheckBox_CheckedChanged(chk, EventArgs.Empty);
                 }
             }
         }
@@ -90,11 +96,39 @@ namespace CourseRegistration
             {
                 foreach (Button button in buttons)
                 {
-                    button.Visible = checkBox.Checked; 
+                    button.Visible = checkBox.Checked;
                 }
+            }
+        }
+
+        private void g_btn1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AssignButtonClickEvents()
+        {
+            // Loop through each button group
+            foreach (var group in buttonGroups.Values)
+            {
+                // Loop through each button in the group and assign the click event
+                foreach (var button in group)
+                {
+                    button.Click += Button_Click;
+                }
+            }
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            if (clickedButton != null)
+            {
+                string buttonText = clickedButton.Text;
+
+                delegateSetText(buttonText);
+                moveToSearchPage();
             }
         }
     }
 }
-
-
