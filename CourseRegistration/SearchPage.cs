@@ -7,7 +7,12 @@ namespace CourseRegistration
     public partial class SearchPage : Form
     {
         List<Root>? roots = null;
+        
+        public delegate void DelegateAddToFav(int index, string course, string prof, string time, string num, string rate);
+        public DelegateAddToFav? delegateAddToFav;
 
+        public delegate int DelegateGetFirstEmptyCourseButton();
+        public DelegateGetFirstEmptyCourseButton? delegateGetFirstEmptyCourseButton;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -264,7 +269,27 @@ namespace CourseRegistration
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            // TODO
+            if (SearchListView.SelectedIndices.Count == 0)
+            {
+                MessageBox.Show("No selected course!");
+                return;
+            }
+
+            int index = SearchListView.SelectedIndices[0];
+            ListViewItem item = SearchListView.SelectedItems[0];
+            if (index != -1)
+            {
+                Root courseData = roots![index];
+
+                delegateAddToFav!(
+                    delegateGetFirstEmptyCourseButton!(), // index
+                    courseData.name!,
+                    courseData.professor!,
+                    item.SubItems[1].Text,
+                    "10",
+                    courseData.rate!.average.ToString()
+                    );
+            }
         }
     }
 

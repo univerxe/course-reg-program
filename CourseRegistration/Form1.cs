@@ -32,10 +32,14 @@ namespace CourseRegistration
             //Set the Region of the Form
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
+            // Set page delegates
+            homePage.moveToSearchPage = this.MoveToSearchPage;
+            searchPage.delegateAddToFav = homePage.SetCourseButton;
+            searchPage.delegateGetFirstEmptyCourseButton = homePage.GetFirstEmptyCourseButton;
+
             //Set the mainPanel to HomePage
             ButtonColorReset(HomeBtn);
             this.mainPanel.Controls.Clear();
-            homePage.moveToSearchPage = this.MoveToSearchPage;
             this.mainPanel.Controls.Add(homePage);
             homePage.Show();
 

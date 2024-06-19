@@ -19,7 +19,7 @@ namespace CourseRegistration
 
         public class CourseButton
         {
-            private Label course;
+            public Label course;
             private Label profTime;
             private Label numRate;
 
@@ -58,6 +58,23 @@ namespace CourseRegistration
                 this.addBtn.Visible = true;
                 this.delBtn.Visible = false;
             }
+        }
+
+        public void SetCourseButton(int index, string course, string prof, string time, string num, string rate)
+        {
+            buttons[index].AddCourse(course, prof, time, num, rate);
+        }
+
+        public int GetFirstEmptyCourseButton()
+        {
+            int i = 0;
+
+            foreach (CourseButton btn in buttons)
+            {
+                if (btn.course.Text == "") return i;
+                i++;
+            }
+            return -1;
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
