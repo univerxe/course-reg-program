@@ -50,11 +50,12 @@ namespace CourseRegistration
             pictureBox1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pictureBox1.Width, pictureBox1.Height, border, border));
             pictureBox2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pictureBox2.Width, pictureBox2.Height, border, border));
 
-            getData();
-
+            getCreditsInfo();
+            getElectLectures();
+            getReqLectures();
         }
 
-        private async void getData()
+        private async void getCreditsInfo()
         {
             try
             {
@@ -103,7 +104,96 @@ namespace CourseRegistration
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
 
+        private async void getReqLectures()
+        {
+            try
+            {
+                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/courses";
+
+                // Create an HttpClient instance
+                using (HttpClient client = new HttpClient())
+                {
+                    // Send a GET request asynchronously
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                    // Check if the response is successful
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Read the content asynchronously
+                        string json = await response.Content.ReadAsStringAsync();
+
+                        // Deserialize JSON to List<Lecture>
+                        var lectures = JsonSerializer.Deserialize<List<Lecture>>(json);
+
+                        // Assuming req_major_list is your CheckedListBox
+                        req_major_list.Items.Clear(); // Clear existing items (if needed)
+
+                        foreach (var lecture in lectures)
+                        {
+                            // Assuming lecture.course_id is the text you want to display
+                            req_major_list.Items.Add(lecture.course_id, false); // Add item with unchecked state
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to get data from the API: " + response.ReasonPhrase,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async void getElectLectures()
+        {
+            try
+            {
+                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/courses";
+
+                // Create an HttpClient instance
+                using (HttpClient client = new HttpClient())
+                {
+                    // Send a GET request asynchronously
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                    // Check if the response is successful
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Read the content asynchronously
+                        string json = await response.Content.ReadAsStringAsync();
+
+                        // Deserialize JSON to List<Lecture>
+                        var lectures = JsonSerializer.Deserialize<List<Lecture>>(json);
+
+                        // Assuming req_major_list is your CheckedListBox
+                        elective_lec_list.Items.Clear(); // Clear existing items (if needed)
+
+                        foreach (var lecture in lectures)
+                        {
+                            // Assuming lecture.course_id is the text you want to display
+                            elective_lec_list.Items.Add(lecture.course_id, false); // Add item with unchecked state
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to get data from the API: " + response.ReasonPhrase,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
 }
 
