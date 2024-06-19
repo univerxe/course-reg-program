@@ -156,5 +156,10 @@ namespace CourseRegistration
         {
             buttons[8].DeleteCourse();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

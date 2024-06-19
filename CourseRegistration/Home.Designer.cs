@@ -89,6 +89,28 @@
             courseName9 = new Label();
             courseBtn9 = new Button();
             panel2 = new Panel();
+            panel21 = new Panel();
+            label20 = new Label();
+            panel20 = new Panel();
+            label19 = new Label();
+            panel19 = new Panel();
+            label18 = new Label();
+            panel18 = new Panel();
+            label17 = new Label();
+            panel17 = new Panel();
+            label16 = new Label();
+            panel16 = new Panel();
+            label15 = new Label();
+            panel15 = new Panel();
+            label14 = new Label();
+            panel14 = new Panel();
+            label13 = new Label();
+            panel13 = new Panel();
+            label12 = new Label();
+            panel12 = new Panel();
+            label11 = new Label();
+            panel8 = new Panel();
+            label10 = new Label();
             panel7 = new Panel();
             label6 = new Label();
             panel4 = new Panel();
@@ -102,31 +124,9 @@
             panel5 = new Panel();
             label4 = new Label();
             panel9 = new Panel();
+            label7 = new Label();
             panel3 = new Panel();
             label2 = new Label();
-            label7 = new Label();
-            panel8 = new Panel();
-            label10 = new Label();
-            panel12 = new Panel();
-            label11 = new Label();
-            panel13 = new Panel();
-            label12 = new Label();
-            panel14 = new Panel();
-            label13 = new Label();
-            panel15 = new Panel();
-            label14 = new Label();
-            panel16 = new Panel();
-            label15 = new Label();
-            panel17 = new Panel();
-            label16 = new Label();
-            panel18 = new Panel();
-            label17 = new Label();
-            panel19 = new Panel();
-            label18 = new Label();
-            panel20 = new Panel();
-            label19 = new Label();
-            panel21 = new Panel();
-            label20 = new Label();
             course1.SuspendLayout();
             course2.SuspendLayout();
             course3.SuspendLayout();
@@ -137,6 +137,17 @@
             course8.SuspendLayout();
             course9.SuspendLayout();
             panel2.SuspendLayout();
+            panel21.SuspendLayout();
+            panel20.SuspendLayout();
+            panel19.SuspendLayout();
+            panel18.SuspendLayout();
+            panel17.SuspendLayout();
+            panel16.SuspendLayout();
+            panel15.SuspendLayout();
+            panel14.SuspendLayout();
+            panel13.SuspendLayout();
+            panel12.SuspendLayout();
+            panel8.SuspendLayout();
             panel7.SuspendLayout();
             panel4.SuspendLayout();
             panel11.SuspendLayout();
@@ -145,23 +156,12 @@
             panel5.SuspendLayout();
             panel9.SuspendLayout();
             panel3.SuspendLayout();
-            panel8.SuspendLayout();
-            panel12.SuspendLayout();
-            panel13.SuspendLayout();
-            panel14.SuspendLayout();
-            panel15.SuspendLayout();
-            panel16.SuspendLayout();
-            panel17.SuspendLayout();
-            panel18.SuspendLayout();
-            panel19.SuspendLayout();
-            panel20.SuspendLayout();
-            panel21.SuspendLayout();
             SuspendLayout();
             // 
             // favorites
             // 
             favorites.AutoSize = true;
-            favorites.Font = new Font("맑은 고딕", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            favorites.Font = new Font("Malgun Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
             favorites.Location = new Point(68, 78);
             favorites.Name = "favorites";
             favorites.Size = new Size(149, 45);
@@ -171,7 +171,7 @@
             // timeTable
             // 
             timeTable.AutoSize = true;
-            timeTable.Font = new Font("맑은 고딕", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            timeTable.Font = new Font("Malgun Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
             timeTable.Location = new Point(838, 78);
             timeTable.Name = "timeTable";
             timeTable.Size = new Size(168, 45);
@@ -181,7 +181,7 @@
             // courses
             // 
             courses.AutoSize = true;
-            courses.Font = new Font("맑은 고딕", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courses.Font = new Font("Malgun Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courses.Location = new Point(68, 581);
             courses.Name = "courses";
             courses.Size = new Size(134, 45);
@@ -192,7 +192,7 @@
             // 
             panel1.BackColor = Color.LightGray;
             panel1.ForeColor = SystemColors.ControlText;
-            panel1.Location = new Point(76, 651);
+            panel1.Location = new Point(76, 655);
             panel1.Name = "panel1";
             panel1.Size = new Size(1146, 244);
             panel1.TabIndex = 4;
@@ -232,7 +232,7 @@
             numRate1.AutoSize = true;
             numRate1.Location = new Point(3, 52);
             numRate1.Name = "numRate1";
-            numRate1.Size = new Size(62, 15);
+            numRate1.Size = new Size(61, 15);
             numRate1.TabIndex = 4;
             numRate1.Text = "numRate1";
             // 
@@ -241,14 +241,14 @@
             profNum1.AutoSize = true;
             profNum1.Location = new Point(3, 28);
             profNum1.Name = "profNum1";
-            profNum1.Size = new Size(62, 15);
+            profNum1.Size = new Size(61, 15);
             profNum1.TabIndex = 3;
             profNum1.Text = "profTime1";
             // 
             // courseName1
             // 
             courseName1.AutoSize = true;
-            courseName1.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseName1.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseName1.Location = new Point(3, 3);
             courseName1.Name = "courseName1";
             courseName1.Size = new Size(111, 21);
@@ -268,7 +268,7 @@
             courseBtn1.BackColor = Color.FromArgb(255, 192, 128);
             courseBtn1.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             courseBtn1.FlatStyle = FlatStyle.Flat;
-            courseBtn1.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseBtn1.Font = new Font("Malgun Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseBtn1.Image = (Image)resources.GetObject("courseBtn1.Image");
             courseBtn1.Location = new Point(83, 33);
             courseBtn1.Name = "courseBtn1";
@@ -311,7 +311,7 @@
             numRate2.AutoSize = true;
             numRate2.Location = new Point(3, 52);
             numRate2.Name = "numRate2";
-            numRate2.Size = new Size(62, 15);
+            numRate2.Size = new Size(61, 15);
             numRate2.TabIndex = 5;
             numRate2.Text = "numRate2";
             // 
@@ -320,14 +320,14 @@
             profNum2.AutoSize = true;
             profNum2.Location = new Point(3, 28);
             profNum2.Name = "profNum2";
-            profNum2.Size = new Size(62, 15);
+            profNum2.Size = new Size(61, 15);
             profNum2.TabIndex = 4;
             profNum2.Text = "profTime2";
             // 
             // courseName2
             // 
             courseName2.AutoSize = true;
-            courseName2.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseName2.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseName2.Location = new Point(3, 3);
             courseName2.Name = "courseName2";
             courseName2.Size = new Size(111, 21);
@@ -339,7 +339,7 @@
             courseBtn2.BackColor = Color.FromArgb(255, 192, 128);
             courseBtn2.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             courseBtn2.FlatStyle = FlatStyle.Flat;
-            courseBtn2.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseBtn2.Font = new Font("Malgun Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseBtn2.Image = (Image)resources.GetObject("courseBtn2.Image");
             courseBtn2.Location = new Point(83, 33);
             courseBtn2.Name = "courseBtn2";
@@ -382,7 +382,7 @@
             numRate3.AutoSize = true;
             numRate3.Location = new Point(3, 52);
             numRate3.Name = "numRate3";
-            numRate3.Size = new Size(62, 15);
+            numRate3.Size = new Size(61, 15);
             numRate3.TabIndex = 6;
             numRate3.Text = "numRate3";
             // 
@@ -391,14 +391,14 @@
             profNum3.AutoSize = true;
             profNum3.Location = new Point(3, 28);
             profNum3.Name = "profNum3";
-            profNum3.Size = new Size(62, 15);
+            profNum3.Size = new Size(61, 15);
             profNum3.TabIndex = 5;
             profNum3.Text = "profTime3";
             // 
             // courseName3
             // 
             courseName3.AutoSize = true;
-            courseName3.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseName3.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseName3.Location = new Point(3, 3);
             courseName3.Name = "courseName3";
             courseName3.Size = new Size(111, 21);
@@ -410,7 +410,7 @@
             courseBtn3.BackColor = Color.FromArgb(255, 192, 128);
             courseBtn3.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             courseBtn3.FlatStyle = FlatStyle.Flat;
-            courseBtn3.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseBtn3.Font = new Font("Malgun Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseBtn3.Image = (Image)resources.GetObject("courseBtn3.Image");
             courseBtn3.Location = new Point(83, 33);
             courseBtn3.Name = "courseBtn3";
@@ -453,7 +453,7 @@
             numRate4.AutoSize = true;
             numRate4.Location = new Point(3, 52);
             numRate4.Name = "numRate4";
-            numRate4.Size = new Size(62, 15);
+            numRate4.Size = new Size(61, 15);
             numRate4.TabIndex = 12;
             numRate4.Text = "numRate4";
             // 
@@ -462,14 +462,14 @@
             profNum4.AutoSize = true;
             profNum4.Location = new Point(3, 28);
             profNum4.Name = "profNum4";
-            profNum4.Size = new Size(62, 15);
+            profNum4.Size = new Size(61, 15);
             profNum4.TabIndex = 5;
             profNum4.Text = "profTime4";
             // 
             // courseName4
             // 
             courseName4.AutoSize = true;
-            courseName4.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseName4.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseName4.Location = new Point(3, 3);
             courseName4.Name = "courseName4";
             courseName4.Size = new Size(111, 21);
@@ -481,7 +481,7 @@
             courseBtn4.BackColor = Color.FromArgb(255, 192, 128);
             courseBtn4.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             courseBtn4.FlatStyle = FlatStyle.Flat;
-            courseBtn4.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseBtn4.Font = new Font("Malgun Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseBtn4.Image = (Image)resources.GetObject("courseBtn4.Image");
             courseBtn4.Location = new Point(83, 33);
             courseBtn4.Name = "courseBtn4";
@@ -524,7 +524,7 @@
             numRate5.AutoSize = true;
             numRate5.Location = new Point(3, 52);
             numRate5.Name = "numRate5";
-            numRate5.Size = new Size(62, 15);
+            numRate5.Size = new Size(61, 15);
             numRate5.TabIndex = 13;
             numRate5.Text = "numRate5";
             // 
@@ -533,14 +533,14 @@
             profNum5.AutoSize = true;
             profNum5.Location = new Point(3, 28);
             profNum5.Name = "profNum5";
-            profNum5.Size = new Size(62, 15);
+            profNum5.Size = new Size(61, 15);
             profNum5.TabIndex = 6;
             profNum5.Text = "profTime5";
             // 
             // courseName5
             // 
             courseName5.AutoSize = true;
-            courseName5.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseName5.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseName5.Location = new Point(3, 3);
             courseName5.Name = "courseName5";
             courseName5.Size = new Size(111, 21);
@@ -552,7 +552,7 @@
             courseBtn5.BackColor = Color.FromArgb(255, 192, 128);
             courseBtn5.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             courseBtn5.FlatStyle = FlatStyle.Flat;
-            courseBtn5.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseBtn5.Font = new Font("Malgun Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseBtn5.Image = (Image)resources.GetObject("courseBtn5.Image");
             courseBtn5.Location = new Point(83, 33);
             courseBtn5.Name = "courseBtn5";
@@ -595,7 +595,7 @@
             numRate6.AutoSize = true;
             numRate6.Location = new Point(3, 52);
             numRate6.Name = "numRate6";
-            numRate6.Size = new Size(62, 15);
+            numRate6.Size = new Size(61, 15);
             numRate6.TabIndex = 14;
             numRate6.Text = "numRate6";
             // 
@@ -604,14 +604,14 @@
             profNum6.AutoSize = true;
             profNum6.Location = new Point(3, 28);
             profNum6.Name = "profNum6";
-            profNum6.Size = new Size(62, 15);
+            profNum6.Size = new Size(61, 15);
             profNum6.TabIndex = 13;
             profNum6.Text = "profTime6";
             // 
             // courseName6
             // 
             courseName6.AutoSize = true;
-            courseName6.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseName6.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseName6.Location = new Point(3, 3);
             courseName6.Name = "courseName6";
             courseName6.Size = new Size(111, 21);
@@ -623,7 +623,7 @@
             courseBtn6.BackColor = Color.FromArgb(255, 192, 128);
             courseBtn6.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             courseBtn6.FlatStyle = FlatStyle.Flat;
-            courseBtn6.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseBtn6.Font = new Font("Malgun Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseBtn6.Image = (Image)resources.GetObject("courseBtn6.Image");
             courseBtn6.Location = new Point(83, 33);
             courseBtn6.Name = "courseBtn6";
@@ -666,7 +666,7 @@
             numRate7.AutoSize = true;
             numRate7.Location = new Point(3, 52);
             numRate7.Name = "numRate7";
-            numRate7.Size = new Size(62, 15);
+            numRate7.Size = new Size(61, 15);
             numRate7.TabIndex = 12;
             numRate7.Text = "numRate7";
             // 
@@ -675,14 +675,14 @@
             profNum7.AutoSize = true;
             profNum7.Location = new Point(3, 28);
             profNum7.Name = "profNum7";
-            profNum7.Size = new Size(62, 15);
+            profNum7.Size = new Size(61, 15);
             profNum7.TabIndex = 14;
             profNum7.Text = "profTime7";
             // 
             // courseName7
             // 
             courseName7.AutoSize = true;
-            courseName7.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseName7.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseName7.Location = new Point(3, 3);
             courseName7.Name = "courseName7";
             courseName7.Size = new Size(111, 21);
@@ -694,7 +694,7 @@
             courseBtn7.BackColor = Color.FromArgb(255, 192, 128);
             courseBtn7.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             courseBtn7.FlatStyle = FlatStyle.Flat;
-            courseBtn7.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseBtn7.Font = new Font("Malgun Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseBtn7.Image = (Image)resources.GetObject("courseBtn7.Image");
             courseBtn7.Location = new Point(83, 33);
             courseBtn7.Name = "courseBtn7";
@@ -737,7 +737,7 @@
             numRate8.AutoSize = true;
             numRate8.Location = new Point(3, 52);
             numRate8.Name = "numRate8";
-            numRate8.Size = new Size(62, 15);
+            numRate8.Size = new Size(61, 15);
             numRate8.TabIndex = 15;
             numRate8.Text = "numRate8";
             // 
@@ -746,14 +746,14 @@
             profNum8.AutoSize = true;
             profNum8.Location = new Point(3, 28);
             profNum8.Name = "profNum8";
-            profNum8.Size = new Size(62, 15);
+            profNum8.Size = new Size(61, 15);
             profNum8.TabIndex = 15;
             profNum8.Text = "profTime8";
             // 
             // courseName8
             // 
             courseName8.AutoSize = true;
-            courseName8.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseName8.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseName8.Location = new Point(3, 3);
             courseName8.Name = "courseName8";
             courseName8.Size = new Size(111, 21);
@@ -765,7 +765,7 @@
             courseBtn8.BackColor = Color.FromArgb(255, 192, 128);
             courseBtn8.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             courseBtn8.FlatStyle = FlatStyle.Flat;
-            courseBtn8.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseBtn8.Font = new Font("Malgun Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseBtn8.Image = (Image)resources.GetObject("courseBtn8.Image");
             courseBtn8.Location = new Point(83, 33);
             courseBtn8.Name = "courseBtn8";
@@ -808,7 +808,7 @@
             numRate9.AutoSize = true;
             numRate9.Location = new Point(3, 52);
             numRate9.Name = "numRate9";
-            numRate9.Size = new Size(62, 15);
+            numRate9.Size = new Size(61, 15);
             numRate9.TabIndex = 16;
             numRate9.Text = "numRate9";
             // 
@@ -817,14 +817,14 @@
             profNum9.AutoSize = true;
             profNum9.Location = new Point(3, 28);
             profNum9.Name = "profNum9";
-            profNum9.Size = new Size(62, 15);
+            profNum9.Size = new Size(61, 15);
             profNum9.TabIndex = 7;
             profNum9.Text = "profTime9";
             // 
             // courseName9
             // 
             courseName9.AutoSize = true;
-            courseName9.Font = new Font("맑은 고딕", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseName9.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseName9.Location = new Point(3, 3);
             courseName9.Name = "courseName9";
             courseName9.Size = new Size(111, 21);
@@ -836,7 +836,7 @@
             courseBtn9.BackColor = Color.FromArgb(255, 192, 128);
             courseBtn9.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             courseBtn9.FlatStyle = FlatStyle.Flat;
-            courseBtn9.Font = new Font("맑은 고딕", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            courseBtn9.Font = new Font("Malgun Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
             courseBtn9.Image = (Image)resources.GetObject("courseBtn9.Image");
             courseBtn9.Location = new Point(83, 33);
             courseBtn9.Name = "courseBtn9";
@@ -871,6 +871,215 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(385, 454);
             panel2.TabIndex = 11;
+            // 
+            // panel21
+            // 
+            panel21.BorderStyle = BorderStyle.FixedSingle;
+            panel21.Controls.Add(label20);
+            panel21.ForeColor = Color.Black;
+            panel21.Location = new Point(0, 416);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(20, 36);
+            panel21.TabIndex = 23;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(2, -1);
+            label20.Name = "label20";
+            label20.Size = new Size(13, 15);
+            label20.TabIndex = 0;
+            label20.Text = "7";
+            // 
+            // panel20
+            // 
+            panel20.BorderStyle = BorderStyle.FixedSingle;
+            panel20.Controls.Add(label19);
+            panel20.ForeColor = Color.Black;
+            panel20.Location = new Point(0, 380);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(20, 36);
+            panel20.TabIndex = 22;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(2, -1);
+            label19.Name = "label19";
+            label19.Size = new Size(13, 15);
+            label19.TabIndex = 0;
+            label19.Text = "6";
+            // 
+            // panel19
+            // 
+            panel19.BorderStyle = BorderStyle.FixedSingle;
+            panel19.Controls.Add(label18);
+            panel19.ForeColor = Color.Black;
+            panel19.Location = new Point(0, 344);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(20, 36);
+            panel19.TabIndex = 21;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(2, -1);
+            label18.Name = "label18";
+            label18.Size = new Size(13, 15);
+            label18.TabIndex = 0;
+            label18.Text = "5";
+            // 
+            // panel18
+            // 
+            panel18.BorderStyle = BorderStyle.FixedSingle;
+            panel18.Controls.Add(label17);
+            panel18.ForeColor = Color.Black;
+            panel18.Location = new Point(0, 311);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(20, 36);
+            panel18.TabIndex = 20;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(2, -1);
+            label17.Name = "label17";
+            label17.Size = new Size(13, 15);
+            label17.TabIndex = 0;
+            label17.Text = "4";
+            // 
+            // panel17
+            // 
+            panel17.BorderStyle = BorderStyle.FixedSingle;
+            panel17.Controls.Add(label16);
+            panel17.ForeColor = Color.Black;
+            panel17.Location = new Point(0, 275);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(20, 36);
+            panel17.TabIndex = 19;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(2, -1);
+            label16.Name = "label16";
+            label16.Size = new Size(13, 15);
+            label16.TabIndex = 0;
+            label16.Text = "3";
+            // 
+            // panel16
+            // 
+            panel16.BorderStyle = BorderStyle.FixedSingle;
+            panel16.Controls.Add(label15);
+            panel16.ForeColor = Color.Black;
+            panel16.Location = new Point(0, 239);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(20, 36);
+            panel16.TabIndex = 18;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(2, -1);
+            label15.Name = "label15";
+            label15.Size = new Size(13, 15);
+            label15.TabIndex = 0;
+            label15.Text = "2";
+            // 
+            // panel15
+            // 
+            panel15.BorderStyle = BorderStyle.FixedSingle;
+            panel15.Controls.Add(label14);
+            panel15.ForeColor = Color.Black;
+            panel15.Location = new Point(0, 204);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(20, 36);
+            panel15.TabIndex = 17;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(2, -1);
+            label14.Name = "label14";
+            label14.Size = new Size(13, 15);
+            label14.TabIndex = 0;
+            label14.Text = "1";
+            // 
+            // panel14
+            // 
+            panel14.BorderStyle = BorderStyle.FixedSingle;
+            panel14.Controls.Add(label13);
+            panel14.ForeColor = Color.Black;
+            panel14.Location = new Point(0, 170);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(20, 36);
+            panel14.TabIndex = 16;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(-1, -1);
+            label13.Name = "label13";
+            label13.Size = new Size(19, 15);
+            label13.TabIndex = 0;
+            label13.Text = "12";
+            // 
+            // panel13
+            // 
+            panel13.BorderStyle = BorderStyle.FixedSingle;
+            panel13.Controls.Add(label12);
+            panel13.ForeColor = Color.Black;
+            panel13.Location = new Point(0, 134);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(20, 36);
+            panel13.TabIndex = 15;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(-1, -1);
+            label12.Name = "label12";
+            label12.Size = new Size(19, 15);
+            label12.TabIndex = 0;
+            label12.Text = "11";
+            // 
+            // panel12
+            // 
+            panel12.BorderStyle = BorderStyle.FixedSingle;
+            panel12.Controls.Add(label11);
+            panel12.ForeColor = Color.Black;
+            panel12.Location = new Point(0, 98);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(20, 36);
+            panel12.TabIndex = 14;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(-1, -1);
+            label11.Name = "label11";
+            label11.Size = new Size(19, 15);
+            label11.TabIndex = 0;
+            label11.Text = "10";
+            // 
+            // panel8
+            // 
+            panel8.BorderStyle = BorderStyle.FixedSingle;
+            panel8.Controls.Add(label10);
+            panel8.ForeColor = Color.Black;
+            panel8.Location = new Point(0, 62);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(20, 36);
+            panel8.TabIndex = 13;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(2, -1);
+            label10.Name = "label10";
+            label10.Size = new Size(13, 15);
+            label10.TabIndex = 0;
+            label10.Text = "9";
             // 
             // panel7
             // 
@@ -996,6 +1205,15 @@
             panel9.Size = new Size(20, 36);
             panel9.TabIndex = 5;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(2, -1);
+            label7.Name = "label7";
+            label7.Size = new Size(13, 15);
+            label7.TabIndex = 0;
+            label7.Text = "8";
+            // 
             // panel3
             // 
             panel3.BorderStyle = BorderStyle.FixedSingle;
@@ -1014,224 +1232,6 @@
             label2.Size = new Size(19, 15);
             label2.TabIndex = 0;
             label2.Text = "토";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(2, -1);
-            label7.Name = "label7";
-            label7.Size = new Size(14, 15);
-            label7.TabIndex = 0;
-            label7.Text = "8";
-            // 
-            // panel8
-            // 
-            panel8.BorderStyle = BorderStyle.FixedSingle;
-            panel8.Controls.Add(label10);
-            panel8.ForeColor = Color.Black;
-            panel8.Location = new Point(0, 62);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(20, 36);
-            panel8.TabIndex = 13;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(2, -1);
-            label10.Name = "label10";
-            label10.Size = new Size(14, 15);
-            label10.TabIndex = 0;
-            label10.Text = "9";
-            // 
-            // panel12
-            // 
-            panel12.BorderStyle = BorderStyle.FixedSingle;
-            panel12.Controls.Add(label11);
-            panel12.ForeColor = Color.Black;
-            panel12.Location = new Point(0, 98);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(20, 36);
-            panel12.TabIndex = 14;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(-1, -1);
-            label11.Name = "label11";
-            label11.Size = new Size(21, 15);
-            label11.TabIndex = 0;
-            label11.Text = "10";
-            // 
-            // panel13
-            // 
-            panel13.BorderStyle = BorderStyle.FixedSingle;
-            panel13.Controls.Add(label12);
-            panel13.ForeColor = Color.Black;
-            panel13.Location = new Point(0, 134);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(20, 36);
-            panel13.TabIndex = 15;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(-1, -1);
-            label12.Name = "label12";
-            label12.Size = new Size(21, 15);
-            label12.TabIndex = 0;
-            label12.Text = "11";
-            // 
-            // panel14
-            // 
-            panel14.BorderStyle = BorderStyle.FixedSingle;
-            panel14.Controls.Add(label13);
-            panel14.ForeColor = Color.Black;
-            panel14.Location = new Point(0, 170);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(20, 36);
-            panel14.TabIndex = 16;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(-1, -1);
-            label13.Name = "label13";
-            label13.Size = new Size(21, 15);
-            label13.TabIndex = 0;
-            label13.Text = "12";
-            // 
-            // panel15
-            // 
-            panel15.BorderStyle = BorderStyle.FixedSingle;
-            panel15.Controls.Add(label14);
-            panel15.ForeColor = Color.Black;
-            panel15.Location = new Point(0, 204);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(20, 36);
-            panel15.TabIndex = 17;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(2, -1);
-            label14.Name = "label14";
-            label14.Size = new Size(14, 15);
-            label14.TabIndex = 0;
-            label14.Text = "1";
-            // 
-            // panel16
-            // 
-            panel16.BorderStyle = BorderStyle.FixedSingle;
-            panel16.Controls.Add(label15);
-            panel16.ForeColor = Color.Black;
-            panel16.Location = new Point(0, 239);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(20, 36);
-            panel16.TabIndex = 18;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(2, -1);
-            label15.Name = "label15";
-            label15.Size = new Size(14, 15);
-            label15.TabIndex = 0;
-            label15.Text = "2";
-            // 
-            // panel17
-            // 
-            panel17.BorderStyle = BorderStyle.FixedSingle;
-            panel17.Controls.Add(label16);
-            panel17.ForeColor = Color.Black;
-            panel17.Location = new Point(0, 275);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(20, 36);
-            panel17.TabIndex = 19;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Location = new Point(2, -1);
-            label16.Name = "label16";
-            label16.Size = new Size(14, 15);
-            label16.TabIndex = 0;
-            label16.Text = "3";
-            // 
-            // panel18
-            // 
-            panel18.BorderStyle = BorderStyle.FixedSingle;
-            panel18.Controls.Add(label17);
-            panel18.ForeColor = Color.Black;
-            panel18.Location = new Point(0, 311);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(20, 36);
-            panel18.TabIndex = 20;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Location = new Point(2, -1);
-            label17.Name = "label17";
-            label17.Size = new Size(14, 15);
-            label17.TabIndex = 0;
-            label17.Text = "4";
-            // 
-            // panel19
-            // 
-            panel19.BorderStyle = BorderStyle.FixedSingle;
-            panel19.Controls.Add(label18);
-            panel19.ForeColor = Color.Black;
-            panel19.Location = new Point(0, 344);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(20, 36);
-            panel19.TabIndex = 21;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Location = new Point(2, -1);
-            label18.Name = "label18";
-            label18.Size = new Size(14, 15);
-            label18.TabIndex = 0;
-            label18.Text = "5";
-            // 
-            // panel20
-            // 
-            panel20.BorderStyle = BorderStyle.FixedSingle;
-            panel20.Controls.Add(label19);
-            panel20.ForeColor = Color.Black;
-            panel20.Location = new Point(0, 380);
-            panel20.Name = "panel20";
-            panel20.Size = new Size(20, 36);
-            panel20.TabIndex = 22;
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Location = new Point(2, -1);
-            label19.Name = "label19";
-            label19.Size = new Size(14, 15);
-            label19.TabIndex = 0;
-            label19.Text = "6";
-            // 
-            // panel21
-            // 
-            panel21.BorderStyle = BorderStyle.FixedSingle;
-            panel21.Controls.Add(label20);
-            panel21.ForeColor = Color.Black;
-            panel21.Location = new Point(0, 416);
-            panel21.Name = "panel21";
-            panel21.Size = new Size(20, 36);
-            panel21.TabIndex = 23;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Location = new Point(2, -1);
-            label20.Name = "label20";
-            label20.Size = new Size(14, 15);
-            label20.TabIndex = 0;
-            label20.Text = "7";
             // 
             // Home
             // 
@@ -1275,6 +1275,28 @@
             course9.ResumeLayout(false);
             course9.PerformLayout();
             panel2.ResumeLayout(false);
+            panel21.ResumeLayout(false);
+            panel21.PerformLayout();
+            panel20.ResumeLayout(false);
+            panel20.PerformLayout();
+            panel19.ResumeLayout(false);
+            panel19.PerformLayout();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
+            panel17.ResumeLayout(false);
+            panel17.PerformLayout();
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
             panel4.ResumeLayout(false);
@@ -1291,28 +1313,6 @@
             panel9.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel12.ResumeLayout(false);
-            panel12.PerformLayout();
-            panel13.ResumeLayout(false);
-            panel13.PerformLayout();
-            panel14.ResumeLayout(false);
-            panel14.PerformLayout();
-            panel15.ResumeLayout(false);
-            panel15.PerformLayout();
-            panel16.ResumeLayout(false);
-            panel16.PerformLayout();
-            panel17.ResumeLayout(false);
-            panel17.PerformLayout();
-            panel18.ResumeLayout(false);
-            panel18.PerformLayout();
-            panel19.ResumeLayout(false);
-            panel19.PerformLayout();
-            panel20.ResumeLayout(false);
-            panel20.PerformLayout();
-            panel21.ResumeLayout(false);
-            panel21.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
