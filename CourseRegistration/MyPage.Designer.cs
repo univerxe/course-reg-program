@@ -31,10 +31,10 @@
             favorites = new Label();
             main_panel = new Panel();
             panel7 = new Panel();
-            label3 = new Label();
-            label2 = new Label();
+            prof_email = new Label();
+            prof_name = new Label();
             label1 = new Label();
-            pictureBox2 = new PictureBox();
+            prof_img = new PictureBox();
             panel6 = new Panel();
             req_major_list = new CheckedListBox();
             txtOutput = new Label();
@@ -42,9 +42,9 @@
             elective_lec_list = new CheckedListBox();
             label8 = new Label();
             panel5 = new Panel();
-            label7 = new Label();
+            average_grade = new Label();
             label6 = new Label();
-            label5 = new Label();
+            credits_sum = new Label();
             label4 = new Label();
             panel3 = new Panel();
             credits_list = new ListView();
@@ -57,9 +57,9 @@
             label11 = new Label();
             student_major_credits = new Label();
             student_credits = new Label();
-            student_rating_num = new Label();
             student_rating = new Label();
-            student_req_credits = new Label();
+            label98 = new Label();
+            student_elec_credits = new Label();
             label99 = new Label();
             label100 = new Label();
             student_year = new Label();
@@ -68,24 +68,24 @@
             student_id = new Label();
             student_name = new Label();
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
+            student_img = new PictureBox();
             main_label = new Label();
             main_panel.SuspendLayout();
             panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)prof_img).BeginInit();
             panel6.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)student_img).BeginInit();
             SuspendLayout();
             // 
             // favorites
             // 
             favorites.AutoSize = true;
-            favorites.Font = new Font("Malgun Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            favorites.Font = new Font("맑은 고딕", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
             favorites.Location = new Point(33, 34);
             favorites.Name = "favorites";
             favorites.Size = new Size(0, 45);
@@ -111,36 +111,36 @@
             // panel7
             // 
             panel7.BackColor = Color.FromArgb(87, 33, 43);
-            panel7.Controls.Add(label3);
-            panel7.Controls.Add(label2);
+            panel7.Controls.Add(prof_email);
+            panel7.Controls.Add(prof_name);
             panel7.Controls.Add(label1);
-            panel7.Controls.Add(pictureBox2);
+            panel7.Controls.Add(prof_img);
             panel7.Location = new Point(943, 599);
             panel7.Name = "panel7";
             panel7.Size = new Size(229, 244);
             panel7.TabIndex = 2;
             // 
-            // label3
+            // prof_email
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Agency FB", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(57, 215);
-            label3.Name = "label3";
-            label3.Size = new Size(114, 24);
-            label3.TabIndex = 10;
-            label3.Text = "eglee96@kw.ac.kr\n";
+            prof_email.AutoSize = true;
+            prof_email.Font = new Font("Agency FB", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            prof_email.ForeColor = Color.White;
+            prof_email.Location = new Point(57, 215);
+            prof_email.Name = "prof_email";
+            prof_email.Size = new Size(114, 24);
+            prof_email.TabIndex = 10;
+            prof_email.Text = "eglee96@kw.ac.kr\n";
             // 
-            // label2
+            // prof_name
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Agency FB", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(73, 184);
-            label2.Name = "label2";
-            label2.Size = new Size(81, 34);
-            label2.TabIndex = 11;
-            label2.Text = "이윤구";
+            prof_name.AutoSize = true;
+            prof_name.Font = new Font("Agency FB", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            prof_name.ForeColor = Color.White;
+            prof_name.Location = new Point(73, 184);
+            prof_name.Name = "prof_name";
+            prof_name.Size = new Size(81, 34);
+            prof_name.TabIndex = 11;
+            prof_name.Text = "이윤구";
             // 
             // label1
             // 
@@ -153,15 +153,14 @@
             label1.TabIndex = 10;
             label1.Text = "지도교수";
             // 
-            // pictureBox2
+            // prof_img
             // 
-            pictureBox2.Image = Properties.Resources.photo_230417;
-            pictureBox2.Location = new Point(57, 53);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(112, 128);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
+            prof_img.Location = new Point(57, 53);
+            prof_img.Name = "prof_img";
+            prof_img.Size = new Size(112, 128);
+            prof_img.SizeMode = PictureBoxSizeMode.StretchImage;
+            prof_img.TabIndex = 1;
+            prof_img.TabStop = false;
             // 
             // panel6
             // 
@@ -179,7 +178,7 @@
             req_major_list.BorderStyle = BorderStyle.None;
             req_major_list.Cursor = Cursors.SizeWE;
             req_major_list.Font = new Font("Agency FB", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            req_major_list.ForeColor = Color.White;
+            req_major_list.ForeColor = Color.Black;
             req_major_list.FormattingEnabled = true;
             req_major_list.HorizontalScrollbar = true;
             req_major_list.ImeMode = ImeMode.Off;
@@ -238,25 +237,25 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(107, 34, 48);
-            panel5.Controls.Add(label7);
+            panel5.Controls.Add(average_grade);
             panel5.Controls.Add(label6);
-            panel5.Controls.Add(label5);
+            panel5.Controls.Add(credits_sum);
             panel5.Controls.Add(label4);
             panel5.Location = new Point(39, 599);
             panel5.Name = "panel5";
             panel5.Size = new Size(229, 244);
             panel5.TabIndex = 2;
             // 
-            // label7
+            // average_grade
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Agency FB", 27.75F, FontStyle.Bold);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(48, 74);
-            label7.Name = "label7";
-            label7.Size = new Size(132, 44);
-            label7.TabIndex = 12;
-            label7.Text = "4.32/4.5";
+            average_grade.AutoSize = true;
+            average_grade.Font = new Font("Agency FB", 27.75F, FontStyle.Bold);
+            average_grade.ForeColor = Color.White;
+            average_grade.Location = new Point(48, 74);
+            average_grade.Name = "average_grade";
+            average_grade.Size = new Size(132, 44);
+            average_grade.TabIndex = 12;
+            average_grade.Text = "4.32/4.5";
             // 
             // label6
             // 
@@ -269,16 +268,16 @@
             label6.TabIndex = 11;
             label6.Text = "취득점수";
             // 
-            // label5
+            // credits_sum
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Agency FB", 27.75F, FontStyle.Bold);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(60, 166);
-            label5.Name = "label5";
-            label5.Size = new Size(108, 44);
-            label5.TabIndex = 11;
-            label5.Text = "36/133";
+            credits_sum.AutoSize = true;
+            credits_sum.Font = new Font("Agency FB", 27.75F, FontStyle.Bold);
+            credits_sum.ForeColor = Color.White;
+            credits_sum.Location = new Point(60, 166);
+            credits_sum.Name = "credits_sum";
+            credits_sum.Size = new Size(108, 44);
+            credits_sum.TabIndex = 11;
+            credits_sum.Text = "36/133";
             // 
             // label4
             // 
@@ -352,9 +351,9 @@
             panel2.Controls.Add(label11);
             panel2.Controls.Add(student_major_credits);
             panel2.Controls.Add(student_credits);
-            panel2.Controls.Add(student_rating_num);
             panel2.Controls.Add(student_rating);
-            panel2.Controls.Add(student_req_credits);
+            panel2.Controls.Add(label98);
+            panel2.Controls.Add(student_elec_credits);
             panel2.Controls.Add(label99);
             panel2.Controls.Add(label100);
             panel2.Controls.Add(student_year);
@@ -400,38 +399,38 @@
             student_credits.TabIndex = 10;
             student_credits.Text = "54 / 133 ";
             // 
-            // student_rating_num
-            // 
-            student_rating_num.AutoSize = true;
-            student_rating_num.Font = new Font("Agency FB", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            student_rating_num.ForeColor = Color.White;
-            student_rating_num.Location = new Point(330, 201);
-            student_rating_num.Name = "student_rating_num";
-            student_rating_num.Size = new Size(44, 25);
-            student_rating_num.TabIndex = 9;
-            student_rating_num.Text = "7/97";
-            // 
             // student_rating
             // 
             student_rating.AutoSize = true;
-            student_rating.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            student_rating.Font = new Font("Agency FB", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             student_rating.ForeColor = Color.White;
-            student_rating.Location = new Point(323, 181);
+            student_rating.Location = new Point(330, 201);
             student_rating.Name = "student_rating";
-            student_rating.Size = new Size(57, 20);
-            student_rating.TabIndex = 8;
-            student_rating.Text = "학과석차";
+            student_rating.Size = new Size(44, 25);
+            student_rating.TabIndex = 9;
+            student_rating.Text = "7/97";
             // 
-            // student_req_credits
+            // label98
             // 
-            student_req_credits.AutoSize = true;
-            student_req_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            student_req_credits.ForeColor = Color.White;
-            student_req_credits.Location = new Point(102, 210);
-            student_req_credits.Name = "student_req_credits";
-            student_req_credits.Size = new Size(43, 20);
-            student_req_credits.TabIndex = 7;
-            student_req_credits.Text = " 6 / 18 ";
+            label98.AutoSize = true;
+            label98.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label98.ForeColor = Color.White;
+            label98.Location = new Point(323, 181);
+            label98.Name = "label98";
+            label98.Size = new Size(57, 20);
+            label98.TabIndex = 8;
+            label98.Text = "학과석차";
+            // 
+            // student_elec_credits
+            // 
+            student_elec_credits.AutoSize = true;
+            student_elec_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            student_elec_credits.ForeColor = Color.White;
+            student_elec_credits.Location = new Point(102, 210);
+            student_elec_credits.Name = "student_elec_credits";
+            student_elec_credits.Size = new Size(43, 20);
+            student_elec_credits.TabIndex = 7;
+            student_elec_credits.Text = " 6 / 18 ";
             // 
             // label99
             // 
@@ -513,21 +512,20 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(217, 217, 217);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(student_img);
             panel1.Location = new Point(39, 71);
             panel1.Name = "panel1";
             panel1.Size = new Size(229, 244);
             panel1.TabIndex = 1;
             // 
-            // pictureBox1
+            // student_img
             // 
-            pictureBox1.Image = Properties.Resources.photo_2024_06_20_00_00_10;
-            pictureBox1.Location = new Point(25, 16);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(181, 214);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            student_img.Location = new Point(25, 16);
+            student_img.Name = "student_img";
+            student_img.Size = new Size(181, 214);
+            student_img.SizeMode = PictureBoxSizeMode.StretchImage;
+            student_img.TabIndex = 0;
+            student_img.TabStop = false;
             // 
             // main_label
             // 
@@ -553,7 +551,7 @@
             main_panel.PerformLayout();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)prof_img).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             panel4.ResumeLayout(false);
@@ -565,7 +563,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)student_img).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -581,24 +579,24 @@
         private Panel panel3;
         private Panel panel2;
         private Panel panel1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
+        private PictureBox prof_img;
+        private PictureBox student_img;
         private Label student_id;
         private Label student_name;
         private Label student_sec_major;
         private Label student_major;
         private Label label100;
         private Label student_year;
-        private Label student_req_credits;
+        private Label student_elec_credits;
         private Label label99;
-        private Label label2;
+        private Label prof_name;
         private Label label1;
-        private Label student_rating_num;
         private Label student_rating;
-        private Label label3;
-        private Label label7;
+        private Label label98;
+        private Label prof_email;
+        private Label average_grade;
         private Label label6;
-        private Label label5;
+        private Label credits_sum;
         private Label label4;
         private Label label8;
         private Label txtOutput;
