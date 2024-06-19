@@ -41,7 +41,7 @@
             y_btn9 = new Button();
             y_btn13 = new Button();
             y_btn8 = new Button();
-            cb_major = new CheckBox();
+            checkBoxY = new CheckBox();
             y_btn12 = new Button();
             y_btn31 = new Button();
             y_btn24 = new Button();
@@ -53,9 +53,9 @@
             b_btn11 = new Button();
             b_btn12 = new Button();
             b_btn4 = new Button();
-            cb_prac = new CheckBox();
+            checkBoxB = new CheckBox();
             y_btn26 = new Button();
-            cb_bsm = new CheckBox();
+            checkBoxG = new CheckBox();
             b_btn5 = new Button();
             y_btn28 = new Button();
             y_btn17 = new Button();
@@ -68,7 +68,7 @@
             y_btn5 = new Button();
             y_btn7 = new Button();
             y_btn6 = new Button();
-            cb_all = new CheckBox();
+            checkBoxAll = new CheckBox();
             b_btn7 = new Button();
             y_btn22 = new Button();
             b_btn3 = new Button();
@@ -243,15 +243,15 @@
             y_btn8.Text = "오픈소스소프트웨어개발";
             y_btn8.UseVisualStyleBackColor = false;
             // 
-            // cb_major
+            // checkBoxY
             // 
-            cb_major.Font = new Font("NanumBarunGothicOTF", 12F);
-            cb_major.Location = new Point(219, 23);
-            cb_major.Name = "cb_major";
-            cb_major.Size = new Size(162, 40);
-            cb_major.TabIndex = 23;
-            cb_major.Text = "전공 과목 보기";
-            cb_major.UseVisualStyleBackColor = true;
+            checkBoxY.Font = new Font("NanumBarunGothicOTF", 12F);
+            checkBoxY.Location = new Point(219, 23);
+            checkBoxY.Name = "checkBoxY";
+            checkBoxY.Size = new Size(162, 40);
+            checkBoxY.TabIndex = 23;
+            checkBoxY.Text = "전공 과목 보기";
+            checkBoxY.UseVisualStyleBackColor = true;
             // 
             // y_btn12
             // 
@@ -374,15 +374,15 @@
             b_btn4.Text = "리눅스활용실습";
             b_btn4.UseVisualStyleBackColor = false;
             // 
-            // cb_prac
+            // checkBoxB
             // 
-            cb_prac.Font = new Font("NanumBarunGothicOTF", 12F);
-            cb_prac.Location = new Point(568, 23);
-            cb_prac.Name = "cb_prac";
-            cb_prac.Size = new Size(162, 40);
-            cb_prac.TabIndex = 25;
-            cb_prac.Text = "설계/실험 과목 보기";
-            cb_prac.UseVisualStyleBackColor = true;
+            checkBoxB.Font = new Font("NanumBarunGothicOTF", 12F);
+            checkBoxB.Location = new Point(568, 23);
+            checkBoxB.Name = "checkBoxB";
+            checkBoxB.Size = new Size(162, 40);
+            checkBoxB.TabIndex = 25;
+            checkBoxB.Text = "설계/실험 과목 보기";
+            checkBoxB.UseVisualStyleBackColor = true;
             // 
             // y_btn26
             // 
@@ -395,15 +395,15 @@
             y_btn26.Text = "정보시스템응용";
             y_btn26.UseVisualStyleBackColor = false;
             // 
-            // cb_bsm
+            // checkBoxG
             // 
-            cb_bsm.Font = new Font("NanumBarunGothicOTF", 12F);
-            cb_bsm.Location = new Point(393, 23);
-            cb_bsm.Name = "cb_bsm";
-            cb_bsm.Size = new Size(162, 40);
-            cb_bsm.TabIndex = 24;
-            cb_bsm.Text = "BSM 과목 보기";
-            cb_bsm.UseVisualStyleBackColor = true;
+            checkBoxG.Font = new Font("NanumBarunGothicOTF", 12F);
+            checkBoxG.Location = new Point(393, 23);
+            checkBoxG.Name = "checkBoxG";
+            checkBoxG.Size = new Size(162, 40);
+            checkBoxG.TabIndex = 24;
+            checkBoxG.Text = "BSM 과목 보기";
+            checkBoxG.UseVisualStyleBackColor = true;
             // 
             // b_btn5
             // 
@@ -537,15 +537,15 @@
             y_btn6.Text = "자료구조";
             y_btn6.UseVisualStyleBackColor = false;
             // 
-            // cb_all
+            // checkBoxAll
             // 
-            cb_all.Font = new Font("NanumBarunGothicOTF", 12F);
-            cb_all.Location = new Point(42, 23);
-            cb_all.Name = "cb_all";
-            cb_all.Size = new Size(162, 40);
-            cb_all.TabIndex = 26;
-            cb_all.Text = "모두 과목 보기";
-            cb_all.UseVisualStyleBackColor = true;
+            checkBoxAll.Font = new Font("NanumBarunGothicOTF", 12F);
+            checkBoxAll.Location = new Point(42, 23);
+            checkBoxAll.Name = "checkBoxAll";
+            checkBoxAll.Size = new Size(162, 40);
+            checkBoxAll.TabIndex = 26;
+            checkBoxAll.Text = "모두 과목 보기";
+            checkBoxAll.UseVisualStyleBackColor = true;
             // 
             // b_btn7
             // 
@@ -651,10 +651,10 @@
             panel_checkboxes.BackColor = Color.LightGray;
             panel_checkboxes.Controls.Add(lbl_complete);
             panel_checkboxes.Controls.Add(lbl_prepost);
-            panel_checkboxes.Controls.Add(cb_all);
-            panel_checkboxes.Controls.Add(cb_prac);
-            panel_checkboxes.Controls.Add(cb_bsm);
-            panel_checkboxes.Controls.Add(cb_major);
+            panel_checkboxes.Controls.Add(checkBoxAll);
+            panel_checkboxes.Controls.Add(checkBoxB);
+            panel_checkboxes.Controls.Add(checkBoxG);
+            panel_checkboxes.Controls.Add(checkBoxY);
             panel_checkboxes.Location = new Point(76, 818);
             panel_checkboxes.Name = "panel_checkboxes";
             panel_checkboxes.Size = new Size(1146, 81);
@@ -942,7 +942,7 @@
         private Button y_btn9;
         private Button y_btn13;
         private Button y_btn8;
-        private CheckBox cb_major;
+        private CheckBox checkBoxY;
         private Button y_btn12;
         private Button y_btn31;
         private Button y_btn24;
@@ -954,9 +954,9 @@
         private Button b_btn11;
         private Button b_btn12;
         private Button b_btn4;
-        private CheckBox cb_prac;
+        private CheckBox checkBoxB;
         private Button y_btn26;
-        private CheckBox cb_bsm;
+        private CheckBox checkBoxG;
         private Button b_btn5;
         private Button y_btn28;
         private Button y_btn17;
@@ -969,7 +969,7 @@
         private Button y_btn5;
         private Button y_btn7;
         private Button y_btn6;
-        private CheckBox cb_all;
+        private CheckBox checkBoxAll;
         private Button b_btn7;
         private Button y_btn22;
         private Button b_btn3;
