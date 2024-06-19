@@ -54,6 +54,9 @@
             lecture_credit = new ColumnHeader();
             label20 = new Label();
             panel2 = new Panel();
+            label11 = new Label();
+            student_major_credits = new Label();
+            student_credits = new Label();
             student_rating_num = new Label();
             student_rating = new Label();
             student_req_credits = new Label();
@@ -67,9 +70,6 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             main_label = new Label();
-            student_credits = new Label();
-            student_major_credits = new Label();
-            label11 = new Label();
             main_panel.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -85,7 +85,7 @@
             // favorites
             // 
             favorites.AutoSize = true;
-            favorites.Font = new Font("맑은 고딕", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            favorites.Font = new Font("Malgun Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
             favorites.Location = new Point(33, 34);
             favorites.Name = "favorites";
             favorites.Size = new Size(0, 45);
@@ -367,6 +367,39 @@
             panel2.Size = new Size(392, 244);
             panel2.TabIndex = 0;
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(18, 210);
+            label11.Name = "label11";
+            label11.Size = new Size(75, 20);
+            label11.TabIndex = 12;
+            label11.Text = "필수교양     |";
+            // 
+            // student_major_credits
+            // 
+            student_major_credits.AutoSize = true;
+            student_major_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            student_major_credits.ForeColor = Color.White;
+            student_major_credits.Location = new Point(102, 190);
+            student_major_credits.Name = "student_major_credits";
+            student_major_credits.Size = new Size(49, 20);
+            student_major_credits.TabIndex = 11;
+            student_major_credits.Text = "33 / 60 ";
+            // 
+            // student_credits
+            // 
+            student_credits.AutoSize = true;
+            student_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            student_credits.ForeColor = Color.White;
+            student_credits.Location = new Point(102, 166);
+            student_credits.Name = "student_credits";
+            student_credits.Size = new Size(52, 20);
+            student_credits.TabIndex = 10;
+            student_credits.Text = "54 / 133 ";
+            // 
             // student_rating_num
             // 
             student_rating_num.AutoSize = true;
@@ -505,39 +538,6 @@
             main_label.Size = new Size(167, 52);
             main_label.TabIndex = 0;
             main_label.Text = "My Page";
-            // 
-            // student_credits
-            // 
-            student_credits.AutoSize = true;
-            student_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            student_credits.ForeColor = Color.White;
-            student_credits.Location = new Point(102, 166);
-            student_credits.Name = "student_credits";
-            student_credits.Size = new Size(52, 20);
-            student_credits.TabIndex = 10;
-            student_credits.Text = "54 / 133 ";
-            // 
-            // student_major_credits
-            // 
-            student_major_credits.AutoSize = true;
-            student_major_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            student_major_credits.ForeColor = Color.White;
-            student_major_credits.Location = new Point(102, 190);
-            student_major_credits.Name = "student_major_credits";
-            student_major_credits.Size = new Size(49, 20);
-            student_major_credits.TabIndex = 11;
-            student_major_credits.Text = "33 / 60 ";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(18, 210);
-            label11.Name = "label11";
-            label11.Size = new Size(75, 20);
-            label11.TabIndex = 12;
-            label11.Text = "필수교양     |";
             // 
             // MyPage
             // 
