@@ -66,6 +66,8 @@ namespace CourseRegistration
         private void _UpdateDetailsView(int index)
         {
             Root data = roots![index];
+
+            courseNameLabel.Text = data.name + "(" + data.professor + ")";
             RatingLabel.Text = data.rate?.average.ToString();
 
             int i = 0;
@@ -258,6 +260,11 @@ namespace CourseRegistration
             {
                 Search();
             }
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            // TODO
         }
     }
 

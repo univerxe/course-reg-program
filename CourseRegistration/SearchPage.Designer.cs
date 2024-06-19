@@ -62,6 +62,9 @@
             columnHeader9 = new ColumnHeader();
             columnHeader10 = new ColumnHeader();
             SearchCmb = new ComboBox();
+            label10 = new Label();
+            courseNameLabel = new Label();
+            addBtn = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
@@ -177,21 +180,23 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(addBtn);
             groupBox2.Controls.Add(splitContainer1);
             groupBox2.Location = new Point(721, 164);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(536, 254);
+            groupBox2.Size = new Size(536, 296);
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             // 
             // splitContainer1
             // 
-            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Dock = DockStyle.Top;
             splitContainer1.Location = new Point(3, 19);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(label10);
             splitContainer1.Panel1.Controls.Add(label4);
             splitContainer1.Panel1.Controls.Add(label9);
             splitContainer1.Panel1.Controls.Add(label5);
@@ -202,6 +207,7 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.BackColor = SystemColors.Window;
+            splitContainer1.Panel2.Controls.Add(courseNameLabel);
             splitContainer1.Panel2.Controls.Add(GradingLabel);
             splitContainer1.Panel2.Controls.Add(TeamProjLabel);
             splitContainer1.Panel2.Controls.Add(ExamLabel);
@@ -209,14 +215,14 @@
             splitContainer1.Panel2.Controls.Add(AssignmentLabel);
             splitContainer1.Panel2.Controls.Add(RatingLabel);
             splitContainer1.Size = new Size(530, 232);
-            splitContainer1.SplitterDistance = 218;
+            splitContainer1.SplitterDistance = 195;
             splitContainer1.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            label4.Location = new Point(12, 10);
+            label4.Location = new Point(12, 40);
             label4.Name = "label4";
             label4.Size = new Size(66, 21);
             label4.TabIndex = 0;
@@ -236,7 +242,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            label5.Location = new Point(11, 45);
+            label5.Location = new Point(12, 71);
             label5.Name = "label5";
             label5.Size = new Size(99, 21);
             label5.TabIndex = 1;
@@ -246,7 +252,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            label6.Location = new Point(12, 82);
+            label6.Location = new Point(12, 102);
             label6.Name = "label6";
             label6.Size = new Size(98, 21);
             label6.TabIndex = 2;
@@ -256,7 +262,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            label8.Location = new Point(12, 158);
+            label8.Location = new Point(12, 165);
             label8.Name = "label8";
             label8.Size = new Size(111, 21);
             label8.TabIndex = 4;
@@ -266,7 +272,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
-            label7.Location = new Point(11, 119);
+            label7.Location = new Point(12, 133);
             label7.Name = "label7";
             label7.Size = new Size(52, 21);
             label7.TabIndex = 3;
@@ -284,7 +290,7 @@
             // TeamProjLabel
             // 
             TeamProjLabel.AutoSize = true;
-            TeamProjLabel.Location = new Point(18, 164);
+            TeamProjLabel.Location = new Point(18, 171);
             TeamProjLabel.Name = "TeamProjLabel";
             TeamProjLabel.Size = new Size(12, 15);
             TeamProjLabel.TabIndex = 4;
@@ -293,7 +299,7 @@
             // ExamLabel
             // 
             ExamLabel.AutoSize = true;
-            ExamLabel.Location = new Point(18, 125);
+            ExamLabel.Location = new Point(18, 139);
             ExamLabel.Name = "ExamLabel";
             ExamLabel.Size = new Size(12, 15);
             ExamLabel.TabIndex = 3;
@@ -302,7 +308,7 @@
             // AttendanceLabel
             // 
             AttendanceLabel.AutoSize = true;
-            AttendanceLabel.Location = new Point(18, 88);
+            AttendanceLabel.Location = new Point(18, 108);
             AttendanceLabel.Name = "AttendanceLabel";
             AttendanceLabel.Size = new Size(12, 15);
             AttendanceLabel.TabIndex = 2;
@@ -311,7 +317,7 @@
             // AssignmentLabel
             // 
             AssignmentLabel.AutoSize = true;
-            AssignmentLabel.Location = new Point(18, 51);
+            AssignmentLabel.Location = new Point(18, 77);
             AssignmentLabel.Name = "AssignmentLabel";
             AssignmentLabel.Size = new Size(12, 15);
             AssignmentLabel.TabIndex = 1;
@@ -320,7 +326,7 @@
             // RatingLabel
             // 
             RatingLabel.AutoSize = true;
-            RatingLabel.Location = new Point(18, 15);
+            RatingLabel.Location = new Point(18, 46);
             RatingLabel.Name = "RatingLabel";
             RatingLabel.Size = new Size(12, 15);
             RatingLabel.TabIndex = 0;
@@ -370,6 +376,35 @@
             SearchCmb.Name = "SearchCmb";
             SearchCmb.Size = new Size(121, 23);
             SearchCmb.TabIndex = 8;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("맑은 고딕", 12F, FontStyle.Bold);
+            label10.Location = new Point(12, 9);
+            label10.Name = "label10";
+            label10.Size = new Size(114, 21);
+            label10.TabIndex = 6;
+            label10.Text = "Course Name";
+            // 
+            // courseNameLabel
+            // 
+            courseNameLabel.AutoSize = true;
+            courseNameLabel.Location = new Point(18, 14);
+            courseNameLabel.Name = "courseNameLabel";
+            courseNameLabel.Size = new Size(12, 15);
+            courseNameLabel.TabIndex = 6;
+            courseNameLabel.Text = "-";
+            // 
+            // addBtn
+            // 
+            addBtn.Location = new Point(6, 257);
+            addBtn.Name = "addBtn";
+            addBtn.Size = new Size(120, 33);
+            addBtn.TabIndex = 7;
+            addBtn.Text = "Add to favorites";
+            addBtn.UseVisualStyleBackColor = true;
+            addBtn.Click += addBtn_Click;
             // 
             // SearchPage
             // 
@@ -437,5 +472,8 @@
         private ColumnHeader columnHeader8;
         private ColumnHeader columnHeader9;
         private ColumnHeader columnHeader10;
+        private Label label10;
+        private Label courseNameLabel;
+        private Button addBtn;
     }
 }
