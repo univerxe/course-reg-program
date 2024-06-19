@@ -44,7 +44,7 @@ namespace CourseRegistration
             {
                 this.course.Text = course;
                 this.profTime.Text = prof + " | " + time;
-                this.numRate.Text = num + " | " + rate;
+                this.numRate.Text = num + "담음 | " + rate;
 
                 this.addBtn.Visible = false;
                 this.delBtn.Visible = true;
@@ -104,6 +104,7 @@ namespace CourseRegistration
             buttons.Add(new CourseButton(courseName8, profNum8, numRate8, courseBtn8, deleteBtn8));
             buttons.Add(new CourseButton(courseName9, profNum9, numRate9, courseBtn9, deleteBtn9));
 
+            //ControlPaint.DrawBorder(.Graphics, this.Friday.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
         private void addButton_Clicked(object sender, EventArgs e)

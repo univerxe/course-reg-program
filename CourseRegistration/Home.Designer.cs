@@ -89,6 +89,44 @@
             courseName9 = new Label();
             courseBtn9 = new Button();
             panel2 = new Panel();
+            panel7 = new Panel();
+            label6 = new Label();
+            panel4 = new Panel();
+            label3 = new Label();
+            panel11 = new Panel();
+            label9 = new Label();
+            panel6 = new Panel();
+            label5 = new Label();
+            panel10 = new Panel();
+            label8 = new Label();
+            panel5 = new Panel();
+            label4 = new Label();
+            panel9 = new Panel();
+            panel3 = new Panel();
+            label2 = new Label();
+            label7 = new Label();
+            panel8 = new Panel();
+            label10 = new Label();
+            panel12 = new Panel();
+            label11 = new Label();
+            panel13 = new Panel();
+            label12 = new Label();
+            panel14 = new Panel();
+            label13 = new Label();
+            panel15 = new Panel();
+            label14 = new Label();
+            panel16 = new Panel();
+            label15 = new Label();
+            panel17 = new Panel();
+            label16 = new Label();
+            panel18 = new Panel();
+            label17 = new Label();
+            panel19 = new Panel();
+            label18 = new Label();
+            panel20 = new Panel();
+            label19 = new Label();
+            panel21 = new Panel();
+            label20 = new Label();
             course1.SuspendLayout();
             course2.SuspendLayout();
             course3.SuspendLayout();
@@ -98,6 +136,26 @@
             course7.SuspendLayout();
             course8.SuspendLayout();
             course9.SuspendLayout();
+            panel2.SuspendLayout();
+            panel7.SuspendLayout();
+            panel4.SuspendLayout();
+            panel11.SuspendLayout();
+            panel6.SuspendLayout();
+            panel10.SuspendLayout();
+            panel5.SuspendLayout();
+            panel9.SuspendLayout();
+            panel3.SuspendLayout();
+            panel8.SuspendLayout();
+            panel12.SuspendLayout();
+            panel13.SuspendLayout();
+            panel14.SuspendLayout();
+            panel15.SuspendLayout();
+            panel16.SuspendLayout();
+            panel17.SuspendLayout();
+            panel18.SuspendLayout();
+            panel19.SuspendLayout();
+            panel20.SuspendLayout();
+            panel21.SuspendLayout();
             SuspendLayout();
             // 
             // favorites
@@ -114,7 +172,7 @@
             // 
             timeTable.AutoSize = true;
             timeTable.Font = new Font("맑은 고딕", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            timeTable.Location = new Point(850, 80);
+            timeTable.Location = new Point(838, 78);
             timeTable.Name = "timeTable";
             timeTable.Size = new Size(168, 45);
             timeTable.TabIndex = 2;
@@ -790,11 +848,390 @@
             // panel2
             // 
             panel2.BackColor = Color.LightGray;
+            panel2.Controls.Add(panel21);
+            panel2.Controls.Add(panel20);
+            panel2.Controls.Add(panel19);
+            panel2.Controls.Add(panel18);
+            panel2.Controls.Add(panel17);
+            panel2.Controls.Add(panel16);
+            panel2.Controls.Add(panel15);
+            panel2.Controls.Add(panel14);
+            panel2.Controls.Add(panel13);
+            panel2.Controls.Add(panel12);
+            panel2.Controls.Add(panel8);
+            panel2.Controls.Add(panel7);
+            panel2.Controls.Add(panel4);
+            panel2.Controls.Add(panel11);
+            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(panel10);
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel9);
             panel2.ForeColor = SystemColors.Control;
-            panel2.Location = new Point(863, 148);
+            panel2.Location = new Point(838, 148);
             panel2.Name = "panel2";
-            panel2.Size = new Size(359, 429);
+            panel2.Size = new Size(385, 454);
             panel2.TabIndex = 11;
+            // 
+            // panel7
+            // 
+            panel7.BorderStyle = BorderStyle.FixedSingle;
+            panel7.Controls.Add(label6);
+            panel7.Location = new Point(19, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(61, 27);
+            panel7.TabIndex = 12;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(19, 5);
+            label6.Name = "label6";
+            label6.Size = new Size(19, 15);
+            label6.TabIndex = 0;
+            label6.Text = "토";
+            // 
+            // panel4
+            // 
+            panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(label3);
+            panel4.Location = new Point(80, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(61, 27);
+            panel4.TabIndex = 11;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(19, 5);
+            label3.Name = "label3";
+            label3.Size = new Size(19, 15);
+            label3.TabIndex = 0;
+            label3.Text = "토";
+            // 
+            // panel11
+            // 
+            panel11.BorderStyle = BorderStyle.FixedSingle;
+            panel11.Controls.Add(label9);
+            panel11.Location = new Point(202, 0);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(61, 27);
+            panel11.TabIndex = 10;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(19, 5);
+            label9.Name = "label9";
+            label9.Size = new Size(19, 15);
+            label9.TabIndex = 0;
+            label9.Text = "토";
+            // 
+            // panel6
+            // 
+            panel6.BorderStyle = BorderStyle.FixedSingle;
+            panel6.Controls.Add(label5);
+            panel6.Location = new Point(324, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(61, 27);
+            panel6.TabIndex = 7;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(19, 5);
+            label5.Name = "label5";
+            label5.Size = new Size(19, 15);
+            label5.TabIndex = 0;
+            label5.Text = "토";
+            // 
+            // panel10
+            // 
+            panel10.BorderStyle = BorderStyle.FixedSingle;
+            panel10.Controls.Add(label8);
+            panel10.Location = new Point(141, 0);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(61, 27);
+            panel10.TabIndex = 9;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(19, 5);
+            label8.Name = "label8";
+            label8.Size = new Size(19, 15);
+            label8.TabIndex = 0;
+            label8.Text = "토";
+            // 
+            // panel5
+            // 
+            panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(label4);
+            panel5.Location = new Point(263, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(61, 27);
+            panel5.TabIndex = 6;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(19, 5);
+            label4.Name = "label4";
+            label4.Size = new Size(19, 15);
+            label4.TabIndex = 0;
+            label4.Text = "토";
+            // 
+            // panel9
+            // 
+            panel9.BorderStyle = BorderStyle.FixedSingle;
+            panel9.Controls.Add(label7);
+            panel9.ForeColor = Color.Black;
+            panel9.Location = new Point(0, 26);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(20, 36);
+            panel9.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(label2);
+            panel3.Location = new Point(1162, 148);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(61, 27);
+            panel3.TabIndex = 0;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(19, 5);
+            label2.Name = "label2";
+            label2.Size = new Size(19, 15);
+            label2.TabIndex = 0;
+            label2.Text = "토";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(2, -1);
+            label7.Name = "label7";
+            label7.Size = new Size(14, 15);
+            label7.TabIndex = 0;
+            label7.Text = "8";
+            // 
+            // panel8
+            // 
+            panel8.BorderStyle = BorderStyle.FixedSingle;
+            panel8.Controls.Add(label10);
+            panel8.ForeColor = Color.Black;
+            panel8.Location = new Point(0, 62);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(20, 36);
+            panel8.TabIndex = 13;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(2, -1);
+            label10.Name = "label10";
+            label10.Size = new Size(14, 15);
+            label10.TabIndex = 0;
+            label10.Text = "9";
+            // 
+            // panel12
+            // 
+            panel12.BorderStyle = BorderStyle.FixedSingle;
+            panel12.Controls.Add(label11);
+            panel12.ForeColor = Color.Black;
+            panel12.Location = new Point(0, 98);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(20, 36);
+            panel12.TabIndex = 14;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(-1, -1);
+            label11.Name = "label11";
+            label11.Size = new Size(21, 15);
+            label11.TabIndex = 0;
+            label11.Text = "10";
+            // 
+            // panel13
+            // 
+            panel13.BorderStyle = BorderStyle.FixedSingle;
+            panel13.Controls.Add(label12);
+            panel13.ForeColor = Color.Black;
+            panel13.Location = new Point(0, 134);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(20, 36);
+            panel13.TabIndex = 15;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(-1, -1);
+            label12.Name = "label12";
+            label12.Size = new Size(21, 15);
+            label12.TabIndex = 0;
+            label12.Text = "11";
+            // 
+            // panel14
+            // 
+            panel14.BorderStyle = BorderStyle.FixedSingle;
+            panel14.Controls.Add(label13);
+            panel14.ForeColor = Color.Black;
+            panel14.Location = new Point(0, 170);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(20, 36);
+            panel14.TabIndex = 16;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(-1, -1);
+            label13.Name = "label13";
+            label13.Size = new Size(21, 15);
+            label13.TabIndex = 0;
+            label13.Text = "12";
+            // 
+            // panel15
+            // 
+            panel15.BorderStyle = BorderStyle.FixedSingle;
+            panel15.Controls.Add(label14);
+            panel15.ForeColor = Color.Black;
+            panel15.Location = new Point(0, 204);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(20, 36);
+            panel15.TabIndex = 17;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(2, -1);
+            label14.Name = "label14";
+            label14.Size = new Size(14, 15);
+            label14.TabIndex = 0;
+            label14.Text = "1";
+            // 
+            // panel16
+            // 
+            panel16.BorderStyle = BorderStyle.FixedSingle;
+            panel16.Controls.Add(label15);
+            panel16.ForeColor = Color.Black;
+            panel16.Location = new Point(0, 239);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(20, 36);
+            panel16.TabIndex = 18;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(2, -1);
+            label15.Name = "label15";
+            label15.Size = new Size(14, 15);
+            label15.TabIndex = 0;
+            label15.Text = "2";
+            // 
+            // panel17
+            // 
+            panel17.BorderStyle = BorderStyle.FixedSingle;
+            panel17.Controls.Add(label16);
+            panel17.ForeColor = Color.Black;
+            panel17.Location = new Point(0, 275);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(20, 36);
+            panel17.TabIndex = 19;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(2, -1);
+            label16.Name = "label16";
+            label16.Size = new Size(14, 15);
+            label16.TabIndex = 0;
+            label16.Text = "3";
+            // 
+            // panel18
+            // 
+            panel18.BorderStyle = BorderStyle.FixedSingle;
+            panel18.Controls.Add(label17);
+            panel18.ForeColor = Color.Black;
+            panel18.Location = new Point(0, 311);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(20, 36);
+            panel18.TabIndex = 20;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(2, -1);
+            label17.Name = "label17";
+            label17.Size = new Size(14, 15);
+            label17.TabIndex = 0;
+            label17.Text = "4";
+            // 
+            // panel19
+            // 
+            panel19.BorderStyle = BorderStyle.FixedSingle;
+            panel19.Controls.Add(label18);
+            panel19.ForeColor = Color.Black;
+            panel19.Location = new Point(0, 344);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(20, 36);
+            panel19.TabIndex = 21;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(2, -1);
+            label18.Name = "label18";
+            label18.Size = new Size(14, 15);
+            label18.TabIndex = 0;
+            label18.Text = "5";
+            // 
+            // panel20
+            // 
+            panel20.BorderStyle = BorderStyle.FixedSingle;
+            panel20.Controls.Add(label19);
+            panel20.ForeColor = Color.Black;
+            panel20.Location = new Point(0, 380);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(20, 36);
+            panel20.TabIndex = 22;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(2, -1);
+            label19.Name = "label19";
+            label19.Size = new Size(14, 15);
+            label19.TabIndex = 0;
+            label19.Text = "6";
+            // 
+            // panel21
+            // 
+            panel21.BorderStyle = BorderStyle.FixedSingle;
+            panel21.Controls.Add(label20);
+            panel21.ForeColor = Color.Black;
+            panel21.Location = new Point(0, 416);
+            panel21.Name = "panel21";
+            panel21.Size = new Size(20, 36);
+            panel21.TabIndex = 23;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(2, -1);
+            label20.Name = "label20";
+            label20.Size = new Size(14, 15);
+            label20.TabIndex = 0;
+            label20.Text = "7";
             // 
             // Home
             // 
@@ -807,6 +1244,7 @@
             Controls.Add(course7);
             Controls.Add(course6);
             Controls.Add(course5);
+            Controls.Add(panel3);
             Controls.Add(course4);
             Controls.Add(course3);
             Controls.Add(course2);
@@ -836,6 +1274,45 @@
             course8.PerformLayout();
             course9.ResumeLayout(false);
             course9.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel11.ResumeLayout(false);
+            panel11.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
+            panel17.ResumeLayout(false);
+            panel17.PerformLayout();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
+            panel19.ResumeLayout(false);
+            panel19.PerformLayout();
+            panel20.ResumeLayout(false);
+            panel20.PerformLayout();
+            panel21.ResumeLayout(false);
+            panel21.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -902,5 +1379,43 @@
         private Button deleteBtn2;
         private Button deleteBtn3;
         private Button deleteBtn9;
+        private Panel panel3;
+        private Label label2;
+        private Panel panel9;
+        private Panel panel5;
+        private Label label4;
+        private Panel panel10;
+        private Panel panel11;
+        private Label label9;
+        private Label label8;
+        private Panel panel6;
+        private Label label5;
+        private Panel panel7;
+        private Label label6;
+        private Panel panel4;
+        private Label label3;
+        private Label label7;
+        private Panel panel21;
+        private Label label20;
+        private Panel panel20;
+        private Label label19;
+        private Panel panel19;
+        private Label label18;
+        private Panel panel18;
+        private Label label17;
+        private Panel panel17;
+        private Label label16;
+        private Panel panel16;
+        private Label label15;
+        private Panel panel15;
+        private Label label14;
+        private Panel panel14;
+        private Label label13;
+        private Panel panel13;
+        private Label label12;
+        private Panel panel12;
+        private Label label11;
+        private Panel panel8;
+        private Label label10;
     }
 }
