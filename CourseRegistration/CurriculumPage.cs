@@ -119,6 +119,7 @@ namespace CourseRegistration
             }
         }
 
+        //
         private void Button_Click(object sender, EventArgs e)
         {
             Button clickedButton = sender as Button;
