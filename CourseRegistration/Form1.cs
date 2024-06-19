@@ -7,6 +7,11 @@ namespace CourseRegistration
 {
     public partial class Form1 : Form
     {
+        Home homePage = new() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        SearchPage searchPage = new() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        CurriculumPage curriculumPage = new () { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        MyPage myPage = new() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+
         private bool dragging = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
@@ -30,7 +35,7 @@ namespace CourseRegistration
             //Set the mainPanel to HomePage
             ButtonColorReset(HomeBtn);
             this.mainPanel.Controls.Clear();
-            Home homePage = new Home() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            homePage.moveToSearchPage = this.MoveToSearchPage;
             this.mainPanel.Controls.Add(homePage);
             homePage.Show();
 
@@ -89,7 +94,6 @@ namespace CourseRegistration
         {
             ButtonColorReset(HomeBtn);
             this.mainPanel.Controls.Clear();
-            Home homePage = new Home() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             this.mainPanel.Controls.Add(homePage);
             homePage.Show();
         }
@@ -98,27 +102,32 @@ namespace CourseRegistration
         {
             ButtonColorReset(SearchBtn);
             this.mainPanel.Controls.Clear();
-            SearchPage registrationPage = new SearchPage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.mainPanel.Controls.Add(registrationPage);
-            registrationPage.Show();
+            this.mainPanel.Controls.Add(searchPage);
+            searchPage.Show();
+        }
+
+        public void MoveToSearchPage()
+        {
+            ButtonColorReset(SearchBtn);
+            this.mainPanel.Controls.Clear();
+            this.mainPanel.Controls.Add(searchPage);
+            searchPage.Show();
         }
 
         private void CurriculumBtn_Click(object sender, EventArgs e)
         {
             ButtonColorReset(CurriculumBtn);
             this.mainPanel.Controls.Clear();
-            CurriculumPage calculationPage = new CurriculumPage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.mainPanel.Controls.Add(calculationPage);
-            calculationPage.Show();
+            this.mainPanel.Controls.Add(curriculumPage);
+            curriculumPage.Show();
         }
 
         private void MyPageBtn_Click(object sender, EventArgs e)
         {
             ButtonColorReset(MyPageBtn);
             this.mainPanel.Controls.Clear();
-            MyPage curriculumPage = new MyPage() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            this.mainPanel.Controls.Add(curriculumPage);
-            curriculumPage.Show();
+            this.mainPanel.Controls.Add(myPage);
+            myPage.Show();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -142,5 +151,7 @@ namespace CourseRegistration
             time.Text = DateTime.Now.ToString("HH:mm:ss");
             timer.Start();
         }
+
+     
     }
 }
