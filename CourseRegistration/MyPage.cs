@@ -9,6 +9,17 @@ namespace CourseRegistration
 {
     public partial class MyPage : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+           int nLeftRect,     // x-coordinate of upper-left corner
+           int nTopRect,      // y-coordinate of upper-left corner
+           int nRightRect,    // x-coordinate of lower-right corner
+           int nBottomRect,   // y-coordinate of lower-right corner
+           int nWidthEllipse, // width of ellipse
+           int nHeightEllipse // height of ellipse
+        );
+
         public class Lecture
         {
             public string course_id { get; set; }
@@ -36,34 +47,12 @@ namespace CourseRegistration
             public string prof_id { get; set; }
             public string prof_name { get; set; }
             public string prof_img_link { get; set; }
-
         }
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-           int nLeftRect,     // x-coordinate of upper-left corner
-           int nTopRect,      // y-coordinate of upper-left corner
-           int nRightRect,    // x-coordinate of lower-right corner
-           int nBottomRect,   // y-coordinate of lower-right corner
-           int nWidthEllipse, // width of ellipse
-           int nHeightEllipse // height of ellipse
-        );
-
-        int border = 20;
 
         public MyPage()
         {
             InitializeComponent();
-
-            panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, border, border));
-            panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, border, border));
-            panel3.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, border, border));
-            panel4.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel4.Width, panel4.Height, border, border));
-            panel5.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, border, border));
-            panel6.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel6.Width, panel6.Height, border, border));
-            panel7.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel7.Width, panel7.Height, border, border));
-            student_img.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, student_img.Width, student_img.Height, border, border));
-            prof_img.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, prof_img.Width, prof_img.Height, border, border));
+            makeAllRounded();
 
             getStudentInfo();
             getProffesorInfo();
@@ -251,7 +240,21 @@ namespace CourseRegistration
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
 
+        private void makeAllRounded()
+        {
+            int border = 20;
+
+            panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, border, border));
+            panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, border, border));
+            panel3.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, border, border));
+            panel4.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel4.Width, panel4.Height, border, border));
+            panel5.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel5.Width, panel5.Height, border, border));
+            panel6.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel6.Width, panel6.Height, border, border));
+            panel7.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel7.Width, panel7.Height, border, border));
+            student_img.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, student_img.Width, student_img.Height, border, border));
+            prof_img.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, prof_img.Width, prof_img.Height, border, border));
+        }
+    }
 }
 
