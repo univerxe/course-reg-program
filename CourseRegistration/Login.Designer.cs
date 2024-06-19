@@ -32,12 +32,12 @@
             pictureBox1 = new PictureBox();
             programName = new Label();
             txt_username = new TextBox();
-            txt_pwd = new TextBox();
             Username = new Label();
             Pwd = new Label();
             LoginBtn = new Button();
             topBar = new Panel();
             exitBtn = new Button();
+            txt_pwd = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             topBar.SuspendLayout();
             SuspendLayout();
@@ -71,15 +71,6 @@
             txt_username.Size = new Size(186, 33);
             txt_username.TabIndex = 2;
             txt_username.KeyDown += txt_KeyDown;
-            // 
-            // txt_pwd
-            // 
-            txt_pwd.Font = new Font("맑은 고딕", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            txt_pwd.Location = new Point(121, 315);
-            txt_pwd.Name = "txt_pwd";
-            txt_pwd.Size = new Size(186, 33);
-            txt_pwd.TabIndex = 3;
-            txt_pwd.KeyDown += txt_KeyDown;
             // 
             // Username
             // 
@@ -141,16 +132,27 @@
             exitBtn.UseVisualStyleBackColor = false;
             exitBtn.Click += exitBtn_Click;
             // 
+            // txt_pwd
+            // 
+            txt_pwd.BeepOnError = true;
+            txt_pwd.Font = new Font("맑은 고딕", 14.25F);
+            txt_pwd.Location = new Point(121, 308);
+            txt_pwd.Name = "txt_pwd";
+            txt_pwd.PasswordChar = '•';
+            txt_pwd.Size = new Size(186, 33);
+            txt_pwd.TabIndex = 3;
+            txt_pwd.KeyDown += txt_KeyDown;
+            // 
             // Login
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(107, 34, 48);
             ClientSize = new Size(428, 445);
+            Controls.Add(txt_pwd);
             Controls.Add(topBar);
             Controls.Add(LoginBtn);
             Controls.Add(Pwd);
             Controls.Add(Username);
-            Controls.Add(txt_pwd);
             Controls.Add(txt_username);
             Controls.Add(programName);
             Controls.Add(pictureBox1);
@@ -168,11 +170,11 @@
         private PictureBox pictureBox1;
         private Label programName;
         private TextBox txt_username;
-        private TextBox txt_pwd;
         private Label Username;
         private Label Pwd;
         private Button LoginBtn;
         private Panel topBar;
         private Button exitBtn;
+        private MaskedTextBox txt_pwd;
     }
 }

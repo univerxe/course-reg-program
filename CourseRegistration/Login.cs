@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Runtime.InteropServices;
 
 namespace CourseRegistration
 {
@@ -92,8 +83,8 @@ namespace CourseRegistration
                 }
                 else if (txt_pwd.Text == "pwd" && txt_username.Text == "user")
                 {
-                    Form1 mainForm = new Form1();
-                    this.Hide();
+                    Form1 mainForm = new();
+                    Hide();
                     mainForm.ShowDialog();
                 }
                 else
