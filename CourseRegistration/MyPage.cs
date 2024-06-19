@@ -7,7 +7,17 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 using System.Windows.Forms;
+
+// Define classes that match your JSON structure
+public class Lecture
+{
+    public string course_id { get; set; }
+    public string title { get; set; }
+    public string dept_name { get; set; }
+    public int credits { get; set; }
+}
 
 namespace CourseRegistration
 {
@@ -40,22 +50,60 @@ namespace CourseRegistration
             pictureBox1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pictureBox1.Width, pictureBox1.Height, border, border));
             pictureBox2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pictureBox2.Width, pictureBox2.Height, border, border));
 
-
-            String[] lectures = ["대학영어", "C프로그래밍", "검퓨팅사고", "율합적사고와글쓰기", "광운인되기"];
-            String[] l_status = ["전필", "전필", "전필", "전필", "전필"];
-            String[] l_credit = ["3힉점", "3힉점", "3힉점", "3힉점", "3힉점"];
-            String[] l_grade = ["A+", "A+", "A+", "A+", "A+"];
-
-            for (int i = 0; i < lectures.Length; i++)
-            {
-                ListViewItem item = credits_list.Items.Add(lectures[i]);
-                item.SubItems.Add(l_status[i]);
-                item.SubItems.Add(l_credit[i]);
-                item.SubItems.Add(l_grade[i]);
-
-            }
+            getData();
 
         }
-   
+
+        private async void getData()
+        {
+            try
+            {
+                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/courses";
+
+                // Create an HttpClient instance
+                using (HttpClient client = new HttpClient())
+                {
+                    // Send a GET request asynchronously
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                    // Check if the response is successful
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Read the content asynchronously
+                        string json = await response.Content.ReadAsStringAsync();
+
+                        // Deserialize JSON to List<Lecture>
+                        var lectures = JsonSerializer.Deserialize<List<Lecture>>(json);
+
+                        // Clear existing items in the ListView
+                        credits_list.Items.Clear();
+
+                        // Add items to ListView
+                        foreach (var lecture in lectures)
+                        {
+                            ListViewItem item = new ListViewItem(lecture.course_id);
+                            item.SubItems.Add(lecture.title);
+                            item.SubItems.Add(lecture.dept_name);
+                            item.SubItems.Add(lecture.credits.ToString());
+
+                            credits_list.Items.Add(item);
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to get data from the API: " + response.ReasonPhrase,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
+
 }
+

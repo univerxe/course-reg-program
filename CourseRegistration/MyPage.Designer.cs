@@ -36,10 +36,10 @@
             label1 = new Label();
             pictureBox2 = new PictureBox();
             panel6 = new Panel();
-            checkedListBox2 = new CheckedListBox();
-            label19 = new Label();
+            req_major_list = new CheckedListBox();
+            txtOutput = new Label();
             panel4 = new Panel();
-            checkedListBox1 = new CheckedListBox();
+            elective_lec_list = new CheckedListBox();
             label8 = new Label();
             panel5 = new Panel();
             label7 = new Label();
@@ -54,6 +54,9 @@
             lecture_credit = new ColumnHeader();
             label20 = new Label();
             panel2 = new Panel();
+            label11 = new Label();
+            student_major_credits = new Label();
+            student_credits = new Label();
             student_rating_num = new Label();
             student_rating = new Label();
             student_req_credits = new Label();
@@ -67,9 +70,6 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             main_label = new Label();
-            student_credits = new Label();
-            student_major_credits = new Label();
-            label11 = new Label();
             main_panel.SuspendLayout();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -166,63 +166,63 @@
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(217, 217, 217);
-            panel6.Controls.Add(checkedListBox2);
-            panel6.Controls.Add(label19);
+            panel6.Controls.Add(req_major_list);
+            panel6.Controls.Add(txtOutput);
             panel6.Location = new Point(286, 599);
             panel6.Name = "panel6";
             panel6.Size = new Size(639, 244);
             panel6.TabIndex = 2;
             // 
-            // checkedListBox2
+            // req_major_list
             // 
-            checkedListBox2.BackColor = Color.FromArgb(217, 217, 217);
-            checkedListBox2.BorderStyle = BorderStyle.None;
-            checkedListBox2.Cursor = Cursors.SizeWE;
-            checkedListBox2.Font = new Font("Agency FB", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkedListBox2.ForeColor = Color.White;
-            checkedListBox2.FormattingEnabled = true;
-            checkedListBox2.HorizontalScrollbar = true;
-            checkedListBox2.ImeMode = ImeMode.Off;
-            checkedListBox2.Location = new Point(18, 52);
-            checkedListBox2.Name = "checkedListBox2";
-            checkedListBox2.Size = new Size(579, 175);
-            checkedListBox2.TabIndex = 21;
+            req_major_list.BackColor = Color.FromArgb(217, 217, 217);
+            req_major_list.BorderStyle = BorderStyle.None;
+            req_major_list.Cursor = Cursors.SizeWE;
+            req_major_list.Font = new Font("Agency FB", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            req_major_list.ForeColor = Color.White;
+            req_major_list.FormattingEnabled = true;
+            req_major_list.HorizontalScrollbar = true;
+            req_major_list.ImeMode = ImeMode.Off;
+            req_major_list.Location = new Point(18, 52);
+            req_major_list.Name = "req_major_list";
+            req_major_list.Size = new Size(579, 175);
+            req_major_list.TabIndex = 21;
             // 
-            // label19
+            // txtOutput
             // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Agency FB", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = Color.Black;
-            label19.Location = new Point(14, 9);
-            label19.Name = "label19";
-            label19.Size = new Size(103, 34);
-            label19.TabIndex = 21;
-            label19.Text = "교양필수";
+            txtOutput.AutoSize = true;
+            txtOutput.Font = new Font("Agency FB", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtOutput.ForeColor = Color.Black;
+            txtOutput.Location = new Point(14, 9);
+            txtOutput.Name = "txtOutput";
+            txtOutput.Size = new Size(103, 34);
+            txtOutput.TabIndex = 21;
+            txtOutput.Text = "전공필수";
             // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(87, 33, 43);
-            panel4.Controls.Add(checkedListBox1);
+            panel4.Controls.Add(elective_lec_list);
             panel4.Controls.Add(label8);
             panel4.Location = new Point(39, 334);
             panel4.Name = "panel4";
             panel4.Size = new Size(639, 244);
             panel4.TabIndex = 1;
             // 
-            // checkedListBox1
+            // elective_lec_list
             // 
-            checkedListBox1.BackColor = Color.FromArgb(87, 33, 43);
-            checkedListBox1.BorderStyle = BorderStyle.None;
-            checkedListBox1.Cursor = Cursors.SizeWE;
-            checkedListBox1.Font = new Font("Agency FB", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkedListBox1.ForeColor = Color.White;
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.HorizontalScrollbar = true;
-            checkedListBox1.ImeMode = ImeMode.Off;
-            checkedListBox1.Location = new Point(23, 47);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(579, 175);
-            checkedListBox1.TabIndex = 20;
+            elective_lec_list.BackColor = Color.FromArgb(87, 33, 43);
+            elective_lec_list.BorderStyle = BorderStyle.None;
+            elective_lec_list.Cursor = Cursors.SizeWE;
+            elective_lec_list.Font = new Font("Agency FB", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            elective_lec_list.ForeColor = Color.White;
+            elective_lec_list.FormattingEnabled = true;
+            elective_lec_list.HorizontalScrollbar = true;
+            elective_lec_list.ImeMode = ImeMode.Off;
+            elective_lec_list.Location = new Point(23, 47);
+            elective_lec_list.Name = "elective_lec_list";
+            elective_lec_list.Size = new Size(579, 175);
+            elective_lec_list.TabIndex = 20;
             // 
             // label8
             // 
@@ -367,6 +367,39 @@
             panel2.Size = new Size(392, 244);
             panel2.TabIndex = 0;
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(18, 210);
+            label11.Name = "label11";
+            label11.Size = new Size(75, 20);
+            label11.TabIndex = 12;
+            label11.Text = "필수교양     |";
+            // 
+            // student_major_credits
+            // 
+            student_major_credits.AutoSize = true;
+            student_major_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            student_major_credits.ForeColor = Color.White;
+            student_major_credits.Location = new Point(102, 190);
+            student_major_credits.Name = "student_major_credits";
+            student_major_credits.Size = new Size(49, 20);
+            student_major_credits.TabIndex = 11;
+            student_major_credits.Text = "33 / 60 ";
+            // 
+            // student_credits
+            // 
+            student_credits.AutoSize = true;
+            student_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            student_credits.ForeColor = Color.White;
+            student_credits.Location = new Point(102, 166);
+            student_credits.Name = "student_credits";
+            student_credits.Size = new Size(52, 20);
+            student_credits.TabIndex = 10;
+            student_credits.Text = "54 / 133 ";
+            // 
             // student_rating_num
             // 
             student_rating_num.AutoSize = true;
@@ -506,39 +539,6 @@
             main_label.TabIndex = 0;
             main_label.Text = "My Page";
             // 
-            // student_credits
-            // 
-            student_credits.AutoSize = true;
-            student_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            student_credits.ForeColor = Color.White;
-            student_credits.Location = new Point(102, 166);
-            student_credits.Name = "student_credits";
-            student_credits.Size = new Size(52, 20);
-            student_credits.TabIndex = 10;
-            student_credits.Text = "54 / 133 ";
-            // 
-            // student_major_credits
-            // 
-            student_major_credits.AutoSize = true;
-            student_major_credits.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            student_major_credits.ForeColor = Color.White;
-            student_major_credits.Location = new Point(102, 190);
-            student_major_credits.Name = "student_major_credits";
-            student_major_credits.Size = new Size(49, 20);
-            student_major_credits.TabIndex = 11;
-            student_major_credits.Text = "33 / 60 ";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Agency FB", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label11.ForeColor = Color.White;
-            label11.Location = new Point(18, 210);
-            label11.Name = "label11";
-            label11.Size = new Size(75, 20);
-            label11.TabIndex = 12;
-            label11.Text = "필수교양     |";
-            // 
             // MyPage
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -601,15 +601,15 @@
         private Label label5;
         private Label label4;
         private Label label8;
-        private Label label19;
+        private Label txtOutput;
         private Label label20;
         private ListView credits_list;
         private ColumnHeader lecture_name;
         private ColumnHeader lecture_info;
         private ColumnHeader lecture_grade;
         private ColumnHeader lecture_credit;
-        private CheckedListBox checkedListBox1;
-        private CheckedListBox checkedListBox2;
+        private CheckedListBox elective_lec_list;
+        private CheckedListBox req_major_list;
         private Label student_credits;
         private Label label11;
         private Label student_major_credits;
