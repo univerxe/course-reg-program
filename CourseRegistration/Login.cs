@@ -106,6 +106,7 @@ namespace CourseRegistration
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Close();
+            Application.Exit();
         }
     }
 }

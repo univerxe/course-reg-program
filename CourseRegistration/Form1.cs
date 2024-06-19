@@ -124,6 +124,7 @@ namespace CourseRegistration
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Close();
+            Application.Exit();
         }
 
         private void minimizeBtn_Click(object sender, EventArgs e)
