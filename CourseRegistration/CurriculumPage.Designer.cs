@@ -97,7 +97,12 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            main_panel = new Panel();
+            y = new Button();
+            g = new Button();
+            b = new Button();
             panel_checkboxes.SuspendLayout();
+            main_panel.SuspendLayout();
             SuspendLayout();
             // 
             // y_btn32
@@ -105,7 +110,7 @@
             y_btn32.BackColor = Color.FromArgb(255, 236, 196);
             y_btn32.FlatStyle = FlatStyle.Popup;
             y_btn32.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn32.Location = new Point(1111, 581);
+            y_btn32.Location = new Point(1113, 586);
             y_btn32.Name = "y_btn32";
             y_btn32.Size = new Size(110, 51);
             y_btn32.TabIndex = 134;
@@ -117,7 +122,7 @@
             y_btn30.BackColor = Color.FromArgb(255, 236, 196);
             y_btn30.FlatStyle = FlatStyle.Popup;
             y_btn30.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn30.Location = new Point(1112, 401);
+            y_btn30.Location = new Point(1114, 406);
             y_btn30.Name = "y_btn30";
             y_btn30.Size = new Size(110, 40);
             y_btn30.TabIndex = 133;
@@ -129,7 +134,7 @@
             y_btn29.BackColor = Color.FromArgb(255, 236, 196);
             y_btn29.FlatStyle = FlatStyle.Popup;
             y_btn29.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn29.Location = new Point(1112, 351);
+            y_btn29.Location = new Point(1114, 356);
             y_btn29.Name = "y_btn29";
             y_btn29.Size = new Size(110, 49);
             y_btn29.TabIndex = 132;
@@ -141,7 +146,7 @@
             y_btn27.BackColor = Color.FromArgb(255, 236, 196);
             y_btn27.FlatStyle = FlatStyle.Popup;
             y_btn27.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn27.Location = new Point(979, 581);
+            y_btn27.Location = new Point(981, 586);
             y_btn27.Name = "y_btn27";
             y_btn27.Size = new Size(110, 40);
             y_btn27.TabIndex = 131;
@@ -153,7 +158,7 @@
             b_btn10.BackColor = Color.FromArgb(208, 236, 252);
             b_btn10.FlatStyle = FlatStyle.Popup;
             b_btn10.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn10.Location = new Point(979, 319);
+            b_btn10.Location = new Point(981, 324);
             b_btn10.Name = "b_btn10";
             b_btn10.Size = new Size(110, 40);
             b_btn10.TabIndex = 130;
@@ -165,7 +170,7 @@
             y_btn25.BackColor = Color.FromArgb(255, 236, 196);
             y_btn25.FlatStyle = FlatStyle.Popup;
             y_btn25.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn25.Location = new Point(979, 477);
+            y_btn25.Location = new Point(981, 482);
             y_btn25.Name = "y_btn25";
             y_btn25.Size = new Size(110, 40);
             y_btn25.TabIndex = 129;
@@ -177,7 +182,7 @@
             y_btn20.BackColor = Color.FromArgb(255, 236, 196);
             y_btn20.FlatStyle = FlatStyle.Popup;
             y_btn20.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn20.Location = new Point(811, 534);
+            y_btn20.Location = new Point(813, 539);
             y_btn20.Name = "y_btn20";
             y_btn20.Size = new Size(110, 46);
             y_btn20.TabIndex = 128;
@@ -189,7 +194,7 @@
             y_btn21.BackColor = Color.FromArgb(255, 236, 196);
             y_btn21.FlatStyle = FlatStyle.Popup;
             y_btn21.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn21.Location = new Point(811, 583);
+            y_btn21.Location = new Point(813, 588);
             y_btn21.Name = "y_btn21";
             y_btn21.Size = new Size(110, 52);
             y_btn21.TabIndex = 127;
@@ -201,7 +206,7 @@
             y_btn18.BackColor = Color.FromArgb(255, 236, 196);
             y_btn18.FlatStyle = FlatStyle.Popup;
             y_btn18.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn18.Location = new Point(811, 400);
+            y_btn18.Location = new Point(813, 405);
             y_btn18.Name = "y_btn18";
             y_btn18.Size = new Size(110, 46);
             y_btn18.TabIndex = 126;
@@ -213,7 +218,7 @@
             y_btn14.BackColor = Color.FromArgb(255, 236, 196);
             y_btn14.FlatStyle = FlatStyle.Popup;
             y_btn14.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn14.Location = new Point(678, 580);
+            y_btn14.Location = new Point(680, 585);
             y_btn14.Name = "y_btn14";
             y_btn14.Size = new Size(110, 40);
             y_btn14.TabIndex = 125;
@@ -225,7 +230,7 @@
             y_btn9.BackColor = Color.FromArgb(255, 236, 196);
             y_btn9.FlatStyle = FlatStyle.Popup;
             y_btn9.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn9.Location = new Point(509, 535);
+            y_btn9.Location = new Point(511, 540);
             y_btn9.Name = "y_btn9";
             y_btn9.Size = new Size(110, 49);
             y_btn9.TabIndex = 124;
@@ -237,7 +242,7 @@
             y_btn13.BackColor = Color.FromArgb(255, 236, 196);
             y_btn13.FlatStyle = FlatStyle.Popup;
             y_btn13.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn13.Location = new Point(678, 476);
+            y_btn13.Location = new Point(680, 481);
             y_btn13.Name = "y_btn13";
             y_btn13.Size = new Size(110, 40);
             y_btn13.TabIndex = 123;
@@ -249,7 +254,7 @@
             y_btn8.BackColor = Color.FromArgb(255, 236, 196);
             y_btn8.FlatStyle = FlatStyle.Popup;
             y_btn8.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn8.Location = new Point(509, 396);
+            y_btn8.Location = new Point(511, 401);
             y_btn8.Name = "y_btn8";
             y_btn8.Size = new Size(110, 45);
             y_btn8.TabIndex = 122;
@@ -271,7 +276,7 @@
             y_btn12.BackColor = Color.FromArgb(255, 236, 196);
             y_btn12.FlatStyle = FlatStyle.Popup;
             y_btn12.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn12.Location = new Point(678, 400);
+            y_btn12.Location = new Point(680, 405);
             y_btn12.Name = "y_btn12";
             y_btn12.Size = new Size(110, 46);
             y_btn12.TabIndex = 121;
@@ -283,7 +288,7 @@
             y_btn31.BackColor = Color.FromArgb(255, 236, 196);
             y_btn31.FlatStyle = FlatStyle.Popup;
             y_btn31.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn31.Location = new Point(1111, 477);
+            y_btn31.Location = new Point(1113, 482);
             y_btn31.Name = "y_btn31";
             y_btn31.Size = new Size(110, 50);
             y_btn31.TabIndex = 119;
@@ -295,7 +300,7 @@
             y_btn24.BackColor = Color.FromArgb(255, 236, 196);
             y_btn24.FlatStyle = FlatStyle.Popup;
             y_btn24.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn24.Location = new Point(979, 423);
+            y_btn24.Location = new Point(981, 428);
             y_btn24.Name = "y_btn24";
             y_btn24.Size = new Size(110, 52);
             y_btn24.TabIndex = 118;
@@ -307,7 +312,7 @@
             y_btn19.BackColor = Color.FromArgb(255, 236, 196);
             y_btn19.FlatStyle = FlatStyle.Popup;
             y_btn19.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn19.Location = new Point(811, 476);
+            y_btn19.Location = new Point(813, 481);
             y_btn19.Name = "y_btn19";
             y_btn19.Size = new Size(110, 40);
             y_btn19.TabIndex = 117;
@@ -319,7 +324,7 @@
             b_btn6.BackColor = Color.FromArgb(208, 236, 252);
             b_btn6.FlatStyle = FlatStyle.Popup;
             b_btn6.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn6.Location = new Point(678, 534);
+            b_btn6.Location = new Point(680, 539);
             b_btn6.Name = "b_btn6";
             b_btn6.Size = new Size(110, 40);
             b_btn6.TabIndex = 116;
@@ -331,7 +336,7 @@
             b_btn14.BackColor = Color.FromArgb(208, 236, 252);
             b_btn14.FlatStyle = FlatStyle.Popup;
             b_btn14.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn14.Location = new Point(1111, 680);
+            b_btn14.Location = new Point(1113, 685);
             b_btn14.Name = "b_btn14";
             b_btn14.Size = new Size(110, 40);
             b_btn14.TabIndex = 115;
@@ -343,7 +348,7 @@
             b_btn13.BackColor = Color.FromArgb(208, 236, 252);
             b_btn13.FlatStyle = FlatStyle.Popup;
             b_btn13.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn13.Location = new Point(979, 732);
+            b_btn13.Location = new Point(981, 737);
             b_btn13.Name = "b_btn13";
             b_btn13.Size = new Size(110, 40);
             b_btn13.TabIndex = 114;
@@ -355,7 +360,7 @@
             b_btn8.BackColor = Color.FromArgb(208, 236, 252);
             b_btn8.FlatStyle = FlatStyle.Popup;
             b_btn8.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn8.Location = new Point(811, 680);
+            b_btn8.Location = new Point(813, 685);
             b_btn8.Name = "b_btn8";
             b_btn8.Size = new Size(110, 40);
             b_btn8.TabIndex = 113;
@@ -367,7 +372,7 @@
             b_btn11.BackColor = Color.FromArgb(208, 236, 252);
             b_btn11.FlatStyle = FlatStyle.Popup;
             b_btn11.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn11.Location = new Point(979, 635);
+            b_btn11.Location = new Point(981, 640);
             b_btn11.Name = "b_btn11";
             b_btn11.Size = new Size(110, 40);
             b_btn11.TabIndex = 112;
@@ -379,7 +384,7 @@
             b_btn12.BackColor = Color.FromArgb(208, 236, 252);
             b_btn12.FlatStyle = FlatStyle.Popup;
             b_btn12.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn12.Location = new Point(979, 679);
+            b_btn12.Location = new Point(981, 684);
             b_btn12.Name = "b_btn12";
             b_btn12.Size = new Size(110, 48);
             b_btn12.TabIndex = 111;
@@ -391,7 +396,7 @@
             b_btn4.BackColor = Color.FromArgb(208, 236, 252);
             b_btn4.FlatStyle = FlatStyle.Popup;
             b_btn4.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn4.Location = new Point(376, 679);
+            b_btn4.Location = new Point(378, 684);
             b_btn4.Name = "b_btn4";
             b_btn4.Size = new Size(110, 48);
             b_btn4.TabIndex = 110;
@@ -413,7 +418,7 @@
             y_btn26.BackColor = Color.FromArgb(255, 236, 196);
             y_btn26.FlatStyle = FlatStyle.Popup;
             y_btn26.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn26.Location = new Point(979, 531);
+            y_btn26.Location = new Point(981, 536);
             y_btn26.Name = "y_btn26";
             y_btn26.Size = new Size(110, 49);
             y_btn26.TabIndex = 120;
@@ -435,7 +440,7 @@
             b_btn5.BackColor = Color.FromArgb(208, 236, 252);
             b_btn5.FlatStyle = FlatStyle.Popup;
             b_btn5.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn5.Location = new Point(509, 679);
+            b_btn5.Location = new Point(511, 684);
             b_btn5.Name = "b_btn5";
             b_btn5.Size = new Size(110, 40);
             b_btn5.TabIndex = 109;
@@ -447,7 +452,7 @@
             y_btn28.BackColor = Color.FromArgb(255, 236, 196);
             y_btn28.FlatStyle = FlatStyle.Popup;
             y_btn28.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn28.Location = new Point(1112, 262);
+            y_btn28.Location = new Point(1114, 267);
             y_btn28.Name = "y_btn28";
             y_btn28.Size = new Size(110, 40);
             y_btn28.TabIndex = 106;
@@ -459,7 +464,7 @@
             y_btn17.BackColor = Color.FromArgb(255, 236, 196);
             y_btn17.FlatStyle = FlatStyle.Popup;
             y_btn17.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn17.Location = new Point(811, 318);
+            y_btn17.Location = new Point(813, 323);
             y_btn17.Name = "y_btn17";
             y_btn17.Size = new Size(110, 56);
             y_btn17.TabIndex = 105;
@@ -471,7 +476,7 @@
             y_btn23.BackColor = Color.FromArgb(255, 236, 196);
             y_btn23.FlatStyle = FlatStyle.Popup;
             y_btn23.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn23.Location = new Point(979, 372);
+            y_btn23.Location = new Point(981, 377);
             y_btn23.Name = "y_btn23";
             y_btn23.Size = new Size(110, 49);
             y_btn23.TabIndex = 104;
@@ -483,7 +488,7 @@
             y_btn15.BackColor = Color.FromArgb(255, 236, 196);
             y_btn15.FlatStyle = FlatStyle.Popup;
             y_btn15.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn15.Location = new Point(811, 215);
+            y_btn15.Location = new Point(813, 220);
             y_btn15.Name = "y_btn15";
             y_btn15.Size = new Size(110, 40);
             y_btn15.TabIndex = 103;
@@ -495,7 +500,7 @@
             y_btn16.BackColor = Color.FromArgb(255, 236, 196);
             y_btn16.FlatStyle = FlatStyle.Popup;
             y_btn16.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn16.Location = new Point(811, 261);
+            y_btn16.Location = new Point(813, 266);
             y_btn16.Name = "y_btn16";
             y_btn16.Size = new Size(110, 51);
             y_btn16.TabIndex = 102;
@@ -507,7 +512,7 @@
             y_btn10.BackColor = Color.FromArgb(255, 236, 196);
             y_btn10.FlatStyle = FlatStyle.Popup;
             y_btn10.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn10.Location = new Point(678, 215);
+            y_btn10.Location = new Point(680, 220);
             y_btn10.Name = "y_btn10";
             y_btn10.Size = new Size(110, 40);
             y_btn10.TabIndex = 101;
@@ -519,7 +524,7 @@
             y_btn11.BackColor = Color.FromArgb(255, 236, 196);
             y_btn11.FlatStyle = FlatStyle.Popup;
             y_btn11.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn11.Location = new Point(678, 261);
+            y_btn11.Location = new Point(680, 266);
             y_btn11.Name = "y_btn11";
             y_btn11.Size = new Size(110, 40);
             y_btn11.TabIndex = 100;
@@ -531,7 +536,7 @@
             y_btn4.BackColor = Color.FromArgb(255, 236, 196);
             y_btn4.FlatStyle = FlatStyle.Popup;
             y_btn4.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn4.Location = new Point(376, 406);
+            y_btn4.Location = new Point(378, 411);
             y_btn4.Name = "y_btn4";
             y_btn4.Size = new Size(110, 40);
             y_btn4.TabIndex = 99;
@@ -543,7 +548,7 @@
             y_btn5.BackColor = Color.FromArgb(255, 236, 196);
             y_btn5.FlatStyle = FlatStyle.Popup;
             y_btn5.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn5.Location = new Point(376, 477);
+            y_btn5.Location = new Point(378, 482);
             y_btn5.Name = "y_btn5";
             y_btn5.Size = new Size(110, 40);
             y_btn5.TabIndex = 98;
@@ -555,7 +560,7 @@
             y_btn7.BackColor = Color.FromArgb(255, 236, 196);
             y_btn7.FlatStyle = FlatStyle.Popup;
             y_btn7.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn7.Location = new Point(509, 343);
+            y_btn7.Location = new Point(511, 348);
             y_btn7.Name = "y_btn7";
             y_btn7.Size = new Size(110, 47);
             y_btn7.TabIndex = 97;
@@ -567,7 +572,7 @@
             y_btn6.BackColor = Color.FromArgb(255, 236, 196);
             y_btn6.FlatStyle = FlatStyle.Popup;
             y_btn6.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn6.Location = new Point(509, 262);
+            y_btn6.Location = new Point(511, 267);
             y_btn6.Name = "y_btn6";
             y_btn6.Size = new Size(110, 40);
             y_btn6.TabIndex = 96;
@@ -589,7 +594,7 @@
             b_btn7.BackColor = Color.FromArgb(208, 236, 252);
             b_btn7.FlatStyle = FlatStyle.Popup;
             b_btn7.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn7.Location = new Point(678, 678);
+            b_btn7.Location = new Point(680, 683);
             b_btn7.Name = "b_btn7";
             b_btn7.Size = new Size(110, 48);
             b_btn7.TabIndex = 108;
@@ -601,7 +606,7 @@
             y_btn22.BackColor = Color.FromArgb(255, 236, 196);
             y_btn22.FlatStyle = FlatStyle.Popup;
             y_btn22.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn22.Location = new Point(979, 262);
+            y_btn22.Location = new Point(981, 267);
             y_btn22.Name = "y_btn22";
             y_btn22.Size = new Size(110, 40);
             y_btn22.TabIndex = 107;
@@ -613,7 +618,7 @@
             b_btn3.BackColor = Color.FromArgb(208, 236, 252);
             b_btn3.FlatStyle = FlatStyle.Popup;
             b_btn3.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn3.Location = new Point(376, 355);
+            b_btn3.Location = new Point(378, 360);
             b_btn3.Name = "b_btn3";
             b_btn3.Size = new Size(110, 49);
             b_btn3.TabIndex = 95;
@@ -625,7 +630,7 @@
             b_btn9.BackColor = Color.FromArgb(208, 236, 252);
             b_btn9.FlatStyle = FlatStyle.Popup;
             b_btn9.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn9.Location = new Point(979, 154);
+            b_btn9.Location = new Point(981, 159);
             b_btn9.Name = "b_btn9";
             b_btn9.Size = new Size(110, 47);
             b_btn9.TabIndex = 94;
@@ -637,7 +642,7 @@
             g_btn6.BackColor = Color.FromArgb(232, 244, 220);
             g_btn6.FlatStyle = FlatStyle.Popup;
             g_btn6.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn6.Location = new Point(376, 262);
+            g_btn6.Location = new Point(378, 267);
             g_btn6.Name = "g_btn6";
             g_btn6.Size = new Size(110, 40);
             g_btn6.TabIndex = 93;
@@ -649,7 +654,7 @@
             g_btn8.BackColor = Color.FromArgb(232, 244, 220);
             g_btn8.FlatStyle = FlatStyle.Popup;
             g_btn8.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn8.Location = new Point(509, 201);
+            g_btn8.Location = new Point(511, 206);
             g_btn8.Name = "g_btn8";
             g_btn8.Size = new Size(110, 40);
             g_btn8.TabIndex = 92;
@@ -661,7 +666,7 @@
             g_btn7.BackColor = Color.FromArgb(232, 244, 220);
             g_btn7.FlatStyle = FlatStyle.Popup;
             g_btn7.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn7.Location = new Point(509, 154);
+            g_btn7.Location = new Point(511, 159);
             g_btn7.Name = "g_btn7";
             g_btn7.Size = new Size(110, 40);
             g_btn7.TabIndex = 91;
@@ -673,7 +678,7 @@
             g_btn5.BackColor = Color.FromArgb(232, 244, 220);
             g_btn5.FlatStyle = FlatStyle.Popup;
             g_btn5.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn5.Location = new Point(376, 154);
+            g_btn5.Location = new Point(378, 159);
             g_btn5.Name = "g_btn5";
             g_btn5.Size = new Size(110, 40);
             g_btn5.TabIndex = 90;
@@ -685,7 +690,7 @@
             g_btn9.BackColor = Color.FromArgb(232, 244, 220);
             g_btn9.FlatStyle = FlatStyle.Popup;
             g_btn9.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn9.Location = new Point(678, 154);
+            g_btn9.Location = new Point(680, 159);
             g_btn9.Name = "g_btn9";
             g_btn9.Size = new Size(110, 40);
             g_btn9.TabIndex = 89;
@@ -695,13 +700,16 @@
             // panel_checkboxes
             // 
             panel_checkboxes.BackColor = Color.LightGray;
+            panel_checkboxes.Controls.Add(b);
+            panel_checkboxes.Controls.Add(g);
+            panel_checkboxes.Controls.Add(y);
             panel_checkboxes.Controls.Add(lbl_complete);
             panel_checkboxes.Controls.Add(lbl_prepost);
             panel_checkboxes.Controls.Add(checkBoxAll);
             panel_checkboxes.Controls.Add(checkBoxB);
             panel_checkboxes.Controls.Add(checkBoxG);
             panel_checkboxes.Controls.Add(checkBoxY);
-            panel_checkboxes.Location = new Point(76, 818);
+            panel_checkboxes.Location = new Point(78, 823);
             panel_checkboxes.Name = "panel_checkboxes";
             panel_checkboxes.Size = new Size(1146, 81);
             panel_checkboxes.TabIndex = 88;
@@ -731,7 +739,7 @@
             g_btn1.BackColor = Color.FromArgb(232, 244, 220);
             g_btn1.FlatStyle = FlatStyle.Popup;
             g_btn1.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn1.Location = new Point(76, 154);
+            g_btn1.Location = new Point(78, 159);
             g_btn1.Name = "g_btn1";
             g_btn1.Size = new Size(110, 40);
             g_btn1.TabIndex = 135;
@@ -744,7 +752,7 @@
             g_btn2.BackColor = Color.FromArgb(232, 244, 220);
             g_btn2.FlatStyle = FlatStyle.Popup;
             g_btn2.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn2.Location = new Point(76, 215);
+            g_btn2.Location = new Point(78, 220);
             g_btn2.Name = "g_btn2";
             g_btn2.Size = new Size(110, 40);
             g_btn2.TabIndex = 136;
@@ -756,7 +764,7 @@
             g_btn3.BackColor = Color.FromArgb(232, 244, 220);
             g_btn3.FlatStyle = FlatStyle.Popup;
             g_btn3.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn3.Location = new Point(207, 154);
+            g_btn3.Location = new Point(209, 159);
             g_btn3.Name = "g_btn3";
             g_btn3.Size = new Size(110, 40);
             g_btn3.TabIndex = 137;
@@ -768,7 +776,7 @@
             g_btn4.BackColor = Color.FromArgb(232, 244, 220);
             g_btn4.FlatStyle = FlatStyle.Popup;
             g_btn4.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn4.Location = new Point(207, 215);
+            g_btn4.Location = new Point(209, 220);
             g_btn4.Name = "g_btn4";
             g_btn4.Size = new Size(110, 40);
             g_btn4.TabIndex = 138;
@@ -780,7 +788,7 @@
             y_btn1.BackColor = Color.FromArgb(255, 236, 196);
             y_btn1.FlatStyle = FlatStyle.Popup;
             y_btn1.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn1.Location = new Point(76, 355);
+            y_btn1.Location = new Point(78, 360);
             y_btn1.Name = "y_btn1";
             y_btn1.Size = new Size(110, 40);
             y_btn1.TabIndex = 139;
@@ -792,7 +800,7 @@
             b_btn2.BackColor = Color.FromArgb(208, 236, 252);
             b_btn2.FlatStyle = FlatStyle.Popup;
             b_btn2.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn2.Location = new Point(207, 355);
+            b_btn2.Location = new Point(209, 360);
             b_btn2.Name = "b_btn2";
             b_btn2.Size = new Size(110, 49);
             b_btn2.TabIndex = 140;
@@ -804,7 +812,7 @@
             b_btn1.BackColor = Color.FromArgb(208, 236, 252);
             b_btn1.FlatStyle = FlatStyle.Popup;
             b_btn1.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b_btn1.Location = new Point(76, 680);
+            b_btn1.Location = new Point(78, 685);
             b_btn1.Name = "b_btn1";
             b_btn1.Size = new Size(241, 48);
             b_btn1.TabIndex = 141;
@@ -816,7 +824,7 @@
             y_btn2.BackColor = Color.FromArgb(255, 236, 196);
             y_btn2.FlatStyle = FlatStyle.Popup;
             y_btn2.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn2.Location = new Point(76, 476);
+            y_btn2.Location = new Point(78, 481);
             y_btn2.Name = "y_btn2";
             y_btn2.Size = new Size(241, 40);
             y_btn2.TabIndex = 142;
@@ -828,7 +836,7 @@
             y_btn3.BackColor = Color.FromArgb(255, 236, 196);
             y_btn3.FlatStyle = FlatStyle.Popup;
             y_btn3.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y_btn3.Location = new Point(76, 544);
+            y_btn3.Location = new Point(78, 549);
             y_btn3.Name = "y_btn3";
             y_btn3.Size = new Size(110, 49);
             y_btn3.TabIndex = 143;
@@ -840,7 +848,7 @@
             g_btn10.BackColor = Color.FromArgb(232, 244, 220);
             g_btn10.FlatStyle = FlatStyle.Popup;
             g_btn10.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g_btn10.Location = new Point(811, 154);
+            g_btn10.Location = new Point(813, 159);
             g_btn10.Name = "g_btn10";
             g_btn10.Size = new Size(110, 40);
             g_btn10.TabIndex = 144;
@@ -850,28 +858,31 @@
             // lbl_options
             // 
             lbl_options.AutoSize = true;
-            lbl_options.Font = new Font("Malgun Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            lbl_options.Location = new Point(79, 771);
+            lbl_options.Font = new Font("Malgun Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            lbl_options.ForeColor = Color.WhiteSmoke;
+            lbl_options.Location = new Point(16, 677);
             lbl_options.Name = "lbl_options";
-            lbl_options.Size = new Size(135, 45);
+            lbl_options.Size = new Size(140, 45);
             lbl_options.TabIndex = 145;
             lbl_options.Text = "Options";
             // 
             // lbl_roadmap
             // 
             lbl_roadmap.AutoSize = true;
-            lbl_roadmap.Font = new Font("Malgun Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            lbl_roadmap.Font = new Font("Malgun Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 129);
             lbl_roadmap.Location = new Point(76, 32);
             lbl_roadmap.Name = "lbl_roadmap";
-            lbl_roadmap.Size = new Size(391, 45);
+            lbl_roadmap.Size = new Size(412, 45);
             lbl_roadmap.TabIndex = 147;
             lbl_roadmap.Text = "Software Major Roadmap";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("NanumBarunGothicOTF", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label1.Location = new Point(169, 107);
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(111, 14);
             label1.Name = "label1";
             label1.Size = new Size(55, 22);
             label1.TabIndex = 148;
@@ -881,7 +892,8 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("NanumBarunGothicOTF", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label2.Location = new Point(1072, 107);
+            label2.ForeColor = Color.WhiteSmoke;
+            label2.Location = new Point(1005, 14);
             label2.Name = "label2";
             label2.Size = new Size(55, 22);
             label2.TabIndex = 149;
@@ -891,7 +903,8 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("NanumBarunGothicOTF", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label3.Location = new Point(772, 107);
+            label3.ForeColor = Color.WhiteSmoke;
+            label3.Location = new Point(711, 14);
             label3.Name = "label3";
             label3.Size = new Size(55, 22);
             label3.TabIndex = 150;
@@ -901,23 +914,65 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("NanumBarunGothicOTF", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            label4.Location = new Point(469, 107);
+            label4.ForeColor = Color.WhiteSmoke;
+            label4.Location = new Point(409, 14);
             label4.Name = "label4";
             label4.Size = new Size(55, 22);
             label4.TabIndex = 151;
             label4.Text = "2학년";
+            // 
+            // main_panel
+            // 
+            main_panel.BackColor = Color.FromArgb(107, 34, 48);
+            main_panel.Controls.Add(label1);
+            main_panel.Controls.Add(lbl_options);
+            main_panel.Controls.Add(label4);
+            main_panel.Controls.Add(label2);
+            main_panel.Controls.Add(label3);
+            main_panel.Location = new Point(60, 93);
+            main_panel.Name = "main_panel";
+            main_panel.Size = new Size(1181, 828);
+            main_panel.TabIndex = 152;
+            // 
+            // y
+            // 
+            y.BackColor = Color.FromArgb(255, 236, 196);
+            y.FlatStyle = FlatStyle.Popup;
+            y.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
+            y.Location = new Point(334, 33);
+            y.Name = "y";
+            y.Size = new Size(16, 16);
+            y.TabIndex = 153;
+            y.UseVisualStyleBackColor = false;
+            // 
+            // g
+            // 
+            g.BackColor = Color.FromArgb(232, 244, 220);
+            g.FlatStyle = FlatStyle.Popup;
+            g.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
+            g.Location = new Point(720, 32);
+            g.Name = "g";
+            g.Size = new Size(16, 16);
+            g.TabIndex = 155;
+            g.UseVisualStyleBackColor = false;
+            // 
+            // b
+            // 
+            b.BackColor = Color.FromArgb(208, 236, 252);
+            b.FlatStyle = FlatStyle.Popup;
+            b.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
+            b.Location = new Point(513, 32);
+            b.Name = "b";
+            b.Size = new Size(16, 16);
+            b.TabIndex = 156;
+            b.UseVisualStyleBackColor = false;
             // 
             // CurriculumPage
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.White;
             ClientSize = new Size(1299, 951);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(lbl_roadmap);
-            Controls.Add(lbl_options);
             Controls.Add(g_btn10);
             Controls.Add(y_btn3);
             Controls.Add(y_btn2);
@@ -975,11 +1030,14 @@
             Controls.Add(g_btn5);
             Controls.Add(g_btn9);
             Controls.Add(panel_checkboxes);
+            Controls.Add(main_panel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CurriculumPage";
             Text = "Calculaton";
             panel_checkboxes.ResumeLayout(false);
             panel_checkboxes.PerformLayout();
+            main_panel.ResumeLayout(false);
+            main_panel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1055,5 +1113,9 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Panel main_panel;
+        private Button b;
+        private Button g;
+        private Button y;
     }
 }
