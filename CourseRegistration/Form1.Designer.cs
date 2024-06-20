@@ -34,7 +34,6 @@
             mainPanel = new Panel();
             topBar_right = new Panel();
             minimizeBtn = new Button();
-            maximizeBtn = new Button();
             exitBtn = new Button();
             symbol = new PictureBox();
             HomeBtn = new Button();
@@ -72,7 +71,6 @@
             // 
             topBar_right.BackColor = Color.White;
             topBar_right.Controls.Add(minimizeBtn);
-            topBar_right.Controls.Add(maximizeBtn);
             topBar_right.Controls.Add(exitBtn);
             topBar_right.Location = new Point(213, 0);
             topBar_right.Name = "topBar_right";
@@ -87,24 +85,12 @@
             minimizeBtn.BackColor = Color.FromArgb(107, 34, 48);
             minimizeBtn.FlatAppearance.BorderSize = 0;
             minimizeBtn.FlatStyle = FlatStyle.Flat;
-            minimizeBtn.Location = new Point(1215, 9);
+            minimizeBtn.Location = new Point(1237, 9);
             minimizeBtn.Name = "minimizeBtn";
             minimizeBtn.Size = new Size(20, 20);
             minimizeBtn.TabIndex = 10;
             minimizeBtn.UseVisualStyleBackColor = false;
             minimizeBtn.Click += minimizeBtn_Click;
-            // 
-            // maximizeBtn
-            // 
-            maximizeBtn.BackColor = Color.FromArgb(107, 34, 48);
-            maximizeBtn.FlatAppearance.BorderSize = 0;
-            maximizeBtn.FlatStyle = FlatStyle.Flat;
-            maximizeBtn.Location = new Point(1241, 9);
-            maximizeBtn.Name = "maximizeBtn";
-            maximizeBtn.Size = new Size(20, 20);
-            maximizeBtn.TabIndex = 10;
-            maximizeBtn.UseVisualStyleBackColor = false;
-            maximizeBtn.Click += maximizeBtn_Click;
             // 
             // exitBtn
             // 
@@ -259,7 +245,6 @@
         private Panel topBar_right;
         private Button exitBtn;
         private Button minimizeBtn;
-        private Button maximizeBtn;
         private Label time;
     }
 }

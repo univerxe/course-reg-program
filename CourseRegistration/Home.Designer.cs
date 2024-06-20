@@ -33,6 +33,22 @@
             timeTable = new Label();
             courses = new Label();
             panel1 = new Panel();
+            regBtn6 = new Button();
+            regCourse6 = new Label();
+            regBtn3 = new Button();
+            regCourse3 = new Label();
+            regBtn8 = new Button();
+            regCourse8 = new Label();
+            regBtn5 = new Button();
+            regCourse5 = new Label();
+            regBtn2 = new Button();
+            regCourse2 = new Label();
+            regBtn7 = new Button();
+            regCourse7 = new Label();
+            regBtn4 = new Button();
+            regCourse4 = new Label();
+            regBtn1 = new Button();
+            regCourse1 = new Label();
             course1 = new Panel();
             deleteBtn1 = new Button();
             numRate1 = new Label();
@@ -320,6 +336,7 @@
             Tue6_Label = new Label();
             Thu6 = new Panel();
             Thu6_Label = new Label();
+            panel1.SuspendLayout();
             course1.SuspendLayout();
             course2.SuspendLayout();
             course3.SuspendLayout();
@@ -479,11 +496,243 @@
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
+            panel1.Controls.Add(regBtn6);
+            panel1.Controls.Add(regCourse6);
+            panel1.Controls.Add(regBtn3);
+            panel1.Controls.Add(regCourse3);
+            panel1.Controls.Add(regBtn8);
+            panel1.Controls.Add(regCourse8);
+            panel1.Controls.Add(regBtn5);
+            panel1.Controls.Add(regCourse5);
+            panel1.Controls.Add(regBtn2);
+            panel1.Controls.Add(regCourse2);
+            panel1.Controls.Add(regBtn7);
+            panel1.Controls.Add(regCourse7);
+            panel1.Controls.Add(regBtn4);
+            panel1.Controls.Add(regCourse4);
+            panel1.Controls.Add(regBtn1);
+            panel1.Controls.Add(regCourse1);
             panel1.ForeColor = SystemColors.ControlText;
             panel1.Location = new Point(76, 651);
             panel1.Name = "panel1";
             panel1.Size = new Size(1146, 244);
             panel1.TabIndex = 4;
+            // 
+            // regBtn6
+            // 
+            regBtn6.BackgroundImage = (Image)resources.GetObject("regBtn6.BackgroundImage");
+            regBtn6.FlatAppearance.BorderColor = Color.LightGray;
+            regBtn6.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            regBtn6.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            regBtn6.FlatStyle = FlatStyle.Flat;
+            regBtn6.ForeColor = Color.LightGray;
+            regBtn6.Location = new Point(768, 100);
+            regBtn6.Name = "regBtn6";
+            regBtn6.Size = new Size(29, 29);
+            regBtn6.TabIndex = 28;
+            regBtn6.UseVisualStyleBackColor = true;
+            regBtn6.Visible = false;
+            regBtn6.Click += regBtn6_Click;
+            // 
+            // regCourse6
+            // 
+            regCourse6.AutoSize = true;
+            regCourse6.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
+            regCourse6.Location = new Point(793, 104);
+            regCourse6.Name = "regCourse6";
+            regCourse6.Size = new Size(85, 25);
+            regCourse6.TabIndex = 27;
+            regCourse6.Text = "Course6";
+            regCourse6.Visible = false;
+            // 
+            // regBtn3
+            // 
+            regBtn3.BackgroundImage = (Image)resources.GetObject("regBtn3.BackgroundImage");
+            regBtn3.FlatAppearance.BorderColor = Color.LightGray;
+            regBtn3.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            regBtn3.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            regBtn3.FlatStyle = FlatStyle.Flat;
+            regBtn3.ForeColor = Color.LightGray;
+            regBtn3.Location = new Point(768, 35);
+            regBtn3.Name = "regBtn3";
+            regBtn3.Size = new Size(29, 29);
+            regBtn3.TabIndex = 26;
+            regBtn3.UseVisualStyleBackColor = true;
+            regBtn3.Visible = false;
+            regBtn3.Click += regBtn3_Click;
+            // 
+            // regCourse3
+            // 
+            regCourse3.AutoSize = true;
+            regCourse3.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
+            regCourse3.Location = new Point(793, 39);
+            regCourse3.Name = "regCourse3";
+            regCourse3.Size = new Size(85, 25);
+            regCourse3.TabIndex = 25;
+            regCourse3.Text = "Course3";
+            regCourse3.Visible = false;
+            // 
+            // regBtn8
+            // 
+            regBtn8.BackgroundImage = (Image)resources.GetObject("regBtn8.BackgroundImage");
+            regBtn8.FlatAppearance.BorderColor = Color.LightGray;
+            regBtn8.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            regBtn8.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            regBtn8.FlatStyle = FlatStyle.Flat;
+            regBtn8.ForeColor = Color.LightGray;
+            regBtn8.Location = new Point(386, 165);
+            regBtn8.Name = "regBtn8";
+            regBtn8.Size = new Size(29, 29);
+            regBtn8.TabIndex = 24;
+            regBtn8.UseVisualStyleBackColor = true;
+            regBtn8.Visible = false;
+            regBtn8.Click += regBtn8_Click;
+            // 
+            // regCourse8
+            // 
+            regCourse8.AutoSize = true;
+            regCourse8.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            regCourse8.Location = new Point(411, 169);
+            regCourse8.Name = "regCourse8";
+            regCourse8.Size = new Size(85, 25);
+            regCourse8.TabIndex = 23;
+            regCourse8.Text = "Course8";
+            regCourse8.Visible = false;
+            // 
+            // regBtn5
+            // 
+            regBtn5.BackgroundImage = (Image)resources.GetObject("regBtn5.BackgroundImage");
+            regBtn5.FlatAppearance.BorderColor = Color.LightGray;
+            regBtn5.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            regBtn5.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            regBtn5.FlatStyle = FlatStyle.Flat;
+            regBtn5.ForeColor = Color.LightGray;
+            regBtn5.Location = new Point(386, 100);
+            regBtn5.Name = "regBtn5";
+            regBtn5.Size = new Size(29, 29);
+            regBtn5.TabIndex = 22;
+            regBtn5.UseVisualStyleBackColor = true;
+            regBtn5.Visible = false;
+            regBtn5.Click += regBtn5_Click;
+            // 
+            // regCourse5
+            // 
+            regCourse5.AutoSize = true;
+            regCourse5.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
+            regCourse5.Location = new Point(411, 104);
+            regCourse5.Name = "regCourse5";
+            regCourse5.Size = new Size(85, 25);
+            regCourse5.TabIndex = 21;
+            regCourse5.Text = "Course5";
+            regCourse5.Visible = false;
+            // 
+            // regBtn2
+            // 
+            regBtn2.BackgroundImage = (Image)resources.GetObject("regBtn2.BackgroundImage");
+            regBtn2.FlatAppearance.BorderColor = Color.LightGray;
+            regBtn2.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            regBtn2.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            regBtn2.FlatStyle = FlatStyle.Flat;
+            regBtn2.ForeColor = Color.LightGray;
+            regBtn2.Location = new Point(386, 35);
+            regBtn2.Name = "regBtn2";
+            regBtn2.Size = new Size(29, 29);
+            regBtn2.TabIndex = 20;
+            regBtn2.UseVisualStyleBackColor = true;
+            regBtn2.Visible = false;
+            regBtn2.Click += regBtn2_Click;
+            // 
+            // regCourse2
+            // 
+            regCourse2.AutoSize = true;
+            regCourse2.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
+            regCourse2.Location = new Point(411, 39);
+            regCourse2.Name = "regCourse2";
+            regCourse2.Size = new Size(85, 25);
+            regCourse2.TabIndex = 19;
+            regCourse2.Text = "Course2";
+            regCourse2.Visible = false;
+            // 
+            // regBtn7
+            // 
+            regBtn7.BackgroundImage = (Image)resources.GetObject("regBtn7.BackgroundImage");
+            regBtn7.FlatAppearance.BorderColor = Color.LightGray;
+            regBtn7.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            regBtn7.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            regBtn7.FlatStyle = FlatStyle.Flat;
+            regBtn7.ForeColor = Color.LightGray;
+            regBtn7.Location = new Point(3, 165);
+            regBtn7.Name = "regBtn7";
+            regBtn7.Size = new Size(29, 29);
+            regBtn7.TabIndex = 18;
+            regBtn7.UseVisualStyleBackColor = true;
+            regBtn7.Visible = false;
+            regBtn7.Click += regBtn7_Click;
+            // 
+            // regCourse7
+            // 
+            regCourse7.AutoSize = true;
+            regCourse7.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
+            regCourse7.Location = new Point(28, 169);
+            regCourse7.Name = "regCourse7";
+            regCourse7.Size = new Size(85, 25);
+            regCourse7.TabIndex = 17;
+            regCourse7.Text = "Course7";
+            regCourse7.Visible = false;
+            // 
+            // regBtn4
+            // 
+            regBtn4.BackgroundImage = (Image)resources.GetObject("regBtn4.BackgroundImage");
+            regBtn4.FlatAppearance.BorderColor = Color.LightGray;
+            regBtn4.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            regBtn4.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            regBtn4.FlatStyle = FlatStyle.Flat;
+            regBtn4.ForeColor = Color.LightGray;
+            regBtn4.Location = new Point(3, 100);
+            regBtn4.Name = "regBtn4";
+            regBtn4.Size = new Size(29, 29);
+            regBtn4.TabIndex = 16;
+            regBtn4.UseVisualStyleBackColor = true;
+            regBtn4.Visible = false;
+            regBtn4.Click += regBtn4_Click;
+            // 
+            // regCourse4
+            // 
+            regCourse4.AutoSize = true;
+            regCourse4.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
+            regCourse4.Location = new Point(28, 104);
+            regCourse4.Name = "regCourse4";
+            regCourse4.Size = new Size(85, 25);
+            regCourse4.TabIndex = 15;
+            regCourse4.Text = "Course4";
+            regCourse4.Visible = false;
+            // 
+            // regBtn1
+            // 
+            regBtn1.BackgroundImage = (Image)resources.GetObject("regBtn1.BackgroundImage");
+            regBtn1.FlatAppearance.BorderColor = Color.LightGray;
+            regBtn1.FlatAppearance.MouseDownBackColor = Color.LightGray;
+            regBtn1.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            regBtn1.FlatStyle = FlatStyle.Flat;
+            regBtn1.ForeColor = Color.LightGray;
+            regBtn1.Location = new Point(3, 35);
+            regBtn1.Name = "regBtn1";
+            regBtn1.Size = new Size(29, 29);
+            regBtn1.TabIndex = 14;
+            regBtn1.UseVisualStyleBackColor = true;
+            regBtn1.Visible = false;
+            regBtn1.Click += regBtn1_Click;
+            // 
+            // regCourse1
+            // 
+            regCourse1.AutoSize = true;
+            regCourse1.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold);
+            regCourse1.Location = new Point(28, 39);
+            regCourse1.Name = "regCourse1";
+            regCourse1.Size = new Size(85, 25);
+            regCourse1.TabIndex = 0;
+            regCourse1.Text = "Course1";
+            regCourse1.Visible = false;
             // 
             // course1
             // 
@@ -498,6 +747,7 @@
             course1.Name = "course1";
             course1.Size = new Size(200, 100);
             course1.TabIndex = 5;
+            course1.DoubleClick += Register1;
             // 
             // deleteBtn1
             // 
@@ -523,6 +773,7 @@
             numRate1.Size = new Size(62, 15);
             numRate1.TabIndex = 4;
             numRate1.Text = "numRate1";
+            numRate1.DoubleClick += Register1;
             // 
             // profNum1
             // 
@@ -532,6 +783,7 @@
             profNum1.Size = new Size(62, 15);
             profNum1.TabIndex = 3;
             profNum1.Text = "profTime1";
+            profNum1.DoubleClick += Register1;
             // 
             // courseName1
             // 
@@ -542,6 +794,7 @@
             courseName1.Size = new Size(111, 21);
             courseName1.TabIndex = 2;
             courseName1.Text = "courseName1";
+            courseName1.DoubleClick += Register1;
             // 
             // label1
             // 
@@ -577,6 +830,7 @@
             course2.Name = "course2";
             course2.Size = new Size(200, 100);
             course2.TabIndex = 6;
+            course2.DoubleClick += Register2;
             // 
             // deleteBtn2
             // 
@@ -602,6 +856,7 @@
             numRate2.Size = new Size(62, 15);
             numRate2.TabIndex = 5;
             numRate2.Text = "numRate2";
+            numRate2.DoubleClick += Register2;
             // 
             // profNum2
             // 
@@ -611,6 +866,7 @@
             profNum2.Size = new Size(62, 15);
             profNum2.TabIndex = 4;
             profNum2.Text = "profTime2";
+            profNum2.DoubleClick += Register2;
             // 
             // courseName2
             // 
@@ -621,6 +877,7 @@
             courseName2.Size = new Size(111, 21);
             courseName2.TabIndex = 3;
             courseName2.Text = "courseName2";
+            courseName2.DoubleClick += Register2;
             // 
             // courseBtn2
             // 
@@ -648,6 +905,7 @@
             course3.Name = "course3";
             course3.Size = new Size(200, 100);
             course3.TabIndex = 6;
+            course3.DoubleClick += Register3;
             // 
             // deleteBtn3
             // 
@@ -673,6 +931,7 @@
             numRate3.Size = new Size(62, 15);
             numRate3.TabIndex = 6;
             numRate3.Text = "numRate3";
+            numRate3.DoubleClick += Register3;
             // 
             // profNum3
             // 
@@ -682,6 +941,7 @@
             profNum3.Size = new Size(62, 15);
             profNum3.TabIndex = 5;
             profNum3.Text = "profTime3";
+            profNum3.DoubleClick += Register3;
             // 
             // courseName3
             // 
@@ -692,6 +952,7 @@
             courseName3.Size = new Size(111, 21);
             courseName3.TabIndex = 4;
             courseName3.Text = "courseName3";
+            courseName3.DoubleClick += Register3;
             // 
             // courseBtn3
             // 
@@ -719,6 +980,7 @@
             course4.Name = "course4";
             course4.Size = new Size(200, 100);
             course4.TabIndex = 7;
+            course4.DoubleClick += Register4;
             // 
             // deleteBtn4
             // 
@@ -744,6 +1006,7 @@
             numRate4.Size = new Size(62, 15);
             numRate4.TabIndex = 12;
             numRate4.Text = "numRate4";
+            numRate4.DoubleClick += Register4;
             // 
             // profNum4
             // 
@@ -753,6 +1016,7 @@
             profNum4.Size = new Size(62, 15);
             profNum4.TabIndex = 5;
             profNum4.Text = "profTime4";
+            profNum4.DoubleClick += Register4;
             // 
             // courseName4
             // 
@@ -763,6 +1027,7 @@
             courseName4.Size = new Size(111, 21);
             courseName4.TabIndex = 3;
             courseName4.Text = "courseName4";
+            courseName4.DoubleClick += Register4;
             // 
             // courseBtn4
             // 
@@ -790,6 +1055,7 @@
             course5.Name = "course5";
             course5.Size = new Size(200, 100);
             course5.TabIndex = 7;
+            course5.DoubleClick += Register5;
             // 
             // deleteBtn5
             // 
@@ -815,6 +1081,7 @@
             numRate5.Size = new Size(62, 15);
             numRate5.TabIndex = 13;
             numRate5.Text = "numRate5";
+            numRate5.DoubleClick += Register5;
             // 
             // profNum5
             // 
@@ -824,6 +1091,7 @@
             profNum5.Size = new Size(62, 15);
             profNum5.TabIndex = 6;
             profNum5.Text = "profTime5";
+            profNum5.DoubleClick += Register5;
             // 
             // courseName5
             // 
@@ -834,6 +1102,7 @@
             courseName5.Size = new Size(111, 21);
             courseName5.TabIndex = 12;
             courseName5.Text = "courseName5";
+            courseName5.DoubleClick += Register5;
             // 
             // courseBtn5
             // 
@@ -861,6 +1130,7 @@
             course6.Name = "course6";
             course6.Size = new Size(200, 100);
             course6.TabIndex = 7;
+            course6.DoubleClick += Register6;
             // 
             // deleteBtn6
             // 
@@ -886,6 +1156,7 @@
             numRate6.Size = new Size(62, 15);
             numRate6.TabIndex = 14;
             numRate6.Text = "numRate6";
+            numRate6.DoubleClick += Register6;
             // 
             // profNum6
             // 
@@ -895,6 +1166,7 @@
             profNum6.Size = new Size(62, 15);
             profNum6.TabIndex = 13;
             profNum6.Text = "profTime6";
+            profNum6.DoubleClick += Register6;
             // 
             // courseName6
             // 
@@ -905,6 +1177,7 @@
             courseName6.Size = new Size(111, 21);
             courseName6.TabIndex = 3;
             courseName6.Text = "courseName6";
+            courseName6.DoubleClick += Register6;
             // 
             // courseBtn6
             // 
@@ -932,6 +1205,7 @@
             course7.Name = "course7";
             course7.Size = new Size(200, 100);
             course7.TabIndex = 8;
+            course7.DoubleClick += Register7;
             // 
             // deleteBtn7
             // 
@@ -957,6 +1231,7 @@
             numRate7.Size = new Size(62, 15);
             numRate7.TabIndex = 12;
             numRate7.Text = "numRate7";
+            numRate7.DoubleClick += Register7;
             // 
             // profNum7
             // 
@@ -966,6 +1241,7 @@
             profNum7.Size = new Size(62, 15);
             profNum7.TabIndex = 14;
             profNum7.Text = "profTime7";
+            profNum7.DoubleClick += Register7;
             // 
             // courseName7
             // 
@@ -976,6 +1252,7 @@
             courseName7.Size = new Size(111, 21);
             courseName7.TabIndex = 3;
             courseName7.Text = "courseName7";
+            courseName7.DoubleClick += Register7;
             // 
             // courseBtn7
             // 
@@ -1003,6 +1280,7 @@
             course8.Name = "course8";
             course8.Size = new Size(200, 100);
             course8.TabIndex = 9;
+            course8.DoubleClick += Register8;
             // 
             // deleteBtn8
             // 
@@ -1028,6 +1306,7 @@
             numRate8.Size = new Size(62, 15);
             numRate8.TabIndex = 15;
             numRate8.Text = "numRate8";
+            numRate8.DoubleClick += Register8;
             // 
             // profNum8
             // 
@@ -1037,6 +1316,7 @@
             profNum8.Size = new Size(62, 15);
             profNum8.TabIndex = 15;
             profNum8.Text = "profTime8";
+            profNum8.DoubleClick += Register8;
             // 
             // courseName8
             // 
@@ -1047,6 +1327,7 @@
             courseName8.Size = new Size(111, 21);
             courseName8.TabIndex = 5;
             courseName8.Text = "courseName8";
+            courseName8.DoubleClick += Register8;
             // 
             // courseBtn8
             // 
@@ -1074,6 +1355,7 @@
             course9.Name = "course9";
             course9.Size = new Size(200, 100);
             course9.TabIndex = 10;
+            course9.DoubleClick += Register9;
             // 
             // deleteBtn9
             // 
@@ -1099,6 +1381,7 @@
             numRate9.Size = new Size(62, 15);
             numRate9.TabIndex = 16;
             numRate9.Text = "numRate9";
+            numRate9.DoubleClick += Register9;
             // 
             // profNum9
             // 
@@ -1108,6 +1391,7 @@
             profNum9.Size = new Size(62, 15);
             profNum9.TabIndex = 7;
             profNum9.Text = "profTime9";
+            profNum9.DoubleClick += Register9;
             // 
             // courseName9
             // 
@@ -1118,6 +1402,7 @@
             courseName9.Size = new Size(111, 21);
             courseName9.TabIndex = 4;
             courseName9.Text = "courseName9";
+            courseName9.DoubleClick += Register9;
             // 
             // courseBtn9
             // 
@@ -3369,6 +3654,8 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Home";
             Text = "Home";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             course1.ResumeLayout(false);
             course1.PerformLayout();
             course2.ResumeLayout(false);
@@ -3848,5 +4135,21 @@
         private Label Tue6_Label;
         private Panel Thu6;
         private Label Thu6_Label;
+        private Label regCourse1;
+        private Button regBtn6;
+        private Label regCourse6;
+        private Button regBtn3;
+        private Label regCourse3;
+        private Button regBtn8;
+        private Label regCourse8;
+        private Button regBtn5;
+        private Label regCourse5;
+        private Button regBtn2;
+        private Label regCourse2;
+        private Button regBtn7;
+        private Label regCourse7;
+        private Button regBtn4;
+        private Label regCourse4;
+        private Button regBtn1;
     }
 }

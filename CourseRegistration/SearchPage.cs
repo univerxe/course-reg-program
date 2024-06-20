@@ -43,7 +43,7 @@ namespace CourseRegistration
             roots = JsonSerializer.Deserialize<List<Root>>(jsonString);
             Random rnd = new();
 
-            string[] times = ["월4수3", "화2목3", "수6", "목5", "금123"];
+            string[] times = ["월4수3", "화1목2", "수6", "목5", "금123"];
             if (roots != null)
             {
                 foreach (Root root in roots)
