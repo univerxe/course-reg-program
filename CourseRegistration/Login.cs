@@ -127,7 +127,7 @@ namespace CourseRegistration
         {
             try
             {
-                string apiUrl = "http://127.0.0.1:5000/login";
+                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/login";
 
                 // Create an HttpClient instance
                 using (HttpClient client = new HttpClient())

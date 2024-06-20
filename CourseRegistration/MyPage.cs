@@ -72,15 +72,15 @@ namespace CourseRegistration
             getStudentInfo();
             getProffesorInfo();
             getCreditsInfo();
-            getElectLectures();
-            getReqLectures();
+            //getElectLectures();
+            //getReqLectures();
         }
 
         private async void getStudentInfo()
         {
             try
             {
-                string apiUrl = "http://127.0.0.1:5000/student_info/" + username;
+                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/student_info/" + username;
 
 
                 // Create an HttpClient instance
@@ -156,8 +156,8 @@ namespace CourseRegistration
         {
             try
             {
-                string apiUrl = "http://127.0.0.1:5000/student_lectures/" + username;
-                //string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/courses";
+                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/student_lectures/" + username;
+
 
                 // Create an HttpClient instance
                 using (HttpClient client = new HttpClient())
