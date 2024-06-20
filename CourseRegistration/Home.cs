@@ -59,6 +59,7 @@ namespace CourseRegistration
                 this.time = time;
                 this.addBtn.Visible = false;
                 this.delBtn.Visible = true;
+                this.course.Visible = true;
             }
 
             public void DeleteCourse()
@@ -66,21 +67,26 @@ namespace CourseRegistration
                 this.course.Text = "";
                 this.profTime.Text = "";
                 this.numRate.Text = "";
-                this.time = "";
                 this.addBtn.Visible = true;
                 this.delBtn.Visible = false;
+                this.course.Visible = false;
             }
 
             public string GetTime()
             {
                 return this.time;
             }
+
+            public void ResetTime()
+            {
+                this.time = "";
+            }
         }
 
         public void SetCourseButton(int index, string course, string prof, string time, string num, string rate)
         {
             buttons[index].AddCourse(course, prof, time, num, rate);
-            UpdateTable();
+            UpdateTable(true);
         }
 
         public int GetFirstEmptyCourseButton()
@@ -133,46 +139,64 @@ namespace CourseRegistration
         private void deleteBtn1_Click(object sender, EventArgs e)
         {
             buttons[0].DeleteCourse();
+            UpdateTable(false);
+            buttons[0].ResetTime();
         }
 
         private void deleteBtn2_Click(object sender, EventArgs e)
         {
             buttons[1].DeleteCourse();
+            UpdateTable(false);
+            buttons[1].ResetTime();
         }
 
         private void deleteBtn3_Click(object sender, EventArgs e)
         {
             buttons[2].DeleteCourse();
+            UpdateTable(false);
+            buttons[2].ResetTime();
         }
 
         private void deleteBtn4_Click(object sender, EventArgs e)
         {
             buttons[3].DeleteCourse();
+            UpdateTable(false);
+            buttons[3].ResetTime();
         }
 
         private void deleteBtn5_Click(object sender, EventArgs e)
         {
             buttons[4].DeleteCourse();
+            UpdateTable(false);
+            buttons[4].ResetTime();
         }
 
         private void deleteBtn6_Click(object sender, EventArgs e)
         {
             buttons[5].DeleteCourse();
+            UpdateTable(false);
+            buttons[5].ResetTime();
         }
 
         private void deleteBtn7_Click(object sender, EventArgs e)
         {
             buttons[6].DeleteCourse();
+            UpdateTable(false);
+            buttons[6].ResetTime();
         }
 
         private void deleteBtn8_Click(object sender, EventArgs e)
         {
             buttons[7].DeleteCourse();
+            UpdateTable(false);
+            buttons[7].ResetTime();
         }
 
         private void deleteBtn9_Click(object sender, EventArgs e)
         {
             buttons[8].DeleteCourse();
+            UpdateTable(false);
+            buttons[8].ResetTime();
         }
 
 
@@ -202,21 +226,40 @@ namespace CourseRegistration
         }
 
 
-        public void UpdateTable()
+        public void UpdateTable(bool check)
         {
             char day;
             char time;
-            for (int i = 0; i < buttons.Count; i++)
+            if(check == true)
             {
-                if (buttons[i].GetTime() != "")
+                for (int i = 0; i < buttons.Count; i++)
                 {
-                    for (int j = 0; j < buttons[i].GetTime().Length; j += 2)
+                    if (buttons[i].course.Text != "")
                     {
-                        day = buttons[i].GetTime()[j];
-                        time = buttons[i].GetTime()[j+1];
-                              
-                        SetDayPanel(day, int.Parse(time.ToString()), buttons[i].course.Text);
-                        if (day == '금') break;
+                        for (int j = 0; j < buttons[i].GetTime().Length; j += 2)
+                        {
+                            day = buttons[i].GetTime()[j];
+                            time = buttons[i].GetTime()[j + 1];
+
+                            SetDayPanel(day, int.Parse(time.ToString()), buttons[i].course.Text);
+                            if (day == '금') break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < buttons.Count; i++)
+                {
+                    if (buttons[i].course.Text == "" && buttons[i].GetTime()!= "")
+                    {
+                        for (int j = 0; j < buttons[i].GetTime().Length; j += 2)
+                        {
+                            day = buttons[i].GetTime()[j];
+                            time = buttons[i].GetTime()[j + 1];
+                            DeleteDayPanel(day, int.Parse(time.ToString()), buttons[i].course.Text);
+                            if (day == '금') break;
+                        }
                     }
                 }
             }
@@ -253,7 +296,26 @@ namespace CourseRegistration
 
         public void DeleteDayPanel(char day, int time, string course)
         {
-
+            if (day == '월')
+            {
+                MonPanel[time - 1].Visible = false;
+            }
+            if (day == '화')
+            {
+                TuePanel[time - 1].Visible = false;
+            }
+            if (day == '수')
+            {
+                WedPanel[time - 1].Visible = false;
+            }
+            if (day == '목')
+            {
+                ThuPanel[time - 1].Visible = false;
+            }
+            if (day == '금')
+            {
+                Friday123.Visible = false;
+            }
         }
         public void InitializeTable()
         {
