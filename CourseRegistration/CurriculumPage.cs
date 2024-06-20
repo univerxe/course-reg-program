@@ -8,9 +8,13 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
+using System.Drawing.Text;
+using System.Reflection.Emit;
 
 namespace CourseRegistration
 {
+
     public partial class CurriculumPage : Form
     {
         private Dictionary<CheckBox, List<Button>> buttonGroups;
@@ -19,6 +23,8 @@ namespace CourseRegistration
 
         public delegate void DelegateSetText(string text);
         public DelegateSetText? delegateSetText;
+
+        private PrivateFontCollection pfc;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -33,6 +39,7 @@ namespace CourseRegistration
         public CurriculumPage()
         {
             InitializeComponent();
+            InitCustomButtonFont();
             GroupButtons();
             InitializeDefaultStates();
             AssignButtonClickEvents();
@@ -115,6 +122,8 @@ namespace CourseRegistration
                 foreach (var button in group)
                 {
                     button.Click += Button_Click;
+                    button.Font = new Font(pfc.Families[0],button.Font.Size, FontStyle.Regular);
+                    button.UseCompatibleTextRendering = true;
                 }
             }
         }
@@ -127,9 +136,19 @@ namespace CourseRegistration
             {
                 string buttonText = clickedButton.Text;
 
-                delegateSetText(buttonText);
+                delegateSetText?.Invoke(buttonText);
                 moveToSearchPage();
             }
+        }
+
+        private void InitCustomButtonFont()
+        {
+            pfc = new PrivateFontCollection();
+            byte[] fontdata = Properties.Resources.NanumSquareNeo_cBd;
+            IntPtr data = Marshal.AllocCoTaskMem(fontdata.Length);
+            Marshal.Copy(fontdata, 0, data, fontdata.Length);
+            pfc.AddMemoryFont(data, fontdata.Length);
+            Marshal.FreeCoTaskMem(data);
         }
     }
 }
