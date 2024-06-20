@@ -3,12 +3,15 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Net;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace CourseRegistration
 {
     public partial class MyPage : Form
     {
+        String username = "00128";
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -23,12 +26,12 @@ namespace CourseRegistration
         public class Lecture
         {
             public string course_id { get; set; }
-            public string title { get; set; }
-            public string dept_name { get; set; }
+            public string course_title { get; set; }
             public int credits { get; set; }
+            public string grade { get; set; }
         }
 
-        public class Student
+        public class StudentFullInfo
         {
             public string student_id { get; set; }
             public string student_name { get; set; }
@@ -41,6 +44,17 @@ namespace CourseRegistration
             public int student_rating { get; set; }
             public int student_img_link { get; set; }
         }
+
+
+        public class Student
+        {
+            public string ID { get; set; }
+            public string dept_name { get; set; }
+            public string name { get; set; }
+            public int tot_cred { get; set; }
+        }
+
+
 
         public class Proffesor
         {
@@ -63,18 +77,51 @@ namespace CourseRegistration
 
         private async void getStudentInfo()
         {
-            //student_id.Text = "";
-            //student_name.Text = "";
-            //student_major.Text = "";
-            //student_sec_major.Text = "";
-            //student_year.Text = "";
-            //student_credits.Text = "";
-            //student_elec_credits.Text = "";
-            //student_major_credits.Text = "";
-            //student_rating.Text = "";
-            
-            //average_grade.Text = "";
-            //credits_sum.Text = "";
+            try
+            {
+                string apiUrl = "http://127.0.0.1:5000/student_info/00128";
+
+                // Create an HttpClient instance
+                using (HttpClient client = new HttpClient())
+                {
+                    // Send a GET request asynchronously
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                    // Check if the response is successful
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Read the content asynchronously
+                        string json = await response.Content.ReadAsStringAsync();
+
+                        // Deserialize JSON
+                        var student = JsonSerializer.Deserialize<List<Student>>(json);
+                       
+                        student_id.Text = student[0].ID;
+                        student_name.Text = student[0].name;
+                        student_major.Text = student[0].dept_name;
+                        //student_sec_major.Text = "";
+                        //student_year.Text = "";
+                        //student_credits.Text = "";
+                        //student_elec_credits.Text = "";
+                        //student_major_credits.Text = "";
+                        //student_rating.Text = "";
+
+                        //average_grade.Text = "";
+                        credits_sum.Text = student[0].tot_cred.ToString() + "/" + "133";
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to get data from the API: " + response.ReasonPhrase,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             string studentImageUrl = "https://avatars.githubusercontent.com/u/116807110?s=400&u=5d4699be20a0a4b5adac2dcd25dad399d31b443d&v=4";
             using (WebClient client = new WebClient())
@@ -107,7 +154,7 @@ namespace CourseRegistration
         {
             try
             {
-                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/courses";
+                string apiUrl = "http://127.0.0.1:5000/student_lectures/" + username;
 
                 // Create an HttpClient instance
                 using (HttpClient client = new HttpClient())
@@ -124,18 +171,22 @@ namespace CourseRegistration
                         // Deserialize JSON to List<Lecture>
                         var lectures = JsonSerializer.Deserialize<List<Lecture>>(json);
 
-                        // Clear existing items in the ListView
-                        credits_list.Items.Clear();
-
-                        // Add items to ListView
-                        foreach (var lecture in lectures)
+                        // Check if deserialization was successful
+                        if (lectures != null)
                         {
-                            ListViewItem item = new ListViewItem(lecture.course_id);
-                            item.SubItems.Add(lecture.title);
-                            item.SubItems.Add(lecture.dept_name);
-                            item.SubItems.Add(lecture.credits.ToString());
+                            // Clear existing items in the ListView
+                            credits_list.Items.Clear();
 
-                            credits_list.Items.Add(item);
+                            // Add items to ListView
+                            foreach (var lecture in lectures)
+                            {
+                                ListViewItem item = new ListViewItem(lecture.course_title);
+                                item.SubItems.Add(lecture.course_id);
+                                item.SubItems.Add(lecture.credits.ToString());
+                                item.SubItems.Add(lecture.grade);
+
+                                credits_list.Items.Add(item);
+                            }
                         }
 
                     }
@@ -174,11 +225,11 @@ namespace CourseRegistration
                         // Deserialize JSON to List<Lecture>
                         var lectures = JsonSerializer.Deserialize<List<Lecture>>(json);
 
-                        req_major_list.Items.Clear(); // Clear existing items (if needed)
+                        req_major_list.Items.Clear(); 
 
                         foreach (var lecture in lectures)
                         {
-                            req_major_list.Items.Add(lecture.course_id, false); // Add item with unchecked state
+                            req_major_list.Items.Add(lecture.course_id, false);
                         }
 
                     }
@@ -217,13 +268,11 @@ namespace CourseRegistration
                         // Deserialize JSON to List<Lecture>
                         var lectures = JsonSerializer.Deserialize<List<Lecture>>(json);
 
-                        // Assuming req_major_list is your CheckedListBox
-                        elective_lec_list.Items.Clear(); // Clear existing items (if needed)
+                        elective_lec_list.Items.Clear();
 
                         foreach (var lecture in lectures)
                         {
-                            // Assuming lecture.course_id is the text you want to display
-                            elective_lec_list.Items.Add(lecture.course_id, false); // Add item with unchecked state
+                            elective_lec_list.Items.Add(lecture.course_id, false);
                         }
 
                     }
@@ -245,6 +294,7 @@ namespace CourseRegistration
         {
             int border = 20;
 
+            main_panel.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, main_panel.Width, main_panel.Height, border, border));
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, border, border));
             panel2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, border, border));
             panel3.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, border, border));
