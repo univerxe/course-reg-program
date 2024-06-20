@@ -43,6 +43,7 @@
             MyPageBtn = new Button();
             timer = new System.Windows.Forms.Timer(components);
             time = new Label();
+            button_logout = new Button();
             topBar_right.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)symbol).BeginInit();
             symbolPanel.SuspendLayout();
@@ -61,7 +62,7 @@
             // mainPanel
             // 
             mainPanel.BackColor = Color.White;
-            mainPanel.Font = new Font("맑은 고딕", 9F);
+            mainPanel.Font = new Font("맑은 고딕", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
             mainPanel.Location = new Point(213, 31);
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(1299, 951);
@@ -205,11 +206,28 @@
             time.TabIndex = 9;
             time.Text = "12:12:12";
             // 
+            // button_logout
+            // 
+            button_logout.BackColor = Color.FromArgb(101, 29, 44);
+            button_logout.FlatAppearance.BorderSize = 0;
+            button_logout.FlatStyle = FlatStyle.Flat;
+            button_logout.Font = new Font("맑은 고딕", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            button_logout.ForeColor = Color.White;
+            button_logout.ImageAlign = ContentAlignment.MiddleLeft;
+            button_logout.Location = new Point(25, 937);
+            button_logout.Name = "button_logout";
+            button_logout.Size = new Size(163, 33);
+            button_logout.TabIndex = 10;
+            button_logout.Text = "2022203502";
+            button_logout.UseVisualStyleBackColor = false;
+            button_logout.Click += button_logout_Click;
+            // 
             // Form1
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(107, 34, 48);
             ClientSize = new Size(1512, 982);
+            Controls.Add(button_logout);
             Controls.Add(time);
             Controls.Add(topBar_right);
             Controls.Add(MyPageBtn);
@@ -221,6 +239,7 @@
             Controls.Add(topBar_left);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
             topBar_right.ResumeLayout(false);
@@ -246,5 +265,6 @@
         private Button exitBtn;
         private Button minimizeBtn;
         private Label time;
+        private Button button_logout;
     }
 }

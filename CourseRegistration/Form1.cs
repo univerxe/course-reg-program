@@ -9,8 +9,9 @@ namespace CourseRegistration
     {
         Home homePage = new() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         SearchPage searchPage = new() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-        CurriculumPage curriculumPage = new () { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        CurriculumPage curriculumPage = new() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         MyPage myPage = new() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        Login loginPage = new() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
 
         private bool dragging = false;
         private Point dragCursorPoint;
@@ -35,7 +36,7 @@ namespace CourseRegistration
             // Set page delegates
 
             //              from                    to 
-            homePage.moveToSearchPage = this.MoveToSearchPage; 
+            homePage.moveToSearchPage = this.MoveToSearchPage;
             searchPage.delegateAddToFav = homePage.SetCourseButton;
             searchPage.delegateGetFirstEmptyCourseButton = homePage.GetFirstEmptyCourseButton;
             curriculumPage.moveToSearchPage = this.MoveToSearchPage;
@@ -55,6 +56,7 @@ namespace CourseRegistration
             MyPageBtn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, MyPageBtn.Width, MyPageBtn.Height, 30, 30));
             exitBtn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, exitBtn.Width, exitBtn.Height, 20, 20));
             minimizeBtn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, minimizeBtn.Width, minimizeBtn.Height, 20, 20));
+            button_logout.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, button_logout.Width, button_logout.Height, 10, 10));
         }
 
         //Set the color of the button When it clicked and others
@@ -160,6 +162,10 @@ namespace CourseRegistration
             timer.Start();
         }
 
-     
+        private void button_logout_Click(object sender, EventArgs e)
+        {
+            Close();
+            Application.Exit();
+        }
     }
 }
