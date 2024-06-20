@@ -14,6 +14,16 @@ namespace CourseRegistration
     public partial class Home : Form
     {
         List<CourseButton> buttons = new List<CourseButton>();
+        List<Panel> MonPanel = new List<Panel>();
+        List<Label> MonLabel = new List<Label>();
+        List<Panel> TuePanel = new List<Panel>();
+        List<Label> TueLabel = new List<Label>();
+        List<Panel> WedPanel = new List<Panel>();
+        List<Label> WedLabel = new List<Label>();
+        List<Panel> ThuPanel = new List<Panel>();
+        List<Label> ThuLabel = new List<Label>();
+
+
         public delegate void DelegateMoveToSearchPage();
         public DelegateMoveToSearchPage? moveToSearchPage;
 
@@ -22,7 +32,7 @@ namespace CourseRegistration
             public Label course;
             private Label profTime;
             private Label numRate;
-
+            private string time = "";
             private Button addBtn;
             private Button delBtn;
 
@@ -45,7 +55,7 @@ namespace CourseRegistration
                 this.course.Text = course;
                 this.profTime.Text = prof + " | " + time;
                 this.numRate.Text = num + "담음 | " + rate;
-
+                this.time = time;
                 this.addBtn.Visible = false;
                 this.delBtn.Visible = true;
             }
@@ -55,8 +65,14 @@ namespace CourseRegistration
                 this.course.Text = "";
                 this.profTime.Text = "";
                 this.numRate.Text = "";
+                this.time = "";
                 this.addBtn.Visible = true;
                 this.delBtn.Visible = false;
+            }
+
+            public string GetTime()
+            {
+                return this.time;
             }
         }
 
@@ -93,7 +109,7 @@ namespace CourseRegistration
         public Home()
         {
             InitializeComponent();
-
+            InitializeTable();
             buttons.Add(new CourseButton(courseName1, profNum1, numRate1, courseBtn1, deleteBtn1));
             buttons.Add(new CourseButton(courseName2, profNum2, numRate2, courseBtn2, deleteBtn2));
             buttons.Add(new CourseButton(courseName3, profNum3, numRate3, courseBtn3, deleteBtn3));
@@ -103,7 +119,6 @@ namespace CourseRegistration
             buttons.Add(new CourseButton(courseName7, profNum7, numRate7, courseBtn7, deleteBtn7));
             buttons.Add(new CourseButton(courseName8, profNum8, numRate8, courseBtn8, deleteBtn8));
             buttons.Add(new CourseButton(courseName9, profNum9, numRate9, courseBtn9, deleteBtn9));
-
             //ControlPaint.DrawBorder(.Graphics, this.Friday.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
@@ -156,5 +171,118 @@ namespace CourseRegistration
         {
             buttons[8].DeleteCourse();
         }
+
+        public void UpdateTable()
+        {
+            char day;
+            int time;            
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                if (buttons[i].GetTime() != "")
+                {
+                    for (int j = 0; j < buttons[i].GetTime().Length; j+=2)
+                    {
+                        day = buttons[i].GetTime()[j];
+                        time = Convert.ToInt32(buttons[i].GetTime()[j + 1]);
+                        if(day == '월')
+                        {
+                            if(time == 1)
+                            {
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        public void ChangeTableText(Label label, string name)
+        {
+            string name1;
+            string name2;
+            string name3;
+
+            if(name.Length <= 5)
+            {
+                label.Text = name;
+            } 
+            else if(name.Length <= 10) 
+            {
+                name1 = name.Substring(0, 5);
+                name2 = name.Substring(5, 10);
+
+                label.Text = name1 + "\n" + name2;
+            }
+            else 
+            {
+                name1 = name.Substring(0, 5);
+                name2 = name.Substring(5, 10);
+                name3 = name.Substring(10, (int)name1.Length);
+                label.Text = name1 + "\n" + name2 + "\n" + name3; 
+            }
+            this.Update();
+        }
+
+        public void InitializeTable()
+        {
+            MonPanel.Add(Mon1);
+            MonPanel.Add(Mon2);
+            MonPanel.Add(Mon3);
+            MonPanel.Add(Mon4);
+            MonPanel.Add(Mon5);
+            MonPanel.Add(Mon6);
+
+            MonLabel.Add(Mon1_Label);
+            MonLabel.Add(Mon2_Label);
+            MonLabel.Add(Mon3_Label);
+            MonLabel.Add(Mon4_Label);
+            MonLabel.Add(Mon5_Label);
+            MonLabel.Add(Mon6_Label);
+
+            TuePanel.Add(Tue1);
+            TuePanel.Add(Tue2);
+            TuePanel.Add(Tue3);
+            TuePanel.Add(Tue4);
+            TuePanel.Add(Tue5);
+            TuePanel.Add(Tue6);
+
+            TueLabel.Add(Tue1_Label);
+            TueLabel.Add(Tue2_Label);
+            TueLabel.Add(Tue3_Label);
+            TueLabel.Add(Tue4_Label);
+            TueLabel.Add(Tue5_Label);
+            TueLabel.Add(Tue6_Label);
+
+            WedPanel.Add(Wed1);
+            WedPanel.Add(Wed2);
+            WedPanel.Add(Wed3);
+            WedPanel.Add(Wed4);
+            WedPanel.Add(Wed5);
+            WedPanel.Add(Wed6);
+
+            WedLabel.Add(Wed1_Label);
+            WedLabel.Add(Wed2_Label);
+            WedLabel.Add(Wed3_Label);
+            WedLabel.Add(Wed4_Label);
+            WedLabel.Add(Wed5_Label);
+            WedLabel.Add(Wed6_Label);   
+
+            ThuPanel.Add(Thu1);
+            ThuPanel.Add(Thu2);
+            ThuPanel.Add(Thu3);
+            ThuPanel.Add(Thu4);
+            ThuPanel.Add(Thu5);
+            ThuPanel.Add(Thu6);
+
+            ThuLabel.Add(Thu1_Label);
+            ThuLabel.Add(Thu2_Label);
+            ThuLabel.Add(Thu3_Label);
+            ThuLabel.Add(Thu4_Label);
+            ThuLabel.Add(Thu5_Label);
+            ThuLabel.Add(Thu6_Label);
+        }
+
     }
 }
+
