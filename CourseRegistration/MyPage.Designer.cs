@@ -520,9 +520,9 @@
             // 
             // student_img
             // 
-            student_img.Location = new Point(25, 16);
+            student_img.Location = new Point(31, 16);
             student_img.Name = "student_img";
-            student_img.Size = new Size(181, 214);
+            student_img.Size = new Size(169, 214);
             student_img.SizeMode = PictureBoxSizeMode.StretchImage;
             student_img.TabIndex = 0;
             student_img.TabStop = false;

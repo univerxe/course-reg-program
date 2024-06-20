@@ -125,7 +125,15 @@ namespace CourseRegistration
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            string studentImageUrl = "https://avatars.githubusercontent.com/u/116807110?s=400&u=5d4699be20a0a4b5adac2dcd25dad399d31b443d&v=4";
+            string studentImageUrl;
+            if (username == "2022203510")
+            {
+                studentImageUrl = "https://scontent-ssn1-1.xx.fbcdn.net/v/t1.15752-9/448315222_489166016902602_7736305252103526069_n.jpg?stp=dst-jpg_p1080x2048&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=9PFAcenrEukQ7kNvgFGI4MV&_nc_ht=scontent-ssn1-1.xx&oh=03_Q7cD1QGV3CaW8By-P2FZYEr79mq76P-itW6kAUCyCYdl8erNpQ&oe=669BBF18";
+            }
+            else
+            {
+                studentImageUrl = "https://klas.kw.ac.kr/spv/cmn/image/PersonImageRead.do?imgGubunCode=11&imgMemberNo=2022203502&imgHash=935012825b";
+            }
             using (WebClient client = new WebClient())
             {
                 byte[] imageData = client.DownloadData(studentImageUrl);
