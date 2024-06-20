@@ -310,6 +310,9 @@ namespace CourseRegistration
         public void SetSearchText(string lecture_name)
         {
             SearchText.Text = lecture_name;
+
+            // Do search
+            Search();
         }
     }
 
