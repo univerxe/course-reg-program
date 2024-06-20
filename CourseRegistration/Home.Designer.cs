@@ -2849,6 +2849,7 @@
             Mon1.Name = "Mon1";
             Mon1.Size = new Size(60, 54);
             Mon1.TabIndex = 13;
+            Mon1.Visible = false;
             // 
             // Mon1_Label
             // 
@@ -2868,6 +2869,7 @@
             Wed2.Name = "Wed2";
             Wed2.Size = new Size(60, 54);
             Wed2.TabIndex = 14;
+            Wed2.Visible = false;
             // 
             // Wed2_Label
             // 
@@ -2887,6 +2889,7 @@
             Mon2.Name = "Mon2";
             Mon2.Size = new Size(60, 54);
             Mon2.TabIndex = 15;
+            Mon2.Visible = false;
             // 
             // Mon2_Label
             // 
@@ -2906,6 +2909,7 @@
             Mon3.Name = "Mon3";
             Mon3.Size = new Size(60, 54);
             Mon3.TabIndex = 16;
+            Mon3.Visible = false;
             // 
             // Mon3_Label
             // 
@@ -2925,6 +2929,7 @@
             Mon4.Name = "Mon4";
             Mon4.Size = new Size(60, 54);
             Mon4.TabIndex = 17;
+            Mon4.Visible = false;
             // 
             // Mon4_Label
             // 
@@ -2944,6 +2949,7 @@
             Mon5.Name = "Mon5";
             Mon5.Size = new Size(60, 54);
             Mon5.TabIndex = 18;
+            Mon5.Visible = false;
             // 
             // Mon5_Label
             // 
@@ -2963,6 +2969,7 @@
             Wed1.Name = "Wed1";
             Wed1.Size = new Size(60, 54);
             Wed1.TabIndex = 19;
+            Wed1.Visible = false;
             // 
             // Wed1_Label
             // 
@@ -2982,6 +2989,7 @@
             Wed4.Name = "Wed4";
             Wed4.Size = new Size(60, 54);
             Wed4.TabIndex = 20;
+            Wed4.Visible = false;
             // 
             // Wed4_Label
             // 
@@ -3001,6 +3009,7 @@
             Wed3.Name = "Wed3";
             Wed3.Size = new Size(60, 54);
             Wed3.TabIndex = 21;
+            Wed3.Visible = false;
             // 
             // Wed3_Label
             // 
@@ -3020,6 +3029,7 @@
             Wed6.Name = "Wed6";
             Wed6.Size = new Size(60, 54);
             Wed6.TabIndex = 22;
+            Wed6.Visible = false;
             // 
             // Wed6_Label
             // 
@@ -3039,6 +3049,7 @@
             Mon6.Name = "Mon6";
             Mon6.Size = new Size(60, 54);
             Mon6.TabIndex = 23;
+            Mon6.Visible = false;
             // 
             // Mon6_Label
             // 
@@ -3058,6 +3069,7 @@
             Wed5.Name = "Wed5";
             Wed5.Size = new Size(60, 54);
             Wed5.TabIndex = 24;
+            Wed5.Visible = false;
             // 
             // Wed5_Label
             // 
@@ -3077,6 +3089,7 @@
             Tue1.Name = "Tue1";
             Tue1.Size = new Size(60, 54);
             Tue1.TabIndex = 25;
+            Tue1.Visible = false;
             // 
             // Tue1_Label
             // 
@@ -3096,6 +3109,7 @@
             Thu2.Name = "Thu2";
             Thu2.Size = new Size(60, 54);
             Thu2.TabIndex = 26;
+            Thu2.Visible = false;
             // 
             // Thu2_Label
             // 
@@ -3115,6 +3129,7 @@
             Tue2.Name = "Tue2";
             Tue2.Size = new Size(60, 54);
             Tue2.TabIndex = 27;
+            Tue2.Visible = false;
             // 
             // Tue2_Label
             // 
@@ -3134,6 +3149,7 @@
             Thu1.Name = "Thu1";
             Thu1.Size = new Size(60, 54);
             Thu1.TabIndex = 28;
+            Thu1.Visible = false;
             // 
             // Thu1_Label
             // 
@@ -3153,6 +3169,7 @@
             Tue3.Name = "Tue3";
             Tue3.Size = new Size(60, 54);
             Tue3.TabIndex = 29;
+            Tue3.Visible = false;
             // 
             // Tue3_Label
             // 
@@ -3172,6 +3189,7 @@
             Thu3.Name = "Thu3";
             Thu3.Size = new Size(60, 54);
             Thu3.TabIndex = 30;
+            Thu3.Visible = false;
             // 
             // Thu3_Label
             // 
@@ -3191,6 +3209,7 @@
             Tue4.Name = "Tue4";
             Tue4.Size = new Size(60, 54);
             Tue4.TabIndex = 31;
+            Tue4.Visible = false;
             // 
             // Tue4_Label
             // 
@@ -3210,6 +3229,7 @@
             Thu4.Name = "Thu4";
             Thu4.Size = new Size(60, 54);
             Thu4.TabIndex = 32;
+            Thu4.Visible = false;
             // 
             // Thu4_Label
             // 
@@ -3229,6 +3249,7 @@
             Tue5.Name = "Tue5";
             Tue5.Size = new Size(60, 54);
             Tue5.TabIndex = 33;
+            Tue5.Visible = false;
             // 
             // Tue5_Label
             // 
@@ -3248,6 +3269,7 @@
             Thu5.Name = "Thu5";
             Thu5.Size = new Size(60, 54);
             Thu5.TabIndex = 34;
+            Thu5.Visible = false;
             // 
             // Thu5_Label
             // 
@@ -3267,6 +3289,7 @@
             Tue6.Name = "Tue6";
             Tue6.Size = new Size(60, 54);
             Tue6.TabIndex = 35;
+            Tue6.Visible = false;
             // 
             // Tue6_Label
             // 
@@ -3286,6 +3309,7 @@
             Thu6.Name = "Thu6";
             Thu6.Size = new Size(60, 54);
             Thu6.TabIndex = 36;
+            Thu6.Visible = false;
             // 
             // Thu6_Label
             // 

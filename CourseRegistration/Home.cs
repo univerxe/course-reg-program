@@ -14,6 +14,7 @@ namespace CourseRegistration
     public partial class Home : Form
     {
         List<CourseButton> buttons = new List<CourseButton>();
+        List<CourseButton> registers = new List<CourseButton>();
         List<Panel> MonPanel = new List<Panel>();
         List<Label> MonLabel = new List<Label>();
         List<Panel> TuePanel = new List<Panel>();
@@ -79,6 +80,7 @@ namespace CourseRegistration
         public void SetCourseButton(int index, string course, string prof, string time, string num, string rate)
         {
             buttons[index].AddCourse(course, prof, time, num, rate);
+            UpdateTable();
         }
 
         public int GetFirstEmptyCourseButton()
@@ -119,6 +121,7 @@ namespace CourseRegistration
             buttons.Add(new CourseButton(courseName7, profNum7, numRate7, courseBtn7, deleteBtn7));
             buttons.Add(new CourseButton(courseName8, profNum8, numRate8, courseBtn8, deleteBtn8));
             buttons.Add(new CourseButton(courseName9, profNum9, numRate9, courseBtn9, deleteBtn9));
+
             //ControlPaint.DrawBorder(.Graphics, this.Friday.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
 
@@ -172,58 +175,86 @@ namespace CourseRegistration
             buttons[8].DeleteCourse();
         }
 
-        public void UpdateTable()
-        {
-            char day;
-            int time;            
-            for (int i = 0; i < buttons.Count; i++)
-            {
-                if (buttons[i].GetTime() != "")
-                {
-                    for (int j = 0; j < buttons[i].GetTime().Length; j+=2)
-                    {
-                        day = buttons[i].GetTime()[j];
-                        time = Convert.ToInt32(buttons[i].GetTime()[j + 1]);
-                        if(day == '월')
-                        {
-                            if(time == 1)
-                            {
-
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
 
         public void ChangeTableText(Label label, string name)
         {
             string name1;
             string name2;
             string name3;
-
-            if(name.Length <= 5)
+            if (name.Length <= 5)
             {
                 label.Text = name;
             } 
             else if(name.Length <= 10) 
             {
                 name1 = name.Substring(0, 5);
-                name2 = name.Substring(5, 10);
-
+                name2 = name.Substring(5, name.Length - 5);
                 label.Text = name1 + "\n" + name2;
             }
             else 
             {
                 name1 = name.Substring(0, 5);
-                name2 = name.Substring(5, 10);
-                name3 = name.Substring(10, (int)name1.Length);
+                name2 = name.Substring(5, 5);
+                name3 = name.Substring(10, name.Length - 10);
                 label.Text = name1 + "\n" + name2 + "\n" + name3; 
             }
             this.Update();
         }
 
+
+        public void UpdateTable()
+        {
+            char day;
+            char time;
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                if (buttons[i].GetTime() != "")
+                {
+                    for (int j = 0; j < buttons[i].GetTime().Length; j += 2)
+                    {
+                        day = buttons[i].GetTime()[j];
+                        time = buttons[i].GetTime()[j+1];
+                              
+                        SetDayPanel(day, int.Parse(time.ToString()), buttons[i].course.Text);
+                        if (day == '금') break;
+                    }
+                }
+            }
+        }
+
+        public void SetDayPanel(char day, int time, string course)
+        {
+           if(day == '월')
+            {
+                ChangeTableText(MonLabel[time - 1], course);
+                MonPanel[time - 1].Visible = true;
+            }
+           if(day == '화')
+            {
+                ChangeTableText(TueLabel[time - 1], course);
+                TuePanel[time - 1].Visible = true;
+            }
+            if (day == '수')
+            {
+                ChangeTableText(WedLabel[time - 1], course);
+                WedPanel[time - 1].Visible = true;
+            }
+            if (day == '목')
+            {
+                ChangeTableText(ThuLabel[time - 1], course);
+                ThuPanel[time - 1].Visible = true;
+            }
+            if (day == '금')
+            {
+                ChangeTableText(Friday123_Label, course);
+                Friday123.Visible = true;
+            }
+        }
+
+        public void DeleteDayPanel(char day, int time, string course)
+        {
+
+        }
         public void InitializeTable()
         {
             MonPanel.Add(Mon1);
