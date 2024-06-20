@@ -10,7 +10,8 @@ namespace CourseRegistration
 {
     public partial class MyPage : Form
     {
-        String username = "00128";
+        String username = Login.GlobalVariables.Username;
+
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -79,7 +80,8 @@ namespace CourseRegistration
         {
             try
             {
-                string apiUrl = "http://127.0.0.1:5000/student_info/00128";
+                string apiUrl = "http://127.0.0.1:5000/student_info/" + username;
+
 
                 // Create an HttpClient instance
                 using (HttpClient client = new HttpClient())

@@ -5,8 +5,14 @@ using System.Text.Json;
 
 namespace CourseRegistration
 {
+
     public partial class Login : Form
     {
+        public static class GlobalVariables
+        {
+            public static string Username { get; set; }
+        }
+
         private bool dragging = false;
         private Point dragCursorPoint;
         private Point dragFormPoint;
@@ -150,6 +156,7 @@ namespace CourseRegistration
                         
                         if (res.message != "Invalid credentials")
                         {
+                            GlobalVariables.Username = loginRequest.username;
                             Form1 mainForm = new();
                             Hide();
                             mainForm.ShowDialog();
