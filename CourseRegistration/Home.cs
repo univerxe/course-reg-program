@@ -210,6 +210,7 @@ namespace CourseRegistration
             buttons[0].DeleteCourse();
             UpdateTable(false);
             buttons[0].ResetTime();
+            UpdateTable(true);
         }
 
         private void deleteBtn2_Click(object sender, EventArgs e)
@@ -217,6 +218,7 @@ namespace CourseRegistration
             buttons[1].DeleteCourse();
             UpdateTable(false);
             buttons[1].ResetTime();
+            UpdateTable(true);
         }
 
         private void deleteBtn3_Click(object sender, EventArgs e)
@@ -224,6 +226,7 @@ namespace CourseRegistration
             buttons[2].DeleteCourse();
             UpdateTable(false);
             buttons[2].ResetTime();
+            UpdateTable(true);
         }
 
         private void deleteBtn4_Click(object sender, EventArgs e)
@@ -231,6 +234,7 @@ namespace CourseRegistration
             buttons[3].DeleteCourse();
             UpdateTable(false);
             buttons[3].ResetTime();
+            UpdateTable(true);
         }
 
         private void deleteBtn5_Click(object sender, EventArgs e)
@@ -238,6 +242,7 @@ namespace CourseRegistration
             buttons[4].DeleteCourse();
             UpdateTable(false);
             buttons[4].ResetTime();
+            UpdateTable(true);
         }
 
         private void deleteBtn6_Click(object sender, EventArgs e)
@@ -245,6 +250,7 @@ namespace CourseRegistration
             buttons[5].DeleteCourse();
             UpdateTable(false);
             buttons[5].ResetTime();
+            UpdateTable(true);
         }
 
         private void deleteBtn7_Click(object sender, EventArgs e)
@@ -252,6 +258,7 @@ namespace CourseRegistration
             buttons[6].DeleteCourse();
             UpdateTable(false);
             buttons[6].ResetTime();
+            UpdateTable(true);
         }
 
         private void deleteBtn8_Click(object sender, EventArgs e)
@@ -259,6 +266,7 @@ namespace CourseRegistration
             buttons[7].DeleteCourse();
             UpdateTable(false);
             buttons[7].ResetTime();
+            UpdateTable(true);
         }
 
         private void deleteBtn9_Click(object sender, EventArgs e)
@@ -266,6 +274,7 @@ namespace CourseRegistration
             buttons[8].DeleteCourse();
             UpdateTable(false);
             buttons[8].ResetTime();
+            UpdateTable(true);
         }
 
 
