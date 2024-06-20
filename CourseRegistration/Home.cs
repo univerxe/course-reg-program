@@ -178,8 +178,26 @@ namespace CourseRegistration
             RegButton.Add(regBtn6);
             RegButton.Add(regBtn7);
             RegButton.Add(regBtn8);
-
-            //ControlPaint.DrawBorder(.Graphics, this.Friday.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
+           
+            courseBtn1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, courseBtn1.Width, courseBtn1.Height, 30, 30));
+            courseBtn2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, courseBtn2.Width, courseBtn2.Height, 30, 30));
+            courseBtn3.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, courseBtn3.Width, courseBtn3.Height, 30, 30));
+            courseBtn4.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, courseBtn4.Width, courseBtn4.Height, 30, 30));
+            courseBtn5.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, courseBtn5.Width, courseBtn5.Height, 30, 30));
+            courseBtn6.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, courseBtn6.Width, courseBtn6.Height, 30, 30));
+            courseBtn7.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, courseBtn7.Width, courseBtn7.Height, 30, 30));
+            courseBtn8.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, courseBtn8.Width, courseBtn8.Height, 30, 30));
+            courseBtn9.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, courseBtn9.Width, courseBtn9.Height, 30, 30));
+            RegisterPanel.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, RegisterPanel.Width, RegisterPanel.Height, 10, 10));
+            course1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, course1.Width, course1.Height, 10, 10));
+            course2.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, course1.Width, course2.Height, 10, 10));
+            course3.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, course1.Width, course3.Height, 10, 10));
+            course4.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, course1.Width, course4.Height, 10, 10));
+            course5.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, course1.Width, course5.Height, 10, 10));
+            course6.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, course1.Width, course6.Height, 10, 10));
+            course7.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, course1.Width, course7.Height, 10, 10));
+            course8.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, course1.Width, course8.Height, 10, 10));
+            course9.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, course1.Width, course9.Height, 10, 10));
         }
 
         private void addButton_Clicked(object sender, EventArgs e)
@@ -530,7 +548,7 @@ namespace CourseRegistration
 
         private void regBtn1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("해당 과목을 수강  취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("해당 과목을 수강취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 registers.RemoveAt(0);
                 CourseUpdate();
@@ -539,7 +557,7 @@ namespace CourseRegistration
 
         private void regBtn2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("해당 과목을 수강  취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("해당 과목을 수강취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 registers.RemoveAt(1);
                 CourseUpdate();
@@ -548,7 +566,7 @@ namespace CourseRegistration
 
         private void regBtn3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("해당 과목을 수강  취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("해당 과목을 수강취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 registers.RemoveAt(2);
                 CourseUpdate();
@@ -557,7 +575,7 @@ namespace CourseRegistration
 
         private void regBtn4_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("해당 과목을 수강  취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("해당 과목을 수강취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 registers.RemoveAt(3);
                 CourseUpdate();
@@ -566,7 +584,7 @@ namespace CourseRegistration
 
         private void regBtn5_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("해당 과목을 수강  취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("해당 과목을 수강취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 registers.RemoveAt(4);
                 CourseUpdate();
@@ -575,7 +593,7 @@ namespace CourseRegistration
 
         private void regBtn6_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("해당 과목을 수강  취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("해당 과목을 수강취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 registers.RemoveAt(5);
                 CourseUpdate();
@@ -584,7 +602,7 @@ namespace CourseRegistration
 
         private void regBtn7_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("해당 과목을 수강  취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("해당 과목을 수강취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 registers.RemoveAt(6);
                 CourseUpdate();
@@ -593,7 +611,7 @@ namespace CourseRegistration
 
         private void regBtn8_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("해당 과목을 수강  취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if(MessageBox.Show("해당 과목을 수강취소하시겠습니까?", "수강취소 알림", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 registers.RemoveAt(7);
                 CourseUpdate();
