@@ -72,8 +72,8 @@ namespace CourseRegistration
             getStudentInfo();
             getProffesorInfo();
             getCreditsInfo();
-            //getElectLectures();
-            //getReqLectures();
+            getElectLectures();
+            getReqLectures();
         }
 
         private async void getStudentInfo()
@@ -211,7 +211,7 @@ namespace CourseRegistration
         {
             try
             {
-                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/courses";
+                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/student_lectures/" + username;
 
                 // Create an HttpClient instance
                 using (HttpClient client = new HttpClient())
@@ -232,7 +232,7 @@ namespace CourseRegistration
 
                         foreach (var lecture in lectures)
                         {
-                            req_major_list.Items.Add(lecture.course_id, false);
+                            req_major_list.Items.Add(lecture.course_title, false);
                         }
 
                     }
@@ -254,7 +254,7 @@ namespace CourseRegistration
         {
             try
             {
-                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/courses";
+                string apiUrl = "https://kwureg-56f6901164d7.herokuapp.com/student_lectures/" + username;
 
                 // Create an HttpClient instance
                 using (HttpClient client = new HttpClient())
@@ -275,7 +275,7 @@ namespace CourseRegistration
 
                         foreach (var lecture in lectures)
                         {
-                            elective_lec_list.Items.Add(lecture.course_id, false);
+                            elective_lec_list.Items.Add(lecture.course_title, false);
                         }
 
                     }
