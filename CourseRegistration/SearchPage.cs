@@ -282,14 +282,21 @@ namespace CourseRegistration
             ListViewItem item = SearchListView.SelectedItems[0];
             if (index != -1)
             {
+                int pos = delegateGetFirstEmptyCourseButton!();
+                if (pos == 1)
+                {
+                    MessageBox.Show("No free position for favorites!");
+                    return;
+                }
+
                 Root courseData = roots![index];
 
                 delegateAddToFav!(
-                    delegateGetFirstEmptyCourseButton!(), // index
+                    pos, // index
                     courseData.name!,
                     courseData.professor!,
                     item.SubItems[1].Text,
-                    "10",
+                    "10", // 담은인원
                     courseData.rate!.average.ToString()
                     );
             }
