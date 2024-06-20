@@ -43,6 +43,7 @@ namespace CourseRegistration
             GroupButtons();
             InitializeDefaultStates();
             AssignButtonClickEvents();
+            makeAllRounded();
         }
 
         private void GroupButtons()
@@ -149,6 +150,18 @@ namespace CourseRegistration
             Marshal.Copy(fontdata, 0, data, fontdata.Length);
             pfc.AddMemoryFont(data, fontdata.Length);
             Marshal.FreeCoTaskMem(data);
+
+        }
+
+        private void makeAllRounded()
+        {
+            int border = 20;
+
+            main_panel.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, main_panel.Width, main_panel.Height, border, border));
+            y.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, y.Width, y.Height, border, border));
+            b.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, b.Width, b.Height, border, border));
+            g.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, g.Width, g.Height, border, border));
+            panel_checkboxes.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel_checkboxes.Width, panel_checkboxes.Height, border, border));
         }
     }
 }
