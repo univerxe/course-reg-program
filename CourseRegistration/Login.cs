@@ -1,4 +1,7 @@
 ﻿using System.Runtime.InteropServices;
+using static CourseRegistration.MyPage;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Text.Json;
 
 namespace CourseRegistration
 {
@@ -71,6 +74,7 @@ namespace CourseRegistration
         }
         private void txt_KeyDown(object sender, KeyEventArgs e)
         {
+
             if (e.KeyCode == Keys.Enter)
             {
                 if (txt_username.Text == string.Empty)
@@ -90,7 +94,7 @@ namespace CourseRegistration
                 }
                 else
                 {
-                    MessageBox.Show("Undefined Username or Password");
+                    login();
                 }
             }
         }
@@ -100,5 +104,74 @@ namespace CourseRegistration
             Close();
             Application.Exit();
         }
+
+        public class LoginRequest
+        {
+            public string username { get; set; }
+            public string password { get; set; }
+        }
+
+        public class LoginResponce
+        {
+            public string message { get; set; }
+        }
+
+
+        private async void login()
+        {
+            try
+            {
+                string apiUrl = "http://127.0.0.1:5000/login";
+
+                // Create an HttpClient instance
+                using (HttpClient client = new HttpClient())
+                {
+                    // Create the login request payload
+                    var loginRequest = new LoginRequest
+                    {
+                        username = txt_username.Text,
+                        password = txt_pwd.Text
+                    };
+
+                    // Serialize the login request to JSON
+                    string jsonPayload = JsonSerializer.Serialize(loginRequest);
+                    var content = new StringContent(jsonPayload, System.Text.Encoding.UTF8, "application/json");
+
+                    // Send a POST request asynchronously
+                    HttpResponseMessage response = await client.PostAsync(apiUrl, content);
+
+
+                    // Check if the response is successful
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Read the content asynchronously
+                        string json = await response.Content.ReadAsStringAsync();
+                        LoginResponce res = JsonSerializer.Deserialize<LoginResponce>(json);
+                        
+                        if (res.message != "Invalid credentials")
+                        {
+                            Form1 mainForm = new();
+                            Hide();
+                            mainForm.ShowDialog();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to get data from the API: " + response.ReasonPhrase,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
