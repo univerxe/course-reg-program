@@ -12,6 +12,7 @@ using System.Reflection;
 using System.Drawing.Text;
 using System.Reflection.Emit;
 
+
 namespace CourseRegistration
 {
 
@@ -44,6 +45,8 @@ namespace CourseRegistration
             InitializeDefaultStates();
             AssignButtonClickEvents();
             makeAllRounded();
+            label_fonts();
+            checkbox_fonts();
         }
 
         private void GroupButtons()
@@ -122,12 +125,36 @@ namespace CourseRegistration
                 // Loop through each button in the group and assign the click event
                 foreach (var button in group)
                 {
-                    button.Click += Button_Click;
-                    button.Font = new Font(pfc.Families[0],button.Font.Size, FontStyle.Regular);
+                    button.Font = new Font(pfc.Families[0], button.Font.Size, FontStyle.Bold);
                     button.UseCompatibleTextRendering = true;
+                    button.Click += Button_Click;
                 }
             }
         }
+
+        private void label_fonts()
+        {
+            foreach (Control ctrl in panel_year.Controls)
+            {
+                if (ctrl is System.Windows.Forms.Label lbl)
+                {
+                    lbl.Font = new Font(pfc.Families[0], lbl.Font.Size, FontStyle.Bold);
+                }
+            }
+        }
+
+        private void checkbox_fonts()
+        {
+            foreach (Control ctrl in panel_checkboxes.Controls)
+            {
+                if (ctrl is CheckBox checkBox)
+                {
+                    checkBox.Font = new Font(pfc.Families[0], checkBox.Font.Size, FontStyle.Bold);
+                }
+            }
+        }
+
+
 
         //
         private void Button_Click(object sender, EventArgs e)
@@ -162,6 +189,8 @@ namespace CourseRegistration
             b.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, b.Width, b.Height, border, border));
             g.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, g.Width, g.Height, border, border));
             panel_checkboxes.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel_checkboxes.Width, panel_checkboxes.Height, border, border));
+            panel_year.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel_year.Width, panel_year.Height, border, border));
+
         }
     }
 }

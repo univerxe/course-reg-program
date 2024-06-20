@@ -79,6 +79,9 @@
             g_btn5 = new Button();
             g_btn9 = new Button();
             panel_checkboxes = new Panel();
+            b = new Button();
+            g = new Button();
+            y = new Button();
             lbl_complete = new Label();
             lbl_prepost = new Label();
             g_btn1 = new Button();
@@ -98,11 +101,15 @@
             label3 = new Label();
             label4 = new Label();
             main_panel = new Panel();
-            y = new Button();
-            g = new Button();
-            b = new Button();
+            panel_year = new Panel();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
             panel_checkboxes.SuspendLayout();
             main_panel.SuspendLayout();
+            panel_year.SuspendLayout();
             SuspendLayout();
             // 
             // y_btn32
@@ -264,7 +271,7 @@
             // checkBoxY
             // 
             checkBoxY.Font = new Font("NanumBarunGothicOTF", 12F);
-            checkBoxY.Location = new Point(219, 23);
+            checkBoxY.Location = new Point(220, 23);
             checkBoxY.Name = "checkBoxY";
             checkBoxY.Size = new Size(162, 40);
             checkBoxY.TabIndex = 23;
@@ -406,7 +413,7 @@
             // checkBoxB
             // 
             checkBoxB.Font = new Font("NanumBarunGothicOTF", 12F);
-            checkBoxB.Location = new Point(568, 23);
+            checkBoxB.Location = new Point(607, 23);
             checkBoxB.Name = "checkBoxB";
             checkBoxB.Size = new Size(162, 40);
             checkBoxB.TabIndex = 25;
@@ -428,7 +435,7 @@
             // checkBoxG
             // 
             checkBoxG.Font = new Font("NanumBarunGothicOTF", 12F);
-            checkBoxG.Location = new Point(393, 23);
+            checkBoxG.Location = new Point(411, 23);
             checkBoxG.Name = "checkBoxG";
             checkBoxG.Size = new Size(162, 40);
             checkBoxG.TabIndex = 24;
@@ -582,7 +589,7 @@
             // checkBoxAll
             // 
             checkBoxAll.Font = new Font("NanumBarunGothicOTF", 12F);
-            checkBoxAll.Location = new Point(42, 23);
+            checkBoxAll.Location = new Point(43, 23);
             checkBoxAll.Name = "checkBoxAll";
             checkBoxAll.Size = new Size(162, 40);
             checkBoxAll.TabIndex = 26;
@@ -713,6 +720,39 @@
             panel_checkboxes.Name = "panel_checkboxes";
             panel_checkboxes.Size = new Size(1146, 81);
             panel_checkboxes.TabIndex = 88;
+            // 
+            // b
+            // 
+            b.BackColor = Color.FromArgb(208, 236, 252);
+            b.FlatStyle = FlatStyle.Popup;
+            b.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
+            b.Location = new Point(531, 32);
+            b.Name = "b";
+            b.Size = new Size(16, 16);
+            b.TabIndex = 156;
+            b.UseVisualStyleBackColor = false;
+            // 
+            // g
+            // 
+            g.BackColor = Color.FromArgb(232, 244, 220);
+            g.FlatStyle = FlatStyle.Popup;
+            g.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
+            g.Location = new Point(754, 33);
+            g.Name = "g";
+            g.Size = new Size(16, 16);
+            g.TabIndex = 155;
+            g.UseVisualStyleBackColor = false;
+            // 
+            // y
+            // 
+            y.BackColor = Color.FromArgb(255, 236, 196);
+            y.FlatStyle = FlatStyle.Popup;
+            y.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
+            y.Location = new Point(335, 33);
+            y.Name = "y";
+            y.Size = new Size(16, 16);
+            y.TabIndex = 153;
+            y.UseVisualStyleBackColor = false;
             // 
             // lbl_complete
             // 
@@ -923,7 +963,8 @@
             // 
             // main_panel
             // 
-            main_panel.BackColor = Color.FromArgb(107, 34, 48);
+            main_panel.BackColor = Color.FromArgb(244, 244, 244);
+            main_panel.Controls.Add(panel_year);
             main_panel.Controls.Add(label1);
             main_panel.Controls.Add(lbl_options);
             main_panel.Controls.Add(label4);
@@ -934,38 +975,74 @@
             main_panel.Size = new Size(1181, 828);
             main_panel.TabIndex = 152;
             // 
-            // y
+            // panel_year
             // 
-            y.BackColor = Color.FromArgb(255, 236, 196);
-            y.FlatStyle = FlatStyle.Popup;
-            y.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            y.Location = new Point(334, 33);
-            y.Name = "y";
-            y.Size = new Size(16, 16);
-            y.TabIndex = 153;
-            y.UseVisualStyleBackColor = false;
+            panel_year.BackColor = Color.FromArgb(107, 34, 48);
+            panel_year.Controls.Add(label5);
+            panel_year.Controls.Add(label6);
+            panel_year.Controls.Add(label7);
+            panel_year.Controls.Add(label8);
+            panel_year.Controls.Add(label9);
+            panel_year.Location = new Point(18, 9);
+            panel_year.Name = "panel_year";
+            panel_year.Size = new Size(1146, 41);
+            panel_year.TabIndex = 153;
             // 
-            // g
+            // label5
             // 
-            g.BackColor = Color.FromArgb(232, 244, 220);
-            g.FlatStyle = FlatStyle.Popup;
-            g.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            g.Location = new Point(720, 32);
-            g.Name = "g";
-            g.Size = new Size(16, 16);
-            g.TabIndex = 155;
-            g.UseVisualStyleBackColor = false;
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("NanumBarunGothicOTF", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            label5.ForeColor = Color.WhiteSmoke;
+            label5.Location = new Point(101, 10);
+            label5.Name = "label5";
+            label5.Size = new Size(55, 22);
+            label5.TabIndex = 148;
+            label5.Text = "1학년";
             // 
-            // b
+            // label6
             // 
-            b.BackColor = Color.FromArgb(208, 236, 252);
-            b.FlatStyle = FlatStyle.Popup;
-            b.Font = new Font("NanumSquare Neo OTF Bold", 11.9999981F, FontStyle.Bold);
-            b.Location = new Point(513, 32);
-            b.Name = "b";
-            b.Size = new Size(16, 16);
-            b.TabIndex = 156;
-            b.UseVisualStyleBackColor = false;
+            label6.AutoSize = true;
+            label6.Font = new Font("Malgun Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            label6.ForeColor = Color.WhiteSmoke;
+            label6.Location = new Point(16, 677);
+            label6.Name = "label6";
+            label6.Size = new Size(140, 45);
+            label6.TabIndex = 145;
+            label6.Text = "Options";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("NanumBarunGothicOTF", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            label7.ForeColor = Color.WhiteSmoke;
+            label7.Location = new Point(393, 10);
+            label7.Name = "label7";
+            label7.Size = new Size(55, 22);
+            label7.TabIndex = 151;
+            label7.Text = "2학년";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("NanumBarunGothicOTF", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            label8.ForeColor = Color.WhiteSmoke;
+            label8.Location = new Point(987, 10);
+            label8.Name = "label8";
+            label8.Size = new Size(55, 22);
+            label8.TabIndex = 149;
+            label8.Text = "4학년";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("NanumBarunGothicOTF", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            label9.ForeColor = Color.WhiteSmoke;
+            label9.Location = new Point(693, 10);
+            label9.Name = "label9";
+            label9.Size = new Size(55, 22);
+            label9.TabIndex = 150;
+            label9.Text = "3학년";
             // 
             // CurriculumPage
             // 
@@ -1038,6 +1115,8 @@
             panel_checkboxes.PerformLayout();
             main_panel.ResumeLayout(false);
             main_panel.PerformLayout();
+            panel_year.ResumeLayout(false);
+            panel_year.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1117,5 +1196,11 @@
         private Button b;
         private Button g;
         private Button y;
+        private Panel panel_year;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label9;
     }
 }
