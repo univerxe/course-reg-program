@@ -234,7 +234,7 @@ namespace CourseRegistration
 
             Random rnd = new();
 
-            string[] times = ["월4수3", "화2목3", "수6", "목5", "금123"];
+            string[] times = ["월4수3", "화1목2", "수6", "목5", "금123"];
             if (roots != null)
             {
                 if (roots.Count == 0)
@@ -282,14 +282,21 @@ namespace CourseRegistration
             ListViewItem item = SearchListView.SelectedItems[0];
             if (index != -1)
             {
+                int pos = delegateGetFirstEmptyCourseButton!();
+                if (pos == -1)
+                {
+                    MessageBox.Show("No free position for favorites!");
+                    return;
+                }
+
                 Root courseData = roots![index];
 
                 delegateAddToFav!(
-                    delegateGetFirstEmptyCourseButton!(), // index
+                    pos, // index
                     courseData.name!,
                     courseData.professor!,
-                    item.SubItems[1].Text,
-                    "10",
+                    item.SubItems[2].Text,
+                    "10", // 담은인원
                     courseData.rate!.average.ToString()
                     );
             }
@@ -303,6 +310,9 @@ namespace CourseRegistration
         public void SetSearchText(string lecture_name)
         {
             SearchText.Text = lecture_name;
+
+            // Do search
+            Search();
         }
     }
 
