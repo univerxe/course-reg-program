@@ -737,6 +737,7 @@
             g_btn1.TabIndex = 135;
             g_btn1.Text = "대학수학1";
             g_btn1.UseVisualStyleBackColor = false;
+            g_btn1.Click += g_btn1_Click;
             // 
             // g_btn2
             // 

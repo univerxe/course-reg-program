@@ -7,7 +7,7 @@ namespace CourseRegistration
     public partial class SearchPage : Form
     {
         List<Root>? roots = null;
-        
+
         public delegate void DelegateAddToFav(int index, string course, string prof, string time, string num, string rate);
         public DelegateAddToFav? delegateAddToFav;
 
@@ -24,6 +24,8 @@ namespace CourseRegistration
            int nWidthEllipse, // width of ellipse
            int nHeightEllipse // height of ellipse
        );
+
+
         public SearchPage()
         {
             InitializeComponent();
@@ -34,13 +36,14 @@ namespace CourseRegistration
             LoadCourseData();
         }
 
+
         void LoadCourseData()
         {
             string jsonString = File.ReadAllText("everytime-lectures.json");
             roots = JsonSerializer.Deserialize<List<Root>>(jsonString);
             Random rnd = new();
 
-            string[] times = ["월4수3", "화2목3", "수6", "목5", "금123"];
+            string[] times = ["월4수3", "화1목2", "수6", "목5", "금123"];
             if (roots != null)
             {
                 foreach (Root root in roots)
@@ -231,7 +234,7 @@ namespace CourseRegistration
 
             Random rnd = new();
 
-            string[] times = ["월4수3", "화2목3", "수6", "목5", "금123"];
+            string[] times = ["월4수3", "화1목2", "수6", "목5", "금123"];
             if (roots != null)
             {
                 if (roots.Count == 0)
@@ -279,17 +282,37 @@ namespace CourseRegistration
             ListViewItem item = SearchListView.SelectedItems[0];
             if (index != -1)
             {
+                int pos = delegateGetFirstEmptyCourseButton!();
+                if (pos == -1)
+                {
+                    MessageBox.Show("No free position for favorites!");
+                    return;
+                }
+
                 Root courseData = roots![index];
 
                 delegateAddToFav!(
-                    delegateGetFirstEmptyCourseButton!(), // index
+                    pos, // index
                     courseData.name!,
                     courseData.professor!,
-                    item.SubItems[1].Text,
-                    "10",
+                    item.SubItems[2].Text,
+                    "10", // 담은인원
                     courseData.rate!.average.ToString()
                     );
             }
+        }
+
+        private void SearchText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void SetSearchText(string lecture_name)
+        {
+            SearchText.Text = lecture_name;
+
+            // Do search
+            Search();
         }
     }
 

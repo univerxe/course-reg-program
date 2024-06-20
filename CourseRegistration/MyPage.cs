@@ -139,7 +139,7 @@ namespace CourseRegistration
             //prof_email.Text = "";
             //prof_name.Text = "";
 
-            string profImageUrl = "https://cs.kw.ac.kr/img/department_guide/photo_230417.jpg";
+            string profImageUrl = "https://klas.kw.ac.kr/spv/cmn/image/PersonImageRead.do?imgGubunCode=21&imgMemberNo=12013070&imgHash=f040c1facb";
             using (WebClient client = new WebClient())
             {
                 byte[] imageData = client.DownloadData(profImageUrl);

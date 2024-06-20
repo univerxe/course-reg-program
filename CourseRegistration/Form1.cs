@@ -33,9 +33,14 @@ namespace CourseRegistration
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
             // Set page delegates
-            homePage.moveToSearchPage = this.MoveToSearchPage;
+
+            //              from                    to 
+            homePage.moveToSearchPage = this.MoveToSearchPage; 
             searchPage.delegateAddToFav = homePage.SetCourseButton;
             searchPage.delegateGetFirstEmptyCourseButton = homePage.GetFirstEmptyCourseButton;
+            curriculumPage.moveToSearchPage = this.MoveToSearchPage;
+            curriculumPage.delegateSetText = searchPage.SetSearchText;
+
 
             //Set the mainPanel to HomePage
             ButtonColorReset(HomeBtn);
@@ -49,7 +54,6 @@ namespace CourseRegistration
             CurriculumBtn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, CurriculumBtn.Width, CurriculumBtn.Height, 30, 30));
             MyPageBtn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, MyPageBtn.Width, MyPageBtn.Height, 30, 30));
             exitBtn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, exitBtn.Width, exitBtn.Height, 20, 20));
-            maximizeBtn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, maximizeBtn.Width, maximizeBtn.Height, 20, 20));
             minimizeBtn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, minimizeBtn.Width, minimizeBtn.Height, 20, 20));
         }
 
