@@ -7,7 +7,7 @@ namespace CourseRegistration
     public partial class SearchPage : Form
     {
         List<Root>? roots = null;
-        
+
         public delegate void DelegateAddToFav(int index, string course, string prof, string time, string num, string rate);
         public DelegateAddToFav? delegateAddToFav;
 
@@ -24,6 +24,8 @@ namespace CourseRegistration
            int nWidthEllipse, // width of ellipse
            int nHeightEllipse // height of ellipse
        );
+
+
         public SearchPage()
         {
             InitializeComponent();
@@ -33,6 +35,7 @@ namespace CourseRegistration
 
             LoadCourseData();
         }
+
 
         void LoadCourseData()
         {
@@ -290,6 +293,16 @@ namespace CourseRegistration
                     courseData.rate!.average.ToString()
                     );
             }
+        }
+
+        private void SearchText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void SetSearchText(string lecture_name)
+        {
+            SearchText.Text = lecture_name;
         }
     }
 

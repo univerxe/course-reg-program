@@ -54,14 +54,15 @@ namespace CourseRegistration
             {
                 MessageBox.Show("Please write your Username");
             }
-
             else if (txt_pwd.Text == string.Empty)
             {
                 MessageBox.Show("Please write your Password");
             }
             else if (txt_pwd.Text == "pwd" && txt_username.Text == "user")
             {
-                MessageBox.Show("Login Success");
+                Form1 mainForm = new();
+                Hide();
+                mainForm.ShowDialog();
             }
             else
             {
