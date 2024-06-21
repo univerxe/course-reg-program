@@ -4,3 +4,4 @@ A project to improve Kwangwoon University's course registration system with a mo
 
 - **[Project Proposal](./project-proposal.pdf)** - View the project proposal document.
 - **[Progress Presentation](./progress-ppt.pptx)** - View the progress presentation.
+- **[Project Final Presentation](./project-final-ppt.pdf)** - View the final presentation.
